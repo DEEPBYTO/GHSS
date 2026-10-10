@@ -1,34 +1,26 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>Government Higher Secondary School | Tibba Sultan Pur</title>
-
-  <meta
-    name="description"
-    content="Official website of Government Higher Secondary School, Tibba Sultan Pur. Learn about our school, academics, facilities and educational activities."
-  >
-
-  <meta name="theme-color" content="#0B1F3A">
-
+  <meta name="description" content="Official website of Government Higher Secondary School, Tibba Sultan Pur. Dedicated to academic excellence, character building and community service.">
+  <meta name="theme-color" content="#1B4332">
   <!-- Official school logo: browser favicon -->
   <link rel="icon" type="image/png" href="./logo.png">
   <link rel="apple-touch-icon" href="./logo.png">
-
   <style>
     :root {
-      --navy: #0B1F3A;
-      --navy-light: #16365C;
-      --navy-hover: #204875;
+      --green-dark: #1B4332;
+      --green-mid: #2D6A4F;
+      --green-light: #40916C;
+      --green-soft: #D8F3DC;
       --white: #FFFFFF;
       --gold: #C6A34A;
-      --light-bg: #F3F6FA;
-      --text: #243247;
-      --muted: #65748A;
-      --border: #E1E7EF;
+      --light-bg: #F0F7F2;
+      --text: #1A2E24;
+      --muted: #52796F;
+      --border: #B7E4C7;
     }
 
     * {
@@ -43,7 +35,7 @@
     }
 
     body {
-      font-family: Arial, Helvetica, sans-serif;
+      font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
       color: var(--text);
       background: var(--white);
       line-height: 1.6;
@@ -64,15 +56,14 @@
       margin: 0 auto;
     }
 
-    /* HEADER */
-
+    /* HEADER — government style, authoritative */
     .site-header {
       position: sticky;
       top: 0;
       z-index: 1000;
       background: var(--white);
       border-bottom: 3px solid var(--gold);
-      box-shadow: 0 3px 16px rgba(11, 31, 58, 0.08);
+      box-shadow: 0 3px 16px rgba(27, 67, 50, 0.08);
     }
 
     .header-inner {
@@ -98,7 +89,7 @@
     }
 
     .brand-text h2 {
-      color: var(--navy);
+      color: var(--green-dark);
       font-size: 22px;
       line-height: 1.2;
       letter-spacing: 1.5px;
@@ -121,28 +112,43 @@
     .nav-links a {
       font-size: 14px;
       font-weight: 700;
-      color: var(--navy);
+      color: var(--green-dark);
       transition: color 0.2s ease;
+      position: relative;
     }
 
-    .nav-links a:hover {
-      color: var(--navy-hover);
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--gold);
+      transition: width 0.2s ease;
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
     }
 
     .nav-links .contact-link {
-      background: var(--navy);
+      background: var(--green-dark);
       color: var(--white);
       padding: 11px 19px;
       border-radius: 4px;
+      transition: background 0.2s ease;
+    }
+
+    .nav-links .contact-link::after {
+      display: none;
     }
 
     .nav-links .contact-link:hover {
-      background: var(--navy-light);
-      color: var(--white);
+      background: var(--green-mid);
     }
 
-    /* HERO */
-
+    /* HERO — dignified, official */
     .hero {
       min-height: 650px;
       display: flex;
@@ -152,17 +158,14 @@
       color: var(--white);
       position: relative;
       overflow: hidden;
-
-      background-color: var(--navy);
-
+      background-color: var(--green-dark);
       background-image:
         linear-gradient(
           120deg,
-          rgba(11, 31, 58, 0.88),
-          rgba(11, 31, 58, 0.58)
+          rgba(27, 67, 50, 0.92),
+          rgba(27, 67, 50, 0.68)
         ),
         url("./school-building.jpeg");
-
       background-position: center;
       background-size: cover;
       background-repeat: no-repeat;
@@ -194,6 +197,7 @@
       font-weight: 700;
       letter-spacing: 2px;
       text-transform: uppercase;
+      background: rgba(27, 67, 50, 0.3);
     }
 
     .hero h1 {
@@ -210,10 +214,11 @@
     }
 
     .hero-location {
-      color: #F0D78F;
+      color: #B7E4C7;
       font-size: clamp(21px, 3vw, 31px);
       font-weight: 600;
       margin-bottom: 23px;
+      letter-spacing: 1px;
     }
 
     .hero-description {
@@ -221,7 +226,7 @@
       margin: 0 auto 32px;
       font-size: 17px;
       line-height: 1.8;
-      color: rgba(255, 255, 255, 0.91);
+      color: rgba(255, 255, 255, 0.92);
     }
 
     .hero-actions {
@@ -241,15 +246,18 @@
       font-size: 14px;
       font-weight: 700;
       transition: 0.2s ease;
+      cursor: pointer;
     }
 
     .button-primary {
       background: var(--white);
-      color: var(--navy);
+      color: var(--green-dark);
+      border-color: var(--white);
     }
 
     .button-primary:hover {
-      background: #E9EEF5;
+      background: #E8F5E9;
+      border-color: #E8F5E9;
     }
 
     .button-outline {
@@ -260,10 +268,10 @@
 
     .button-outline:hover {
       background: rgba(255, 255, 255, 0.12);
+      border-color: var(--white);
     }
 
-    /* INTRODUCTION */
-
+    /* SECTIONS — formal spacing */
     .section {
       padding: 85px 0;
     }
@@ -275,7 +283,7 @@
     }
 
     .section-label {
-      color: var(--navy-light);
+      color: var(--green-mid);
       font-size: 12px;
       font-weight: 800;
       letter-spacing: 2px;
@@ -284,7 +292,7 @@
     }
 
     .section-heading h2 {
-      color: var(--navy);
+      color: var(--green-dark);
       font-size: clamp(29px, 4vw, 42px);
       line-height: 1.2;
       margin-bottom: 17px;
@@ -303,7 +311,7 @@
     }
 
     .about-content h2 {
-      color: var(--navy);
+      color: var(--green-dark);
       font-size: 34px;
       line-height: 1.25;
       margin-bottom: 20px;
@@ -320,6 +328,7 @@
       overflow: hidden;
       background: var(--light-bg);
       border: 1px solid var(--border);
+      box-shadow: 0 8px 24px rgba(27, 67, 50, 0.06);
     }
 
     .about-image img {
@@ -329,8 +338,7 @@
       object-fit: cover;
     }
 
-    /* SCHOOL AREAS */
-
+    /* SCHOOL AREAS — cards with government gravitas */
     .discover {
       background: var(--light-bg);
     }
@@ -344,15 +352,16 @@
     .info-card {
       background: var(--white);
       border: 1px solid var(--border);
-      border-top: 4px solid var(--navy);
+      border-top: 4px solid var(--green-dark);
       padding: 30px 26px;
       border-radius: 5px;
       transition: transform 0.2s ease, box-shadow 0.2s ease;
+      box-shadow: 0 4px 12px rgba(27, 67, 50, 0.03);
     }
 
     .info-card:hover {
       transform: translateY(-5px);
-      box-shadow: 0 12px 28px rgba(11, 31, 58, 0.08);
+      box-shadow: 0 12px 28px rgba(27, 67, 50, 0.08);
     }
 
     .card-number {
@@ -364,7 +373,7 @@
     }
 
     .info-card h3 {
-      color: var(--navy);
+      color: var(--green-dark);
       font-size: 21px;
       margin-bottom: 12px;
     }
@@ -374,14 +383,14 @@
       font-size: 15px;
     }
 
-    /* MISSION */
-
+    /* MISSION — bold, official statement */
     .mission {
-      background: var(--navy);
+      background: var(--green-dark);
       color: var(--white);
       text-align: center;
       padding: 75px 0;
       border-bottom: 5px solid var(--gold);
+      border-top: 1px solid rgba(198, 163, 74, 0.3);
     }
 
     .mission-content {
@@ -390,7 +399,7 @@
     }
 
     .mission .section-label {
-      color: #F0D78F;
+      color: #B7E4C7;
     }
 
     .mission h2 {
@@ -400,13 +409,12 @@
     }
 
     .mission p {
-      color: rgba(255, 255, 255, 0.84);
+      color: rgba(255, 255, 255, 0.85);
       font-size: 17px;
       line-height: 1.8;
     }
 
-    /* CONTACT */
-
+    /* CONTACT — clean, accessible */
     .contact-section {
       background: var(--white);
     }
@@ -418,10 +426,11 @@
       padding: 40px 25px;
       border: 1px solid var(--border);
       border-radius: 6px;
+      background: var(--light-bg);
     }
 
     .contact-panel h2 {
-      color: var(--navy);
+      color: var(--green-dark);
       font-size: 30px;
       margin-bottom: 14px;
     }
@@ -432,20 +441,22 @@
     }
 
     .contact-panel .button {
-      background: var(--navy);
+      background: var(--green-dark);
       color: var(--white);
+      border-color: var(--green-dark);
     }
 
     .contact-panel .button:hover {
-      background: var(--navy-light);
+      background: var(--green-mid);
+      border-color: var(--green-mid);
     }
 
-    /* FOOTER */
-
+    /* FOOTER — official, understated */
     .site-footer {
-      background: #071629;
+      background: #0D2818;
       color: var(--white);
       padding: 35px 0;
+      border-top: 1px solid rgba(198, 163, 74, 0.2);
     }
 
     .footer-inner {
@@ -474,7 +485,6 @@
     }
 
     /* RESPONSIVE DESIGN */
-
     @media (max-width: 850px) {
       .header-inner {
         flex-direction: column;
@@ -568,18 +578,15 @@
     <div class="container header-inner">
 
       <a class="brand" href="#home" aria-label="School homepage">
-
         <img
           class="brand-logo"
           src="./logo.png"
           alt="Official school logo"
         >
-
         <div class="brand-text">
           <h2>GHSS</h2>
           <p>TIBBA SULTAN PUR</p>
         </div>
-
       </a>
 
       <nav class="nav-links" aria-label="Main navigation">
@@ -598,7 +605,6 @@
 
     <!-- HERO SECTION -->
     <section class="hero" id="home">
-
       <div class="hero-content">
 
         <div class="hero-label">
@@ -631,19 +637,15 @@
         </div>
 
       </div>
-
     </section>
 
 
     <!-- ABOUT SECTION -->
     <section class="section" id="about">
-
       <div class="container about-grid">
 
         <div class="about-content">
-
           <div class="section-label">About Our School</div>
-
           <h2>
             Education for Knowledge, Character and Progress
           </h2>
@@ -666,10 +668,9 @@
           </p>
 
           <a class="button button-primary" href="#contact"
-             style="background:#0B1F3A;color:#FFFFFF;">
+             style="background:#1B4332;color:#FFFFFF;border-color:#1B4332;">
             Get in Touch
           </a>
-
         </div>
 
         <div class="about-image">
@@ -681,26 +682,20 @@
         </div>
 
       </div>
-
     </section>
 
 
     <!-- ACADEMICS SECTION -->
     <section class="section discover" id="academics">
-
       <div class="container">
 
         <div class="section-heading">
-
           <div class="section-label">Learning and Development</div>
-
           <h2>Our Academic Environment</h2>
-
           <p>
             An educational environment focused on knowledge,
             learning and preparation for the future.
           </p>
-
         </div>
 
         <div class="cards-grid">
@@ -736,26 +731,20 @@
         </div>
 
       </div>
-
     </section>
 
 
     <!-- FACILITIES SECTION -->
     <section class="section" id="facilities">
-
       <div class="container">
 
         <div class="section-heading">
-
           <div class="section-label">School Life</div>
-
           <h2>Our School Community</h2>
-
           <p>
             A school is more than a place to study. It is a community
             where students learn, grow and prepare for life.
           </p>
-
         </div>
 
         <div class="cards-grid">
@@ -790,41 +779,30 @@
         </div>
 
       </div>
-
     </section>
 
 
     <!-- MISSION SECTION -->
     <section class="mission">
-
       <div class="container mission-content">
-
         <div class="section-label">Our Commitment</div>
-
         <h2>Building a Better Future Through Education</h2>
-
         <p>
           Our commitment is to support an educational environment
           where students can develop knowledge, strengthen their
           character and work towards their ambitions.
         </p>
-
       </div>
-
     </section>
 
 
     <!-- CONTACT SECTION -->
     <section class="section contact-section" id="contact">
-
       <div class="container">
 
         <div class="contact-panel">
-
           <div class="section-label">Contact and Information</div>
-
           <h2>Connect With Our School</h2>
-
           <p>
             For school-related information, admissions enquiries
             or other official matters, please contact the school
@@ -835,11 +813,9 @@
           <a class="button" href="#home">
             Back to Homepage
           </a>
-
         </div>
 
       </div>
-
     </section>
 
   </main>
@@ -847,14 +823,12 @@
 
   <!-- FOOTER -->
   <footer class="site-footer">
-
     <div class="container footer-inner">
 
       <div>
         <div class="footer-brand">
           Government Higher Secondary School
         </div>
-
         <div class="footer-location">
           Tibba Sultan Pur
         </div>
@@ -867,7 +841,6 @@
       </div>
 
     </div>
-
   </footer>
 
 
@@ -878,4 +851,3 @@
 
 </body>
 </html>
-
