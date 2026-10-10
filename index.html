@@ -12,15 +12,19 @@
 
   <meta name="theme-color" content="#174B35">
 
+  <!-- Official school logo as website favicon -->
+  <link rel="icon" type="image/png" href="./logo.png">
+  <link rel="apple-touch-icon" href="./logo.png">
+
   <style>
     :root {
       --green: #174B35;
-      --green-dark: #0B2B1D;
-      --green-light: #EAF1EC;
+      --dark-green: #0B2B1D;
+      --light-green: #EAF1EC;
       --white: #FFFFFF;
       --gold: #C6A34A;
-      --text: #25352C;
-      --muted: #647268;
+      --text: #26352D;
+      --muted: #657168;
     }
 
     * {
@@ -31,12 +35,14 @@
 
     html {
       scroll-behavior: smooth;
+      scroll-padding-top: 90px;
     }
 
     body {
       font-family: Arial, Helvetica, sans-serif;
       color: var(--text);
       background: var(--white);
+      line-height: 1.6;
     }
 
     a {
@@ -46,7 +52,7 @@
     /* HEADER */
 
     .header {
-      min-height: 88px;
+      min-height: 86px;
       padding: 12px 6%;
       display: flex;
       align-items: center;
@@ -54,12 +60,12 @@
       background: var(--white);
       border-bottom: 3px solid var(--gold);
       position: relative;
-      z-index: 5;
+      z-index: 10;
     }
 
     .logo {
-      width: 62px;
-      height: 62px;
+      width: 60px;
+      height: 60px;
       object-fit: contain;
       flex-shrink: 0;
     }
@@ -69,12 +75,13 @@
       font-size: 29px;
       font-weight: 800;
       letter-spacing: 1.5px;
+      line-height: 1.2;
     }
 
     .brand-subtitle {
-      color: var(--muted);
-      font-size: 11px;
       margin-top: 4px;
+      color: var(--muted);
+      font-size: 10px;
       letter-spacing: 1px;
     }
 
@@ -82,46 +89,47 @@
       margin-left: auto;
       display: flex;
       align-items: center;
-      gap: 26px;
+      gap: 25px;
     }
 
     .nav a {
-      text-decoration: none;
       color: var(--green);
       font-size: 14px;
       font-weight: 700;
+      text-decoration: none;
     }
 
     .nav a:hover {
       color: #987323;
     }
 
-    /* HERO: PHOTO OR VIDEO BACKGROUND */
+    /* HERO SECTION */
 
     .hero {
       min-height: 650px;
-      min-height: min(790px, calc(100svh - 88px));
+      min-height: min(790px, calc(100svh - 86px));
+      padding: 75px 22px;
       position: relative;
+      isolation: isolate;
+      overflow: hidden;
+
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
-      padding: 75px 22px;
-      overflow: hidden;
-      isolation: isolate;
-      color: var(--white);
 
-      background-color: var(--green-dark);
+      color: var(--white);
+      background-color: var(--dark-green);
 
       background-image:
         linear-gradient(
-          rgba(11, 43, 29, 0.74),
-          rgba(11, 43, 29, 0.79)
+          rgba(11, 43, 29, 0.77),
+          rgba(11, 43, 29, 0.80)
         ),
-        url("school-building.jpg");
+        url("./school-building.jpg");
 
-      background-position: center;
       background-size: cover;
+      background-position: center;
       background-repeat: no-repeat;
     }
 
@@ -138,7 +146,7 @@
       content: "";
       position: absolute;
       inset: 0;
-      background: rgba(11, 43, 29, 0.73);
+      background: rgba(11, 43, 29, 0.72);
       z-index: -1;
     }
 
@@ -149,70 +157,70 @@
     }
 
     .gold-line {
-      width: 66px;
+      width: 65px;
       height: 4px;
-      margin: 0 auto 27px;
+      margin: 0 auto 28px;
       background: var(--gold);
-      border-radius: 5px;
+      border-radius: 2px;
     }
 
     .welcome {
+      margin-bottom: 23px;
       color: #E8D39B;
-      font-size: 13px;
+      font-size: 12px;
       font-weight: 700;
-      letter-spacing: 4px;
+      letter-spacing: 3px;
       text-transform: uppercase;
-      margin-bottom: 24px;
     }
 
     .hero h1 {
-      font-size: clamp(34px, 5.2vw, 65px);
+      margin-bottom: 18px;
+      font-size: clamp(34px, 5.2vw, 64px);
       font-weight: 800;
       line-height: 1.15;
       letter-spacing: -1px;
-      margin-bottom: 19px;
       text-wrap: balance;
     }
 
     .location {
-      font-size: clamp(21px, 3vw, 31px);
-      font-weight: 500;
+      margin-bottom: 24px;
       color: #E8D39B;
-      margin-bottom: 25px;
+      font-size: clamp(21px, 3vw, 30px);
+      font-weight: 500;
     }
 
     .description {
       max-width: 660px;
-      margin: 0 auto 33px;
-      font-size: 17px;
-      line-height: 1.8;
+      margin: 0 auto 32px;
       color: #F0F5F1;
+      font-size: 16px;
+      line-height: 1.8;
     }
 
     .buttons {
       display: flex;
-      justify-content: center;
       align-items: center;
+      justify-content: center;
       flex-wrap: wrap;
       gap: 14px;
     }
 
     .btn {
-      display: inline-flex;
-      justify-content: center;
-      align-items: center;
       min-height: 48px;
-      padding: 14px 24px;
-      border-radius: 4px;
-      text-decoration: none;
+      padding: 13px 24px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 3px;
       font-size: 14px;
       font-weight: 700;
+      text-decoration: none;
       transition: background 0.2s, color 0.2s;
     }
 
     .btn-primary {
-      color: var(--green-dark);
       background: var(--gold);
+      color: var(--dark-green);
     }
 
     .btn-primary:hover {
@@ -229,99 +237,100 @@
       color: var(--green);
     }
 
-    /* SCHOOL INTRODUCTION */
+    /* ABOUT SECTION */
 
     .about {
-      padding: 85px 7%;
+      padding: 80px 7%;
       text-align: center;
       background: var(--white);
     }
 
     .section-label {
+      margin-bottom: 12px;
       color: #94752B;
       font-size: 12px;
-      letter-spacing: 3px;
       font-weight: 800;
+      letter-spacing: 3px;
       text-transform: uppercase;
-      margin-bottom: 14px;
     }
 
-    .about h2 {
-      color: var(--green);
-      font-size: clamp(28px, 4vw, 39px);
+    .about h2,
+    .highlights h2 {
       margin-bottom: 22px;
+      color: var(--green);
+      font-size: clamp(28px, 4vw, 38px);
+      line-height: 1.3;
     }
 
     .about p {
       max-width: 760px;
       margin: 0 auto;
       color: var(--muted);
-      line-height: 1.9;
       font-size: 16px;
+      line-height: 1.9;
     }
 
-    /* SCHOOL INFORMATION CARDS */
+    /* SCHOOL INFORMATION */
 
     .highlights {
-      padding: 55px 7% 75px;
-      background: var(--green-light);
+      padding: 65px 7% 75px;
+      background: var(--light-green);
     }
 
     .highlights h2 {
       text-align: center;
-      color: var(--green);
-      font-size: 30px;
       margin-bottom: 35px;
     }
 
     .cards {
       max-width: 1050px;
-      margin: auto;
+      margin: 0 auto;
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 22px;
     }
 
     .card {
+      padding: 30px 24px;
       background: var(--white);
       border-top: 4px solid var(--gold);
-      padding: 30px 23px;
-      border-radius: 5px;
+      border-radius: 3px;
       box-shadow: 0 5px 22px rgba(11, 43, 29, 0.06);
     }
 
     .card h3 {
+      margin-bottom: 12px;
       color: var(--green);
       font-size: 19px;
-      margin-bottom: 12px;
     }
 
     .card p {
       color: var(--muted);
-      line-height: 1.7;
       font-size: 14px;
+      line-height: 1.8;
     }
 
     /* FOOTER */
 
     .footer {
-      background: var(--green-dark);
+      padding: 28px 18px;
+      background: var(--dark-green);
       color: #E8EFEA;
       text-align: center;
-      padding: 28px 18px;
       font-size: 13px;
-      line-height: 1.8;
+      line-height: 1.9;
     }
 
     .footer strong {
       color: var(--white);
+      font-size: 15px;
     }
 
     .footer .gold {
       color: #E8D39B;
     }
 
-    /* MOBILE */
+    /* RESPONSIVE DESIGN */
 
     @media (max-width: 700px) {
       .header {
@@ -336,11 +345,12 @@
       }
 
       .brand {
-        font-size: 24px;
+        font-size: 23px;
       }
 
       .brand-subtitle {
         font-size: 9px;
+        letter-spacing: 0.5px;
       }
 
       .nav {
@@ -354,12 +364,12 @@
       .hero {
         min-height: 620px;
         min-height: max(620px, calc(100svh - 76px));
-        padding: 65px 20px;
+        padding: 60px 20px;
       }
 
       .welcome {
         font-size: 11px;
-        letter-spacing: 2.5px;
+        letter-spacing: 2px;
       }
 
       .hero h1 {
@@ -374,23 +384,31 @@
         padding: 60px 7%;
       }
 
-      .cards {
-        grid-template-columns: 1fr;
-      }
-
       .highlights {
         padding: 50px 7%;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
       }
     }
 
     @media (max-width: 380px) {
+      .header {
+        gap: 8px;
+      }
+
+      .logo {
+        width: 42px;
+        height: 42px;
+      }
+
       .brand {
-        font-size: 21px;
+        font-size: 20px;
       }
 
       .brand-subtitle {
         font-size: 8px;
-        letter-spacing: 0.5px;
       }
 
       .nav {
@@ -400,10 +418,17 @@
       .nav a {
         font-size: 11px;
       }
+    }
 
-      .logo {
-        width: 43px;
-        height: 43px;
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        transition: none !important;
       }
     }
   </style>
@@ -411,12 +436,12 @@
 
 <body>
 
-  <!-- OFFICIAL HEADER -->
+  <!-- OFFICIAL SCHOOL HEADER -->
 
   <header class="header">
     <img
-      src="logo.png"
-      alt="GHSS Tibba Sultan Pur official logo"
+      src="./logo.png"
+      alt="Official GHSS Tibba Sultan Pur logo"
       class="logo"
     >
 
@@ -431,22 +456,21 @@
     </nav>
   </header>
 
-  <!-- MAIN HOMEPAGE -->
+  <!-- HOMEPAGE HERO -->
 
   <main>
     <section class="hero" id="home">
 
-      <!-- Optional: add school-video.mp4 to enable video background -->
       <video
         class="hero-video"
         autoplay
         muted
         loop
         playsinline
-        poster="school-building.jpg"
+        poster="./school-building.jpg"
         aria-hidden="true"
       >
-        <source src="school-video.mp4" type="video/mp4">
+        <source src="./school-video.mp4" type="video/mp4">
       </video>
 
       <div class="hero-content">
@@ -463,8 +487,8 @@
         <p class="location">Tibba Sultan Pur</p>
 
         <p class="description">
-          A place of learning, character building and opportunity,
-          dedicated to education and a brighter future for our students.
+          Dedicated to education, character building and
+          creating opportunities for a brighter future.
         </p>
 
         <div class="buttons">
@@ -489,14 +513,14 @@
 
       <p>
         Government Higher Secondary School, Tibba Sultan Pur,
-        is dedicated to providing educational opportunities and
-        supporting students in their academic development.
-        This official website will share school information,
-        educational activities and achievements.
+        is committed to supporting students in their academic
+        development and educational journey. This website will
+        provide school information, educational activities,
+        announcements and achievements.
       </p>
     </section>
 
-    <!-- INFORMATION SECTIONS -->
+    <!-- SCHOOL INFORMATION -->
 
     <section class="highlights" id="highlights">
       <h2>Discover Our School</h2>
@@ -506,24 +530,24 @@
         <article class="card">
           <h3>Our School</h3>
           <p>
-            Learn about our school, its educational mission
+            Learn about the school, its educational mission
             and its commitment to student development.
           </p>
         </article>
 
         <article class="card">
-          <h3>Education & Learning</h3>
+          <h3>Education and Learning</h3>
           <p>
-            Discover our academic activities, learning
-            environment and educational opportunities.
+            Explore the academic environment, learning
+            activities and educational opportunities.
           </p>
         </article>
 
         <article class="card">
-          <h3>News & Activities</h3>
+          <h3>News and Activities</h3>
           <p>
-            A place to share school events, student activities
-            and important announcements.
+            Find school announcements, events, student
+            activities and important updates.
           </p>
         </article>
 
@@ -535,7 +559,11 @@
 
   <footer class="footer">
     <strong>GHSS Tibba Sultan Pur</strong>
-    <p class="gold">Government Higher Secondary School</p>
+
+    <p class="gold">
+      Government Higher Secondary School
+    </p>
+
     <p>
       &copy; <span id="year"></span>
       GHSS Tibba Sultan Pur. All rights reserved.
