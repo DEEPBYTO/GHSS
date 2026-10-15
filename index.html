@@ -3,29 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>GHSS Tibba Sultan Pur – Government Higher Secondary School</title>
-  <meta name="description" content="Government Higher Secondary School Tibba Sultan Pur – Established 1885. Quality education, modern facilities, and a commitment to student success." />
-  <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://ghsstibbasultanpur.github.io/" />
+  <title>Gallery – GHSS Tibba Sultan Pur</title>
+  <meta name="description" content="Photo gallery of Government Higher Secondary School Tibba Sultan Pur – Beauty of GHSS." />
   <link rel="icon" href="https://raw.githubusercontent.com/DEEPBYTO/GHSS/main/logo.png" type="image/png" />
   <meta name="theme-color" content="#0a1a2f" />
-  <meta property="og:title" content="GHSS Tibba Sultan Pur | Government Higher Secondary School" />
-  <meta property="og:description" content="Established 1885 – Quality education, modern facilities, and a commitment to student success." />
-  <meta property="og:image" content="https://raw.githubusercontent.com/DEEPBYTO/GHSS/main/logo.png" />
-  <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="GHSS Tibba Sultan Pur" />
-  <meta name="twitter:card" content="summary_large_image" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&family=Orbitron:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <style>
-    /* ----- RESET & ROOT ----- */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     :root {
       --bg-primary: #0a1a2f;
       --bg-secondary: #112240;
@@ -37,7 +24,6 @@
       --text-secondary: #ccd6e0;
       --text-muted: #8899aa;
       --border-subtle: rgba(255, 255, 255, 0.08);
-      --glass-bg: rgba(10, 26, 47, 0.6);
       --glass-border: rgba(255, 255, 255, 0.12);
       --radius: 16px;
       --radius-sm: 10px;
@@ -45,27 +31,7 @@
       --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
       --font-display: 'Orbitron', 'Inter', sans-serif;
       --shadow-color: rgba(0,0,0,0.6);
-      --btn-primary-bg: #f0c040;
-      --btn-primary-color: #0a1a2f;
-      --btn-primary-hover: #e0b030;
-      --btn-secondary-border: rgba(240, 192, 64, 0.4);
-      --btn-secondary-hover-bg: rgba(240, 192, 64, 0.1);
-      --badge-bg: rgba(240, 192, 64, 0.1);
-      --badge-border: rgba(240, 192, 64, 0.25);
-      --footer-border: var(--border-subtle);
-      --contact-card-bg: var(--bg-card);
-      --scrollbar-thumb: #f0c040;
-      --scrollbar-track: #0a1a2f;
-      --nav-bg: rgba(10, 26, 47, 0.75);
-      --nav-scrolled: rgba(10, 26, 47, 0.97);
-      --whatsapp-border: rgba(240, 192, 64, 0.3);
-      --wordmark-filter: brightness(0) invert(1);
-      --hero-overlay: rgba(10, 26, 47, 0.75);
-      --hero-overlay-2: rgba(10, 26, 47, 0.5);
-      --modal-backdrop: rgba(0, 0, 0, 0.8);
-      --green-accent: #2ecc71;
     }
-
     html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
     body {
       font-family: var(--font-sans);
@@ -73,1815 +39,403 @@
       color: var(--text-primary);
       line-height: 1.6;
       overflow-x: hidden;
+      min-height: 100vh;
     }
     ::selection { background: var(--accent); color: var(--bg-primary); }
     a { color: var(--text-primary); text-decoration: none; transition: color var(--transition); }
     a:hover { color: var(--accent); }
     img { max-width: 100%; display: block; }
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 24px;
-      position: relative;
-      z-index: 2;
-    }
-    .section-padding {
-      padding: 100px 0 80px;
-    }
+    .container { max-width: 1400px; margin: 0 auto; padding: 0 24px; }
     ::-webkit-scrollbar { width: 8px; height: 8px; }
-    ::-webkit-scrollbar-track { background: var(--scrollbar-track); }
-    ::-webkit-scrollbar-thumb { background: var(--scrollbar-thumb); border-radius: 12px; }
-    ::-webkit-scrollbar-thumb:hover { background: var(--text-muted); }
+    ::-webkit-scrollbar-track { background: var(--bg-primary); }
+    ::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 12px; }
 
-    /* ----- FLOATING WHATSAPP BUTTON ----- */
-    .whatsapp-float {
-      position: fixed;
-      bottom: 28px;
-      right: 28px;
-      z-index: 9999;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 60px;
-      height: 60px;
-      border-radius: 50%;
-      background: var(--bg-primary);
-      color: var(--accent);
-      font-size: 2.2rem;
-      box-shadow: 0 8px 30px var(--shadow-color);
-      transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
-      border: 2px solid var(--whatsapp-border);
-      cursor: pointer;
-      text-decoration: none;
-    }
-    .whatsapp-float:hover {
-      transform: scale(1.08);
-      box-shadow: 0 12px 40px var(--accent-glow);
-      background: var(--bg-secondary);
-      border-color: var(--accent);
-      color: var(--accent);
-    }
-    .whatsapp-float i {
-      filter: drop-shadow(0 2px 4px var(--shadow-color));
-    }
-    @media (max-width: 480px) {
-      .whatsapp-float {
-        width: 52px;
-        height: 52px;
-        font-size: 1.8rem;
-        bottom: 18px;
-        right: 18px;
-      }
-    }
-
-    /* ----- PARTICLES CANVAS ----- */
-    #particles-canvas {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 0;
-      pointer-events: none;
-    }
-
-    /* ----- NAVBAR ----- */
-    .navbar {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      z-index: 1000;
+    /* Header */
+    .gallery-page-header {
+      position: fixed; top: 0; left: 0; width: 100%; z-index: 1000;
       padding: 16px 0;
-      background: var(--nav-bg);
+      background: rgba(10, 26, 47, 0.9);
       backdrop-filter: blur(18px) saturate(1.2);
       -webkit-backdrop-filter: blur(18px) saturate(1.2);
       border-bottom: 1px solid var(--glass-border);
-      transition: background var(--transition), box-shadow var(--transition), border-color var(--transition);
     }
-    .navbar.scrolled {
-      background: var(--nav-scrolled);
-      backdrop-filter: blur(24px) saturate(1.3);
-      -webkit-backdrop-filter: blur(24px) saturate(1.3);
-      box-shadow: 0 4px 25px var(--shadow-color);
-    }
-    .navbar .container {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-    .nav-brand {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-    .nav-brand .brand-logo {
-      height: 48px;
-      width: auto;
-      border-radius: 8px;
-      object-fit: contain;
-    }
-    .nav-brand .school-name {
-      display: flex;
-      flex-direction: column;
-      line-height: 1.1;
-    }
-    .nav-brand .school-name .line-1 {
-      font-family: var(--font-display);
-      font-weight: 800;
-      font-size: 1.15rem;
-      letter-spacing: 0.06em;
-      color: var(--accent);
-    }
-    .nav-brand .school-name .line-2 {
-      font-family: var(--font-sans);
-      font-weight: 500;
-      font-size: 0.7rem;
-      letter-spacing: 0.05em;
-      color: var(--text-secondary);
-      text-transform: uppercase;
-    }
-    .nav-brand .school-name .line-3 {
-      font-family: var(--font-sans);
-      font-weight: 400;
-      font-size: 0.62rem;
-      letter-spacing: 0.08em;
-      color: var(--text-muted);
-    }
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 28px;
-      list-style: none;
-    }
-    .nav-links a {
-      font-size: 0.85rem;
-      font-weight: 500;
-      color: var(--text-secondary);
-      letter-spacing: 0.02em;
-      transition: color var(--transition);
-      position: relative;
-    }
-    .nav-links a::after {
-      content: '';
-      position: absolute;
-      left: 0;
-      bottom: -4px;
-      width: 0;
-      height: 2px;
-      background: var(--accent);
-      transition: width var(--transition);
-      border-radius: 4px;
-    }
-    .nav-links a:hover { color: var(--accent); }
-    .nav-links a:hover::after { width: 100%; }
-    .nav-links a.active { color: var(--accent); }
-    .nav-links a.active::after { width: 100%; }
-
-    .nav-cta {
-      display: inline-block;
-      padding: 8px 20px;
-      border-radius: 50px;
-      background: var(--btn-primary-bg);
-      color: var(--btn-primary-color) !important;
-      font-weight: 600;
-      font-size: 0.8rem;
-      letter-spacing: 0.03em;
-      transition: background var(--transition), transform var(--transition), box-shadow var(--transition);
-      border: none;
-      cursor: pointer;
-    }
-    .nav-cta:hover {
-      background: var(--btn-primary-hover);
-      color: var(--btn-primary-color) !important;
-      transform: translateY(-1px);
-      box-shadow: 0 8px 20px var(--accent-glow);
-    }
-    .nav-cta::after { display: none !important; }
-
-    .nav-toggle {
-      display: none;
-      flex-direction: column;
-      gap: 5px;
-      background: none;
-      border: none;
-      cursor: pointer;
-      padding: 6px;
-      border-radius: 6px;
-    }
-    .nav-toggle:hover { background: var(--accent-dim); }
-    .nav-toggle span {
-      display: block;
-      width: 26px;
-      height: 2px;
-      background: var(--text-primary);
-      border-radius: 4px;
-      transition: all 0.3s ease;
-      transform-origin: center;
-    }
-    .nav-toggle.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
-    .nav-toggle.active span:nth-child(2) { opacity: 0; transform: scaleX(0); }
-    .nav-toggle.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
-
-    /* ----- HERO ----- */
-    .hero {
-      position: relative;
-      z-index: 1;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      padding: 120px 0 80px;
-      overflow: hidden;
-      background-color: #0a1a2f;
-    }
-    .hero-bg-rotator {
-      position: absolute;
-      inset: 0;
-      z-index: 0;
-    }
-    .hero-bg-rotator .bg-slide {
-      position: absolute;
-      inset: 0;
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      opacity: 0;
-      transition: opacity 1.2s ease-in-out;
-      will-change: opacity;
-    }
-    .hero-bg-rotator .bg-slide.active {
-      opacity: 1;
-    }
-    .hero-bg-rotator::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(135deg, rgba(10,26,47,0.88) 0%, rgba(10,26,47,0.55) 50%, rgba(10,26,47,0.82) 100%);
-      z-index: 1;
-    }
-
-    .hero-content {
-      position: relative;
-      z-index: 2;
-      max-width: 820px;
-    }
-    .hero-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 6px 16px 6px 8px;
-      border-radius: 50px;
-      background: var(--accent-dim);
-      border: 1px solid var(--glass-border);
-      font-size: 0.75rem;
-      font-weight: 500;
-      color: var(--text-primary);
-      letter-spacing: 0.04em;
-      margin-bottom: 28px;
-      backdrop-filter: blur(4px);
-    }
-    .hero-badge .badge-dot {
-      display: inline-block;
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      background: var(--accent);
-      animation: pulse-dot 2s ease-in-out infinite;
-    }
-    @keyframes pulse-dot {
-      0%, 100% { opacity: 1; transform: scale(1); }
-      50% { opacity: 0.4; transform: scale(0.75); }
-    }
-
-    /* HERO LOGO + TEXT BLOCK */
-    .hero-brand-block {
-      display: flex;
-      align-items: center;
-      gap: 24px;
-      margin-bottom: 8px;
-    }
-    .hero-logo {
-      height: clamp(80px, 14vw, 130px);
-      width: auto;
-      object-fit: contain;
-      filter: drop-shadow(0 6px 20px rgba(0,0,0,0.5));
-    }
-    .hero-brand-text {
-      display: flex;
-      flex-direction: column;
-    }
-    .hero-brand-text .brand-line-1 {
-      font-family: var(--font-display);
-      font-weight: 900;
-      font-size: clamp(3rem, 9vw, 5.5rem);
-      line-height: 1;
-      letter-spacing: 0.02em;
-      color: var(--accent);
-      text-shadow: 0 4px 24px rgba(0,0,0,0.6);
-    }
-    .hero-brand-text .brand-line-2 {
-      font-family: var(--font-sans);
-      font-weight: 600;
-      font-size: clamp(0.9rem, 2vw, 1.35rem);
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: #ffffff;
-      margin-top: 6px;
-      text-shadow: 0 2px 12px rgba(0,0,0,0.6);
-    }
-    .hero-brand-text .brand-line-3 {
-      font-family: var(--font-sans);
-      font-weight: 400;
-      font-size: clamp(0.75rem, 1.4vw, 1rem);
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--text-secondary);
-      margin-top: 2px;
-    }
-
-    .hero-subtitle {
-      font-family: var(--font-display);
-      font-weight: 500;
-      font-size: clamp(0.9rem, 2vw, 1.3rem);
-      color: var(--text-secondary);
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      margin: 20px 0 20px;
-    }
-    .hero-description {
-      font-size: 1.05rem;
-      color: var(--text-secondary);
-      max-width: 560px;
-      line-height: 1.8;
-      margin-bottom: 32px;
-    }
-    .hero-typing {
-      font-size: 1.05rem;
-      color: var(--accent);
-      font-weight: 500;
-      min-height: 2.2rem;
-      margin-bottom: 28px;
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
-    .hero-typing .cursor {
-      display: inline-block;
-      width: 2px;
-      height: 1.2em;
-      background: var(--accent);
-      animation: blink 0.9s step-end infinite;
-      margin-left: 2px;
-    }
-    @keyframes blink {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0; }
-    }
-    .hero-buttons {
-      display: flex;
+    .gallery-page-header .container {
+      display: flex; align-items: center; justify-content: space-between; gap: 16px;
       flex-wrap: wrap;
-      gap: 14px;
     }
-    .btn-primary {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      padding: 14px 36px;
-      border-radius: 50px;
-      background: var(--btn-primary-bg);
-      color: var(--btn-primary-color);
-      font-weight: 600;
-      font-size: 0.95rem;
-      border: none;
-      cursor: pointer;
-      transition: all var(--transition);
-      box-shadow: 0 4px 15px var(--accent-glow);
-      font-family: var(--font-sans);
+    .back-home {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 9px 20px; border-radius: 50px;
+      background: var(--accent-dim); border: 1px solid var(--glass-border);
+      font-size: 0.82rem; font-weight: 600; letter-spacing: 0.03em;
+      color: var(--text-secondary); transition: all var(--transition);
     }
-    .btn-primary:hover {
-      background: var(--btn-primary-hover);
-      transform: translateY(-2px);
-      box-shadow: 0 12px 25px var(--accent-glow);
-      color: var(--btn-primary-color);
+    .back-home:hover {
+      background: var(--accent); color: var(--bg-primary);
+      border-color: var(--accent); transform: translateX(-3px);
     }
-    .btn-secondary {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      padding: 14px 36px;
-      border-radius: 50px;
-      background: transparent;
-      color: var(--text-primary);
-      font-weight: 500;
-      font-size: 0.95rem;
-      border: 1px solid var(--btn-secondary-border);
-      cursor: pointer;
-      transition: all var(--transition);
-      font-family: var(--font-sans);
+    .gallery-page-header .brand {
+      display: flex; align-items: center; gap: 10px;
     }
-    .btn-secondary:hover {
-      background: var(--btn-secondary-hover-bg);
-      border-color: var(--accent);
-      transform: translateY(-2px);
+    .gallery-page-header .brand img {
+      height: 40px; width: auto; object-fit: contain; border-radius: 6px;
     }
-    .section-label {
+    .gallery-page-header .brand-text {
+      display: flex; flex-direction: column; line-height: 1.1;
+    }
+    .gallery-page-header .brand-line-1 {
+      font-family: var(--font-display); font-weight: 800;
+      font-size: 1rem; letter-spacing: 0.06em; color: var(--accent);
+    }
+    .gallery-page-header .brand-line-2 {
+      font-size: 0.62rem; color: var(--text-muted);
+      letter-spacing: 0.08em; text-transform: uppercase;
+    }
+
+    /* Hero of gallery page */
+    .gallery-hero {
+      padding: 160px 0 60px;
+      text-align: center;
+      background: radial-gradient(circle at 50% 30%,
+        rgba(240, 192, 64, 0.12) 0%,
+        rgba(10, 26, 47, 0) 55%);
+      position: relative;
+    }
+    .gallery-hero .section-label {
       display: inline-block;
-      font-family: var(--font-display);
-      font-weight: 500;
-      font-size: 0.7rem;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 12px;
-      background: var(--accent-dim);
-      padding: 4px 14px;
-      border-radius: 50px;
-      border: 1px solid var(--glass-border);
+      font-family: var(--font-display); font-weight: 500;
+      font-size: 0.7rem; letter-spacing: 0.2em;
+      text-transform: uppercase; color: var(--accent);
+      background: var(--accent-dim); padding: 5px 16px;
+      border-radius: 50px; border: 1px solid var(--glass-border);
+      margin-bottom: 18px;
     }
-    .section-title {
+    .gallery-hero h1 {
       font-family: var(--font-display);
-      font-weight: 700;
-      font-size: clamp(2rem, 4vw, 3rem);
-      letter-spacing: -0.02em;
-      margin-bottom: 16px;
-      line-height: 1.15;
-      color: var(--text-primary);
+      font-size: clamp(2.4rem, 6vw, 4.2rem);
+      font-weight: 800; letter-spacing: -0.02em;
+      line-height: 1.1; margin-bottom: 18px;
     }
-    .section-title .highlight { color: var(--accent); }
-    .section-desc {
+    .gallery-hero h1 .highlight { color: var(--accent); }
+    .gallery-hero p {
       color: var(--text-secondary);
-      max-width: 600px;
-      font-size: 1.05rem;
-      line-height: 1.7;
+      max-width: 640px; margin: 0 auto;
+      font-size: 1.05rem; line-height: 1.75;
     }
-
-    /* ============================================
-       ABOUT / HISTORY TIMELINE
-       ============================================ */
-    #about {
-      position: relative;
-      background: var(--bg-secondary);
-      border-top: 1px solid var(--border-subtle);
-      border-bottom: 1px solid var(--border-subtle);
-      overflow: hidden;
-      isolation: isolate;
-    }
-
-    .about-waves {
-      position: absolute;
-      inset: 0;
-      z-index: 0;
-      pointer-events: none;
-      overflow: hidden;
-    }
-    .about-waves .glow-orb {
-      position: absolute;
-      border-radius: 50%;
-      filter: blur(90px);
-      pointer-events: none;
-      opacity: 0.25;
-    }
-    .about-waves .glow-orb.blue {
-      width: 420px;
-      height: 420px;
-      background: #3b82f6;
-      top: -100px;
-      left: -100px;
-      animation: floatOrb 14s ease-in-out infinite;
-    }
-    .about-waves .glow-orb.green {
-      width: 480px;
-      height: 480px;
-      background: #f0c040;
-      bottom: -140px;
-      right: -120px;
-      animation: floatOrb 18s ease-in-out infinite reverse;
-    }
-    @keyframes floatOrb {
-      0%, 100% { transform: translate(0, 0) scale(1); }
-      50%      { transform: translate(40px, -30px) scale(1.1); }
-    }
-
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 60px;
-      margin-top: 48px;
-      align-items: start;
-      position: relative;
-      z-index: 2;
-    }
-    .about-text p {
-      color: var(--text-secondary);
-      font-size: 1rem;
-      line-height: 1.8;
-      margin-bottom: 16px;
-    }
-    .about-text p:last-child { margin-bottom: 0; }
-
-    /* ============================================
-       HISTORY TIMELINE (replaces old value cards)
-       ============================================ */
-    .history-block {
-      position: relative;
-      padding: 8px 0 8px 4px;
-    }
-    .history-heading {
-      font-family: var(--font-display);
-      font-size: 1.15rem;
-      font-weight: 700;
-      letter-spacing: 0.04em;
-      color: var(--accent);
-      margin-bottom: 26px;
-      text-transform: uppercase;
-    }
-    .history-heading .heading-sub {
-      display: block;
-      font-family: var(--font-sans);
-      font-size: 0.72rem;
-      font-weight: 500;
-      letter-spacing: 0.18em;
-      color: var(--text-muted);
-      margin-top: 4px;
-      text-transform: uppercase;
-    }
-
-    .timeline {
-      position: relative;
-      padding-left: 34px;
-    }
-    .timeline::before {
-      content: '';
-      position: absolute;
-      top: 6px;
-      left: 9px;
-      bottom: 6px;
-      width: 2px;
-      background: linear-gradient(to bottom,
-        rgba(240, 192, 64, 0.05) 0%,
-        var(--accent) 12%,
-        var(--accent) 88%,
-        rgba(240, 192, 64, 0.05) 100%);
-      border-radius: 2px;
-    }
-
-    .timeline-item {
-      position: relative;
-      padding: 0 0 26px 0;
-    }
-    .timeline-item:last-child { padding-bottom: 0; }
-
-    .timeline-item .tl-dot {
-      position: absolute;
-      left: -33px;
-      top: 4px;
-      width: 20px;
-      height: 20px;
-      border-radius: 50%;
-      background: var(--bg-secondary);
-      border: 2px solid var(--accent);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: all var(--transition);
-      box-shadow: 0 0 0 0 var(--accent-glow);
-      z-index: 2;
-    }
-    .timeline-item .tl-dot::after {
-      content: '';
-      width: 7px;
-      height: 7px;
-      border-radius: 50%;
-      background: var(--accent);
-      transition: all var(--transition);
-    }
-    .timeline-item:hover .tl-dot {
-      box-shadow: 0 0 0 6px var(--accent-glow);
-      transform: scale(1.08);
-    }
-
-    .timeline-item .tl-year {
-      font-family: var(--font-display);
-      font-weight: 800;
-      font-size: 1.5rem;
-      line-height: 1;
-      color: var(--accent);
-      letter-spacing: 0.03em;
-      margin-bottom: 4px;
-      display: block;
-      transition: transform var(--transition);
-    }
-    .timeline-item:hover .tl-year {
-      transform: translateX(3px);
-    }
-
-    .timeline-item .tl-title {
-      font-family: var(--font-sans);
-      font-weight: 600;
-      font-size: 0.92rem;
-      color: var(--text-primary);
-      margin-bottom: 2px;
-      letter-spacing: 0.01em;
-    }
-    .timeline-item .tl-desc {
-      font-size: 0.8rem;
-      color: var(--text-muted);
-      line-height: 1.55;
-    }
-
-    /* Anniversary highlight badge */
-    .anniversary-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 12px;
+    .gallery-hero .gallery-meta {
+      display: inline-flex; align-items: center; gap: 10px;
       margin-top: 26px;
-      padding: 14px 24px;
-      border-radius: var(--radius-sm);
-      background: linear-gradient(135deg, rgba(240, 192, 64, 0.14) 0%, rgba(240, 192, 64, 0.05) 100%);
-      border: 1px solid var(--badge-border);
-      backdrop-filter: blur(8px);
-      -webkit-backdrop-filter: blur(8px);
+      padding: 10px 22px; border-radius: 50px;
+      background: var(--accent-dim); border: 1px solid var(--glass-border);
+      color: var(--accent); font-weight: 600;
+      font-size: 0.85rem; letter-spacing: 0.04em;
+    }
+    .gallery-hero .gallery-meta i { font-size: 1rem; }
+
+    /* Filter/Info bar */
+    .gallery-toolbar {
+      display: flex; justify-content: space-between; align-items: center;
+      flex-wrap: wrap; gap: 16px; margin: 20px 0 30px;
+      padding: 16px 22px; border-radius: var(--radius-sm);
+      background: var(--bg-card); border: 1px solid var(--glass-border);
+      backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+    }
+    .gallery-toolbar .info {
+      font-size: 0.85rem; color: var(--text-secondary);
+      display: flex; align-items: center; gap: 10px;
+    }
+    .gallery-toolbar .info strong { color: var(--accent); font-weight: 700; }
+    .view-mode {
+      display: inline-flex; gap: 6px;
+      padding: 4px; border-radius: 50px;
+      background: rgba(10, 26, 47, 0.6);
+      border: 1px solid var(--glass-border);
+    }
+    .view-mode button {
+      background: none; border: none; cursor: pointer;
+      padding: 7px 16px; border-radius: 50px;
+      color: var(--text-muted); font-size: 0.75rem;
+      font-weight: 600; letter-spacing: 0.04em;
       transition: all var(--transition);
+      font-family: var(--font-sans);
+      display: inline-flex; align-items: center; gap: 6px;
     }
-    .anniversary-badge:hover {
-      border-color: var(--accent);
-      box-shadow: 0 10px 30px var(--accent-glow);
-      transform: translateY(-2px);
-    }
-    .anniversary-badge .anniv-icon {
-      font-size: 1.6rem;
-      color: var(--accent);
-      flex-shrink: 0;
-    }
-    .anniversary-badge .anniv-text {
-      display: flex;
-      flex-direction: column;
-      line-height: 1.2;
-    }
-    .anniversary-badge .anniv-num {
-      font-family: var(--font-display);
-      font-weight: 800;
-      font-size: 1.35rem;
-      color: var(--accent);
-      letter-spacing: 0.02em;
-    }
-    .anniversary-badge .anniv-label {
-      font-size: 0.72rem;
-      font-weight: 500;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--text-secondary);
+    .view-mode button:hover { color: var(--text-primary); }
+    .view-mode button.active {
+      background: var(--accent); color: var(--bg-primary);
+      box-shadow: 0 4px 14px var(--accent-glow);
     }
 
-    /* ============================================
-       ACADEMICS / SERVICES
-       ============================================ */
-    #academics {
-      background: var(--bg-primary);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .services-stack {
-      margin-top: 0;
-      display: flex;
-      flex-direction: column;
-      position: relative;
-      z-index: 2;
-    }
-
-    .service-bg {
-      position: relative;
-      width: 100%;
-      min-height: 70vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-      text-decoration: none;
-      color: #ffffff;
-      isolation: isolate;
-      cursor: pointer;
-    }
-
-    .service-bg .bg-image {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      z-index: -2;
-      transition: transform 1s cubic-bezier(0.25, 0.46, 0.45, 0.94), filter 0.6s ease;
-      filter: brightness(0.6) contrast(1.05) saturate(1.05);
-    }
-    .service-bg:hover .bg-image {
-      transform: scale(1.06);
-      filter: brightness(0.7) contrast(1.05) saturate(1.1);
-    }
-
-    .service-bg .bg-overlay {
-      position: absolute;
-      inset: 0;
-      z-index: -1;
-      background: linear-gradient(
-        110deg,
-        rgba(10, 26, 47, 0.92) 0%,
-        rgba(10, 26, 47, 0.75) 45%,
-        rgba(10, 26, 47, 0.45) 75%,
-        rgba(10, 26, 47, 0.7) 100%
-      );
-      transition: opacity 0.5s ease;
-    }
-    .service-bg:hover .bg-overlay {
-      opacity: 0.9;
-    }
-
-    .service-bg .service-inner {
-      position: relative;
-      z-index: 2;
-      max-width: 1200px;
-      width: 100%;
-      padding: 80px 48px;
+    /* Gallery grid */
+    .gallery-full-grid {
       display: grid;
-      grid-template-columns: 1fr;
-      gap: 0;
-    }
-
-    .service-bg .service-num {
-      font-family: var(--font-display);
-      font-size: 0.75rem;
-      font-weight: 600;
-      letter-spacing: 0.28em;
-      color: var(--accent);
-      margin-bottom: 20px;
-      display: inline-block;
-    }
-
-    .service-bg .service-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      padding: 6px 16px;
-      border-radius: 50px;
-      background: rgba(240, 192, 64, 0.15);
-      border: 1px solid rgba(240, 192, 64, 0.3);
-      font-size: 0.7rem;
-      font-weight: 600;
-      color: var(--accent);
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      margin-bottom: 20px;
-      backdrop-filter: blur(8px);
-      -webkit-backdrop-filter: blur(8px);
-    }
-
-    .service-bg h3 {
-      font-family: var(--font-display);
-      font-size: clamp(2rem, 5vw, 3.2rem);
-      font-weight: 800;
-      letter-spacing: -0.02em;
-      line-height: 1.1;
-      margin-bottom: 22px;
-      color: #ffffff;
-      text-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
-      max-width: 700px;
-    }
-
-    .service-bg .service-desc {
-      font-size: clamp(1rem, 1.3vw, 1.15rem);
-      line-height: 1.75;
-      color: rgba(255, 255, 255, 0.9);
-      max-width: 620px;
-      margin-bottom: 32px;
-      text-shadow: 0 2px 15px rgba(0, 0, 0, 0.4);
-    }
-
-    .service-bg .service-bottom {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 22px;
-    }
-
-    .service-bg .service-pricing {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 10px 22px;
-      border-radius: 50px;
-      background: rgba(240, 192, 64, 0.12);
-      border: 1px solid rgba(240, 192, 64, 0.3);
-      font-size: 0.85rem;
-      font-weight: 600;
-      color: var(--accent);
-      letter-spacing: 0.03em;
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-      transition: all 0.3s ease;
-    }
-    .service-bg:hover .service-pricing {
-      background: rgba(240, 192, 64, 0.2);
-      border-color: rgba(240, 192, 64, 0.5);
-    }
-
-    .service-bg .service-cta {
-      display: inline-flex;
-      align-items: center;
-      gap: 12px;
-      font-size: 0.9rem;
-      font-weight: 600;
-      letter-spacing: 0.04em;
-      color: #ffffff;
-      transition: gap 0.3s ease;
-    }
-    .service-bg .service-cta .cta-arrow {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 42px;
-      height: 42px;
-      border-radius: 50%;
-      background: var(--accent);
-      color: #0a1a2f;
-      font-size: 0.85rem;
-      transition: all 0.35s ease;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
-    }
-    .service-bg:hover .service-cta {
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
       gap: 18px;
+      padding-bottom: 80px;
+      transition: all 0.4s ease;
     }
-    .service-bg:hover .service-cta .cta-arrow {
-      transform: translateX(6px) rotate(-45deg);
-      box-shadow: 0 6px 30px rgba(240, 192, 64, 0.4);
+    .gallery-full-grid.masonry {
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      grid-auto-rows: 220px;
     }
+    .gallery-full-grid.masonry .gallery-item:nth-child(3n+1) { grid-row: span 2; }
+    .gallery-full-grid.masonry .gallery-item:nth-child(5n+2) { grid-row: span 2; }
+    .gallery-full-grid.masonry .gallery-item:nth-child(7n+3) { grid-column: span 2; }
 
-    .service-bg::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 100%;
-      width: 4px;
-      background: linear-gradient(to bottom, transparent, var(--accent), transparent);
-      opacity: 0;
-      transition: opacity 0.5s ease;
-      z-index: 3;
-    }
-    .service-bg:hover::before {
-      opacity: 0.8;
-    }
-
-    .service-bg.right .service-inner {
-      text-align: right;
-      justify-items: end;
-    }
-    .service-bg.right .service-desc {
-      margin-left: auto;
-    }
-    .service-bg.right .service-bottom {
-      justify-content: flex-end;
-    }
-    .service-bg.right h3 {
-      margin-left: auto;
-    }
-
-    /* ============================================
-       FACILITIES / LABS
-       ============================================ */
-    #facilities {
-      background: var(--bg-secondary);
-      border-top: 1px solid var(--border-subtle);
-      border-bottom: 1px solid var(--border-subtle);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .labs-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 24px;
-      margin-top: 48px;
-      position: relative;
-      z-index: 2;
-    }
-
-    .lab-card {
-      position: relative;
-      border-radius: var(--radius);
-      overflow: hidden;
-      background: var(--bg-card);
+    .gallery-item {
+      position: relative; aspect-ratio: 1 / 1;
+      border-radius: var(--radius-sm); overflow: hidden;
+      cursor: pointer; background: var(--bg-secondary);
       border: 1px solid var(--glass-border);
       transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-      cursor: pointer;
-      display: flex;
-      flex-direction: column;
-      min-height: 320px;
     }
-    .lab-card:hover {
+    .gallery-full-grid.masonry .gallery-item { aspect-ratio: auto; height: 100%; }
+    .gallery-item:hover {
       border-color: var(--accent);
-      transform: translateY(-8px);
-      box-shadow: 0 24px 45px var(--shadow-color), 0 0 50px var(--accent-dim);
+      transform: translateY(-6px) scale(1.02);
+      box-shadow: 0 20px 40px var(--shadow-color), 0 0 40px var(--accent-dim);
+      z-index: 3;
     }
-
-    .lab-card .lab-image {
-      position: relative;
-      width: 100%;
-      aspect-ratio: 16 / 10;
-      overflow: hidden;
-      background: var(--bg-primary);
-      flex-shrink: 0;
-    }
-    .lab-card .lab-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
+    .gallery-item img {
+      width: 100%; height: 100%; object-fit: cover; display: block;
       transition: transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94), filter 0.5s ease;
-      filter: brightness(0.8) contrast(1.05) saturate(1.05);
+      filter: brightness(0.85) contrast(1.05) saturate(1.05);
     }
-    .lab-card:hover .lab-image img {
-      transform: scale(1.08);
-      filter: brightness(0.95) contrast(1.05) saturate(1.15);
+    .gallery-item:hover img {
+      transform: scale(1.12);
+      filter: brightness(1) contrast(1.05) saturate(1.15);
     }
-    .lab-card .lab-image::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(
-        to bottom,
-        rgba(10, 26, 47, 0) 50%,
-        rgba(10, 26, 47, 0.6) 100%
-      );
-      pointer-events: none;
-      transition: opacity 0.4s ease;
+    .gallery-item::after {
+      content: ''; position: absolute; inset: 0;
+      background: linear-gradient(to top, rgba(10, 26, 47, 0.85) 0%, rgba(10, 26, 47, 0) 55%);
+      opacity: 0.9; transition: opacity 0.4s ease; pointer-events: none;
     }
-    .lab-card:hover .lab-image::after {
-      opacity: 0.6;
+    .gallery-item:hover::after { opacity: 0.5; }
+    .gallery-item .gallery-caption {
+      position: absolute; bottom: 0; left: 0; right: 0;
+      padding: 14px 16px; z-index: 2;
     }
-
-    .lab-card .lab-num {
-      position: absolute;
-      top: 16px;
-      left: 16px;
-      z-index: 2;
-      font-family: var(--font-display);
-      font-size: 0.7rem;
-      font-weight: 700;
-      letter-spacing: 0.15em;
-      padding: 5px 12px;
-      border-radius: 50px;
-      background: rgba(10, 26, 47, 0.7);
-      border: 1px solid rgba(240, 192, 64, 0.3);
-      color: var(--accent);
-      backdrop-filter: blur(8px);
-      -webkit-backdrop-filter: blur(8px);
+    .gallery-item .gallery-num {
+      font-family: var(--font-display); font-size: 0.65rem;
+      font-weight: 700; letter-spacing: 0.15em;
+      color: var(--accent); display: block; margin-bottom: 2px;
     }
-
-    .lab-card .lab-body {
-      padding: 22px 22px 24px;
-      display: flex;
-      flex-direction: column;
-      flex: 1;
-      gap: 8px;
+    .gallery-item .gallery-title {
+      font-size: 0.8rem; font-weight: 600;
+      color: #ffffff; letter-spacing: 0.01em;
     }
-    .lab-card h4 {
-      font-family: var(--font-display);
-      font-size: 1.1rem;
-      font-weight: 700;
-      color: var(--text-primary);
-      letter-spacing: -0.01em;
-      margin-bottom: 2px;
-      transition: color 0.3s ease;
+    .gallery-item .gallery-zoom {
+      position: absolute; top: 14px; right: 14px;
+      width: 38px; height: 38px; border-radius: 50%;
+      background: rgba(10, 26, 47, 0.75);
+      border: 1px solid rgba(240, 192, 64, 0.4);
+      color: var(--accent); display: flex; align-items: center;
+      justify-content: center; font-size: 0.85rem; z-index: 2;
+      opacity: 0; transform: scale(0.8);
+      transition: all 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
     }
-    .lab-card p {
-      font-size: 0.85rem;
-      color: var(--text-secondary);
-      line-height: 1.6;
-      margin-bottom: 0;
+    .gallery-item:hover .gallery-zoom { opacity: 1; transform: scale(1); }
+    .gallery-item .gallery-zoom:hover {
+      background: var(--accent); color: var(--bg-primary);
+      transform: scale(1.1) rotate(8deg);
     }
 
-    .lab-card::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 0;
-      height: 3px;
-      background: var(--accent);
-      transition: width 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-      border-radius: 0 0 var(--radius) var(--radius);
+    /* Lightbox */
+    .lightbox {
+      position: fixed; inset: 0; z-index: 10000;
+      background: rgba(0, 0, 0, 0.94);
+      backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+      display: flex; align-items: center; justify-content: center;
+      padding: 40px 20px;
+      opacity: 0; visibility: hidden;
+      transition: opacity 0.35s ease, visibility 0.35s ease;
     }
-    .lab-card:hover::after {
-      width: 100%;
+    .lightbox.active { opacity: 1; visibility: visible; }
+    .lightbox-inner {
+      position: relative; max-width: 1100px; width: 100%;
+      display: flex; flex-direction: column; align-items: center; gap: 16px;
     }
+    .lightbox-img-wrap {
+      position: relative; width: 100%; max-height: 75vh;
+      display: flex; align-items: center; justify-content: center;
+      border-radius: var(--radius); overflow: hidden;
+      border: 1px solid var(--glass-border); background: var(--bg-primary);
+      box-shadow: 0 30px 80px rgba(0,0,0,0.7);
+    }
+    .lightbox-img-wrap img {
+      max-width: 100%; max-height: 75vh;
+      width: auto; height: auto; display: block;
+      object-fit: contain; transition: opacity 0.3s ease;
+    }
+    .lightbox-caption {
+      text-align: center; color: var(--text-secondary);
+      font-size: 0.95rem; letter-spacing: 0.02em;
+    }
+    .lightbox-caption .lb-num {
+      font-family: var(--font-display); color: var(--accent);
+      font-weight: 700; font-size: 0.8rem;
+      letter-spacing: 0.15em; display: block; margin-bottom: 4px;
+    }
+    .lightbox-close {
+      position: absolute; top: -50px; right: 0;
+      width: 44px; height: 44px; border-radius: 50%;
+      background: rgba(10, 26, 47, 0.8);
+      border: 1px solid var(--glass-border); color: var(--text-primary);
+      font-size: 1.1rem; display: flex; align-items: center;
+      justify-content: center; cursor: pointer;
+      transition: all var(--transition); z-index: 3;
+    }
+    .lightbox-close:hover {
+      background: var(--accent); color: var(--bg-primary);
+      border-color: var(--accent); transform: rotate(90deg);
+    }
+    .lightbox-nav {
+      position: absolute; top: 50%; transform: translateY(-50%);
+      width: 52px; height: 52px; border-radius: 50%;
+      background: rgba(10, 26, 47, 0.8);
+      border: 1px solid rgba(240, 192, 64, 0.4);
+      color: var(--accent); font-size: 1.15rem;
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer; transition: all var(--transition); z-index: 3;
+      backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+    }
+    .lightbox-nav:hover {
+      background: var(--accent); color: var(--bg-primary);
+      border-color: var(--accent);
+      transform: translateY(-50%) scale(1.08);
+    }
+    .lightbox-nav.prev { left: -70px; }
+    .lightbox-nav.next { right: -70px; }
 
-    .labs-note {
-      margin-top: 32px;
-      padding: 20px 28px;
-      background: var(--bg-card);
-      border: 1px solid var(--glass-border);
-      border-radius: var(--radius-sm);
-      color: var(--text-secondary);
-      font-size: 0.95rem;
-      text-align: center;
-      backdrop-filter: blur(8px);
-      -webkit-backdrop-filter: blur(8px);
-      position: relative;
-      z-index: 2;
-    }
-
-    /* ============================================
-       CONTACT
-       ============================================ */
-    #contact {
-      background: var(--bg-secondary);
+    /* Footer */
+    .gallery-footer {
+      padding: 40px 0 32px;
       border-top: 1px solid var(--border-subtle);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .contact-wrapper {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 60px;
-      margin-top: 48px;
-      align-items: start;
-      position: relative;
-      z-index: 2;
-    }
-    .contact-info h3 {
-      font-size: 1.3rem;
-      font-weight: 600;
-      margin-bottom: 12px;
-      color: var(--text-primary);
-    }
-    .contact-info p {
-      color: var(--text-secondary);
-      margin-bottom: 28px;
-      line-height: 1.7;
-    }
-
-    .contact-cards {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 16px;
-    }
-    .contact-card {
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      padding: 26px 16px 22px;
-      border-radius: var(--radius);
-      background: var(--contact-card-bg);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-      border: 1px solid var(--glass-border);
-      overflow: hidden;
-      transition: transform var(--transition), border-color var(--transition),
-                  box-shadow var(--transition), background var(--transition);
-    }
-    .contact-card::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 0;
-      height: 2px;
-      background: var(--accent);
-      border-radius: 0 0 4px 4px;
-      transition: width 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    }
-    .contact-card:hover {
-      transform: translateY(-6px);
-      border-color: var(--accent);
-      box-shadow: 0 18px 35px var(--shadow-color);
-    }
-    .contact-card:hover::before {
-      width: 100%;
-    }
-
-    .contact-card .card-icon {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 52px;
-      height: 52px;
-      border-radius: 50%;
-      font-size: 1.35rem;
-      color: var(--accent);
-      background: var(--badge-bg);
-      border: 1px solid var(--badge-border);
-      transition: all var(--transition);
-    }
-    .contact-card:hover .card-icon {
-      background: var(--accent);
-      color: var(--bg-primary);
-      border-color: var(--accent);
-      transform: translateY(-3px);
-      box-shadow: 0 10px 22px var(--accent-glow);
-    }
-
-    .contact-card .card-label {
-      font-family: var(--font-display);
-      font-size: 0.68rem;
-      font-weight: 700;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--text-primary);
-      opacity: 0.9;
-    }
-    .contact-card .card-value {
-      font-size: 0.72rem;
-      color: var(--text-muted);
-      text-align: center;
-      line-height: 1.4;
-      word-break: break-all;
-    }
-    .contact-card .card-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      margin-top: 4px;
-      padding: 7px 20px;
-      border-radius: 50px;
-      font-size: 0.7rem;
-      font-weight: 600;
-      letter-spacing: 0.04em;
-      text-decoration: none;
-      color: var(--text-secondary);
-      background: transparent;
-      border: 1px solid var(--badge-border);
-      transition: all var(--transition);
-    }
-    .contact-card .card-btn:hover {
-      background: var(--btn-primary-bg);
-      color: var(--btn-primary-color);
-      border-color: var(--accent);
-      transform: translateY(-1px);
-    }
-
-    .collaboration-box {
-      margin-top: 50px;
-      padding: 40px 35px;
-      background: var(--accent-dim);
-      border: 1px solid var(--glass-border);
-      border-radius: var(--radius);
-      text-align: center;
-      transition: all var(--transition);
-      position: relative;
-      z-index: 2;
-    }
-    .collaboration-box:hover {
-      border-color: var(--accent);
-      box-shadow: 0 15px 30px var(--accent-glow);
-      transform: translateY(-2px);
-    }
-    .collaboration-box .collab-icon {
-      font-size: 2.5rem;
-      color: var(--accent);
-      margin-bottom: 15px;
-      display: inline-block;
-    }
-    .collaboration-box h3 {
-      font-size: 1.5rem;
-      color: var(--text-primary);
-      margin-bottom: 12px;
-      font-family: var(--font-display);
-      font-weight: 600;
-      letter-spacing: 0.02em;
-    }
-    .collaboration-box p {
-      color: var(--text-secondary);
-      max-width: 750px;
-      margin: 0 auto;
-      font-size: 1.05rem;
-      line-height: 1.8;
-    }
-
-    /* FOOTER */
-    .footer {
-      padding: 48px 0 32px;
-      border-top: 1px solid var(--footer-border);
       background: var(--bg-primary);
-      position: relative;
-      overflow: hidden;
+      text-align: center;
     }
-    .footer .container {
-      position: relative;
-      z-index: 1;
+    .gallery-footer p {
+      font-size: 0.8rem; color: var(--text-muted); margin-bottom: 12px;
     }
-    .footer-grid {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: center;
-      gap: 24px;
+    .gallery-footer .footer-links {
+      display: flex; flex-wrap: wrap; justify-content: center;
+      gap: 20px 28px; margin-top: 16px;
     }
-    .footer-brand .fb-name {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-    }
-    .footer-brand .fb-logo {
-      height: 56px;
-      width: auto;
-      object-fit: contain;
-      border-radius: 6px;
-    }
-    .footer-brand .fb-text {
-      display: flex;
-      flex-direction: column;
-      line-height: 1.15;
-    }
-    .footer-brand .fb-line-1 {
-      font-family: var(--font-display);
-      font-weight: 800;
-      font-size: 1.15rem;
-      letter-spacing: 0.06em;
-      color: var(--accent);
-    }
-    .footer-brand .fb-line-2 {
-      font-family: var(--font-sans);
-      font-weight: 500;
-      font-size: 0.72rem;
-      letter-spacing: 0.06em;
-      color: var(--text-secondary);
-      text-transform: uppercase;
-    }
-    .footer-brand .fb-line-3 {
-      font-family: var(--font-sans);
-      font-weight: 400;
-      font-size: 0.62rem;
-      letter-spacing: 0.1em;
-      color: var(--text-muted);
-    }
-    .footer-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 18px 28px;
-    }
-    .footer-links a {
-      font-size: 0.8rem;
-      color: var(--text-secondary);
+    .gallery-footer .footer-links a {
+      font-size: 0.78rem; color: var(--text-secondary);
       transition: color var(--transition);
     }
-    .footer-links a:hover { color: var(--accent); }
-    .footer-bottom {
-      margin-top: 32px;
-      padding-top: 20px;
-      border-top: 1px solid var(--footer-border);
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: center;
-      gap: 12px;
-    }
-    .footer-bottom p {
-      font-size: 0.75rem;
-      color: var(--text-muted);
-    }
-    .footer-socials {
-      display: flex;
-      gap: 14px;
-    }
-    .footer-socials a {
-      font-size: 0.8rem;
-      color: var(--text-muted);
-      transition: color var(--transition);
-    }
-    .footer-socials a:hover { color: var(--accent); }
+    .gallery-footer .footer-links a:hover { color: var(--accent); }
 
-    /* REVEAL */
-    .reveal {
-      opacity: 0;
-      transform: translateY(30px);
-      transition: opacity 0.8s ease, transform 0.8s ease;
+    @media (max-width: 900px) {
+      .lightbox-nav.prev { left: 8px; }
+      .lightbox-nav.next { right: 8px; }
+      .lightbox-close { top: 8px; right: 8px; background: rgba(10,26,47,0.9); }
     }
-    .reveal.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    /* RESPONSIVE */
-    @media (max-width: 1024px) {
-      .about-grid { grid-template-columns: 1fr; gap: 40px; }
-      .contact-wrapper { grid-template-columns: 1fr; gap: 40px; }
-      .contact-cards { grid-template-columns: repeat(3, 1fr); }
-      .service-bg .service-inner { padding: 70px 36px; }
-      .labs-grid { grid-template-columns: repeat(2, 1fr); }
-    }
-
-    @media (max-width: 768px) {
-      .nav-links {
-        position: fixed;
-        top: 0;
-        right: -100%;
-        width: 280px;
-        height: 100vh;
-        background: var(--bg-primary);
-        backdrop-filter: blur(24px);
-        -webkit-backdrop-filter: blur(24px);
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 28px;
-        padding: 40px;
-        overflow-y: auto;
-        transition: right 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-        border-left: 1px solid var(--glass-border);
+    @media (max-width: 640px) {
+      .gallery-full-grid {
+        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+        gap: 12px;
       }
-      .nav-links.open { right: 0; }
-      .nav-links a { font-size: 1.1rem; }
-      .nav-toggle { display: flex; z-index: 1001; }
-      .nav-cta { display: none; }
-
-      .hero {
-        padding: 120px 0 80px;
-        min-height: 100vh;
-      }
-      .hero-description { font-size: 1rem; }
-      .hero-buttons { flex-direction: column; align-items: stretch; }
-      .hero-buttons .btn-primary,
-      .hero-buttons .btn-secondary { justify-content: center; }
-      .labs-grid { grid-template-columns: 1fr 1fr; }
-      .footer-grid { flex-direction: column; text-align: center; }
-      .footer-brand .fb-name { justify-content: center; }
-      .footer-bottom { flex-direction: column; text-align: center; }
-      .section-padding { padding: 64px 0 48px; }
-      .contact-cards { grid-template-columns: repeat(2, 1fr); gap: 12px; }
-      .contact-card { padding: 22px 12px 18px; }
-      .contact-card .card-icon { width: 46px; height: 46px; font-size: 1.15rem; }
-      .collaboration-box { padding: 30px 20px; margin-top: 35px; }
-      .collaboration-box h3 { font-size: 1.2rem; }
-      .collaboration-box p { font-size: 0.95rem; }
-
-      .service-bg { min-height: 65vh; }
-      .service-bg .service-inner { padding: 60px 24px; }
-      .service-bg h3 { font-size: 2rem; }
-      .service-bg.right .service-inner { text-align: left; justify-items: start; }
-      .service-bg.right h3 { margin-left: 0; }
-      .service-bg.right .service-desc { margin-left: 0; }
-      .service-bg.right .service-bottom { justify-content: flex-start; }
-
-      .about-waves .glow-orb.blue { width: 260px; height: 260px; }
-      .about-waves .glow-orb.green { width: 300px; height: 300px; }
-
-      /* Hero brand block stacks on mobile */
-      .hero-brand-block {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 14px;
-      }
-      .hero-logo { height: 80px; }
-
-      /* Timeline mobile tweaks */
-      .timeline { padding-left: 30px; }
-      .timeline-item .tl-dot { left: -29px; width: 17px; height: 17px; }
-      .timeline-item .tl-dot::after { width: 6px; height: 6px; }
-      .timeline-item .tl-year { font-size: 1.3rem; }
-      .timeline-item .tl-title { font-size: 0.85rem; }
-      .anniversary-badge { padding: 12px 18px; }
-      .anniversary-badge .anniv-num { font-size: 1.15rem; }
+      .gallery-full-grid.masonry { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); grid-auto-rows: 150px; }
+      .gallery-hero { padding: 130px 0 40px; }
+      .gallery-toolbar { padding: 12px 16px; }
+      .view-mode button { padding: 6px 12px; font-size: 0.7rem; }
+      .gallery-page-header .brand-text { display: none; }
     }
-
-    @media (max-width: 480px) {
-      .labs-grid { grid-template-columns: 1fr; }
-      .footer-links { justify-content: center; }
-      .hero-typing { font-size: 0.9rem; flex-wrap: wrap; }
-      .container { padding: 0 16px; }
-      .contact-cards { grid-template-columns: 1fr 1fr; gap: 10px; }
-      .contact-card { padding: 20px 10px 16px; gap: 8px; }
-      .contact-card .card-label { font-size: 0.6rem; }
-      .contact-card .card-icon { width: 42px; height: 42px; font-size: 1rem; }
-      .contact-card .card-value { font-size: 0.62rem; }
-      .collaboration-box { padding: 25px 16px; }
-      .collaboration-box h3 { font-size: 1rem; }
-      .collaboration-box p { font-size: 0.85rem; }
-
-      .service-bg { min-height: 60vh; }
-      .service-bg .service-inner { padding: 50px 20px; }
-      .service-bg h3 { font-size: 1.6rem; }
-      .service-bg .service-desc { font-size: 0.9rem; }
-      .service-bg .service-bottom { gap: 14px; }
-      .service-bg .service-cta .cta-arrow { width: 36px; height: 36px; }
-
-      .lab-card .lab-body { padding: 18px 18px 20px; }
-      .lab-card h4 { font-size: 1rem; }
-      .lab-card p { font-size: 0.8rem; }
-
-      .hero {
-        min-height: 100vh;
-        padding: 100px 0 60px;
-      }
-      .nav-brand .brand-logo { height: 38px; }
-      .nav-brand .school-name .line-1 { font-size: 1rem; }
-      .nav-brand .school-name .line-2 { font-size: 0.6rem; }
-      .nav-brand .school-name .line-3 { font-size: 0.55rem; }
-
-      .footer-brand .fb-logo { height: 44px; }
-      .footer-brand .fb-line-1 { font-size: 1rem; }
-      .footer-brand .fb-line-2 { font-size: 0.65rem; }
-    }
-
-    /* reduce motion */
-    @media (prefers-reduced-motion: reduce) {
-      .about-waves .glow-orb { animation: none; }
-      .hero-bg-rotator .bg-slide { transition: none; }
+    @media (max-width: 420px) {
+      .gallery-full-grid { grid-template-columns: repeat(2, 1fr); gap: 8px; }
+      .gallery-item .gallery-caption { padding: 10px 12px; }
+      .gallery-item .gallery-title { font-size: 0.7rem; }
+      .gallery-item .gallery-num { font-size: 0.58rem; }
+      .gallery-item .gallery-zoom { width: 32px; height: 32px; font-size: 0.75rem; top: 10px; right: 10px; }
     }
   </style>
 </head>
 <body>
-  <canvas id="particles-canvas"></canvas>
 
-  <!-- FLOATING WHATSAPP BUTTON -->
-  <a href="https://wa.me/923006353469?text=Hello%20GHSS%20Tibba%20Sultan%20Pur" 
-     class="whatsapp-float" 
-     target="_blank" 
-     rel="noopener noreferrer" 
-     aria-label="Chat on WhatsApp">
-    <i class="fab fa-whatsapp"></i>
-  </a>
-
-  <!-- NAVBAR -->
-  <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+  <!-- Header -->
+  <header class="gallery-page-header">
     <div class="container">
-      <a href="#hero" class="nav-brand" aria-label="GHSS Tibba Sultan Pur home">
-        <img
-          src="https://raw.githubusercontent.com/DEEPBYTO/GHSS/main/logo.png"
-          alt="GHSS Tibba Sultan Pur logo"
-          class="brand-logo"
-        >
-        <span class="school-name">
-          <span class="line-1">GHSS</span>
-          <span class="line-2">Govt. Higher Secondary School</span>
-          <span class="line-3">Tibba Sultan Pur</span>
-        </span>
+      <a href="index.html" class="back-home">
+        <i class="fas fa-arrow-left"></i> Back to Home
       </a>
-      <ul class="nav-links" id="navLinks" role="menubar">
-        <li role="none"><a href="#about" role="menuitem">About</a></li>
-        <li role="none"><a href="#academics" role="menuitem">Academics</a></li>
-        <li role="none"><a href="#facilities" role="menuitem">Facilities</a></li>
-        <li role="none"><a href="#contact" role="menuitem">Contact</a></li>
-      </ul>
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">
-        <span></span><span></span><span></span>
+      <div class="brand">
+        <img src="https://raw.githubusercontent.com/DEEPBYTO/GHSS/main/logo.png" alt="GHSS Logo" />
+        <div class="brand-text">
+          <span class="brand-line-1">GHSS</span>
+          <span class="brand-line-2">Tibba Sultan Pur</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="gallery-hero">
+    <div class="container">
+      <span class="section-label">Photo Gallery</span>
+      <h1>Beauty of <span class="highlight">GHSS</span></h1>
+      <p>Explore our campus, memorable events, achievements, and everyday moments that make GHSS Tibba Sultan Pur special.</p>
+      <div class="gallery-meta">
+        <i class="fas fa-images"></i>
+        <span><strong id="metaTotal">29</strong> Photos in Gallery</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Grid area -->
+  <main class="container">
+    <div class="gallery-toolbar">
+      <div class="info">
+        <i class="fas fa-camera" style="color: var(--accent);"></i>
+        Showing <strong id="showingCount">29</strong> of <strong id="totalCount">29</strong> photos
+      </div>
+      <div class="view-mode" role="tablist">
+        <button class="active" id="viewGrid" role="tab" aria-selected="true">
+          <i class="fas fa-th"></i> Grid
+        </button>
+        <button id="viewMasonry" role="tab" aria-selected="false">
+          <i class="fas fa-th-large"></i> Masonry
+        </button>
+      </div>
+    </div>
+
+    <!-- Gallery grid — auto-filled -->
+    <div class="gallery-full-grid" id="galleryGridFull"></div>
+  </main>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
+    <div class="lightbox-inner">
+      <button class="lightbox-close" id="lightboxClose" aria-label="Close gallery">
+        <i class="fas fa-times"></i>
       </button>
+      <button class="lightbox-nav prev" id="lightboxPrev" aria-label="Previous image">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+      <button class="lightbox-nav next" id="lightboxNext" aria-label="Next image">
+        <i class="fas fa-chevron-right"></i>
+      </button>
+      <div class="lightbox-img-wrap">
+        <img id="lightboxImg" src="" alt="Gallery image" />
+      </div>
+      <div class="lightbox-caption">
+        <span class="lb-num" id="lightboxNum">01 / 29</span>
+        <span id="lightboxTitle">GHSS Tibba Sultan Pur</span>
+      </div>
     </div>
-  </nav>
+  </div>
 
-  <!-- HERO -->
-  <section class="hero" id="hero" aria-label="Hero">
-    <div class="hero-bg-rotator" id="heroBgRotator" aria-hidden="true"></div>
+  <!-- Footer -->
+  <footer class="gallery-footer">
     <div class="container">
-      <div class="hero-content">
-        <div class="hero-badge"><span class="badge-dot"></span>Established 1885 • 141 Years of Excellence</div>
-
-        <!-- HERO LOGO + STACKED TEXT -->
-        <div class="hero-brand-block">
-          <img
-            src="https://raw.githubusercontent.com/DEEPBYTO/GHSS/main/logo.png"
-            alt="GHSS Tibba Sultan Pur logo"
-            class="hero-logo"
-          >
-          <div class="hero-brand-text">
-            <span class="brand-line-1">GHSS</span>
-            <span class="brand-line-2">Govt. Higher Secondary School</span>
-            <span class="brand-line-3">Tibba Sultan Pur</span>
-          </div>
-        </div>
-
-        <p class="hero-subtitle">Excellence in Education Since 1885</p>
-        <p class="hero-description">Empowering students with quality education, modern facilities, and a commitment to academic excellence and character building.</p>
-        <div class="hero-typing"><span id="typing-text"></span><span class="cursor"></span></div>
-        <div class="hero-buttons">
-          <a href="#about" class="btn-primary">Learn More</a>
-          <a href="#contact" class="btn-secondary">Contact Us</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ABOUT -->
-  <section id="about" class="section-padding" aria-label="About GHSS Tibba Sultan Pur">
-    <div class="about-waves" aria-hidden="true">
-      <div class="glow-orb blue"></div>
-      <div class="glow-orb green"></div>
-    </div>
-
-    <div class="container">
-      <span class="section-label reveal">About Us</span>
-      <h2 class="section-title reveal">Welcome to <span class="highlight">GHSS Tibba Sultan Pur</span></h2>
-      <div class="about-grid">
-        <div class="about-text reveal">
-          <p>Government Higher Secondary School Tibba Sultan Pur is dedicated to providing quality education to students from the region. Our institution has a rich history of academic excellence and community service.</p>
-          <p>We offer a comprehensive curriculum that balances academics, sports, and extracurricular activities, preparing students for higher education and successful careers.</p>
-          <p>Our dedicated faculty and staff work tirelessly to create a supportive learning environment where every student can thrive and reach their full potential.</p>
-        </div>
-
-        <!-- ==========================================
-             HISTORY TIMELINE (replaces value cards)
-             ========================================== -->
-        <div class="history-block reveal">
-          <div class="history-heading">
-            Our History
-            <span class="heading-sub">A Journey Through Time</span>
-          </div>
-
-          <div class="timeline">
-            <div class="timeline-item">
-              <span class="tl-dot"></span>
-              <span class="tl-year">1885</span>
-              <div class="tl-title">School Established</div>
-              <div class="tl-desc">Foundation laid as a Primary School, beginning a legacy of education in the region.</div>
-            </div>
-
-            <div class="timeline-item">
-              <span class="tl-dot"></span>
-              <span class="tl-year">1949</span>
-              <div class="tl-title">Upgraded to Middle School</div>
-              <div class="tl-desc">Expanded academic offerings to include middle-level education for the growing community.</div>
-            </div>
-
-            <div class="timeline-item">
-              <span class="tl-dot"></span>
-              <span class="tl-year">1964</span>
-              <div class="tl-title">Elevated to High School</div>
-              <div class="tl-desc">Achieved High School status, enabling students to complete their secondary education locally.</div>
-            </div>
-
-            <div class="timeline-item">
-              <span class="tl-dot"></span>
-              <span class="tl-year">1987</span>
-              <div class="tl-title">Became Higher Secondary School</div>
-              <div class="tl-desc">Upgraded to Higher Secondary School, offering intermediate programs in Science and Arts.</div>
-            </div>
-          </div>
-
-          <!-- 141 Years Anniversary Badge -->
-          <div class="anniversary-badge">
-            <i class="fas fa-award anniv-icon"></i>
-            <div class="anniv-text">
-              <span class="anniv-num">141 Years</span>
-              <span class="anniv-label">of Educational Excellence</span>
-            </div>
-          </div>
-        </div>
-        <!-- ========================================== -->
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ACADEMICS -->
-  <section id="academics" aria-label="Academics">
-    <div class="container section-padding" style="padding-bottom: 0; position: relative; z-index: 2;">
-      <span class="section-label reveal">Academics</span>
-      <h2 class="section-title reveal">Our <span class="highlight">Programs</span></h2>
-      <p class="section-desc reveal">We offer a wide range of academic programs designed to prepare students for success in higher education and beyond.</p>
-    </div>
-
-    <div class="services-stack">
-
-      <a href="#" class="service-bg reveal">
-        <img class="bg-image"
-             src="https://raw.githubusercontent.com/DEEPBYTO/GHSS/main/school-building.jpeg"
-             alt="School building background" loading="lazy" />
-        <div class="bg-overlay"></div>
-        <div class="service-inner">
-          <span class="service-num">01 / 04</span>
-          <h3>Science Stream</h3>
-          <p class="service-desc">Physics, Chemistry, Biology, and Mathematics with well-equipped laboratories and experienced faculty to prepare students for medical, engineering, and research careers.</p>
-          <div class="service-bottom">
-            <span class="service-pricing">F.Sc / Pre-Medical / Pre-Engineering</span>
-            <span class="service-cta">Learn More <span class="cta-arrow"><i class="fas fa-arrow-right"></i></span></span>
-          </div>
-        </div>
-      </a>
-
-      <a href="#" class="service-bg right reveal">
-        <img class="bg-image"
-             src="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=1920&q=85&auto=format&fit=crop"
-             alt="Arts stream background" loading="lazy" />
-        <div class="bg-overlay"></div>
-        <div class="service-inner">
-          <span class="service-num">02 / 04</span>
-          <h3>Arts & Humanities</h3>
-          <p class="service-desc">A rich curriculum in languages, history, civics, and Islamic studies, fostering critical thinking and cultural awareness.</p>
-          <div class="service-bottom">
-            <span class="service-pricing">F.A / I.Com</span>
-            <span class="service-cta">Learn More <span class="cta-arrow"><i class="fas fa-arrow-right"></i></span></span>
-          </div>
-        </div>
-      </a>
-
-      <a href="#" class="service-bg reveal">
-        <img class="bg-image"
-             src="https://images.unsplash.com/photo-1509062522246-3755977927d7?w=1920&q=85&auto=format&fit=crop"
-             alt="Computer science background" loading="lazy" />
-        <div class="bg-overlay"></div>
-        <div class="service-inner">
-          <span class="service-num">03 / 04</span>
-          <h3>Computer Science</h3>
-          <p class="service-desc">Modern computer labs and courses in programming, IT, and digital literacy to prepare students for the technology-driven world.</p>
-          <div class="service-bottom">
-            <span class="service-pricing">ICS / Computer Science</span>
-            <span class="service-cta">Learn More <span class="cta-arrow"><i class="fas fa-arrow-right"></i></span></span>
-          </div>
-        </div>
-      </a>
-
-      <a href="#" class="service-bg right reveal">
-        <img class="bg-image"
-             src="https://images.unsplash.com/photo-1571260899304-425eee4c7efc?w=1920&q=85&auto=format&fit=crop"
-             alt="Matriculation background" loading="lazy" />
-        <div class="bg-overlay"></div>
-        <div class="service-inner">
-          <span class="service-num">04 / 04</span>
-          <h3>Matriculation</h3>
-          <p class="service-desc">Strong foundation in core subjects for classes 9 and 10, with a focus on board exam preparation and concept clarity.</p>
-          <div class="service-bottom">
-            <span class="service-pricing">SSC Part I & II</span>
-            <span class="service-cta">Learn More <span class="cta-arrow"><i class="fas fa-arrow-right"></i></span></span>
-          </div>
-        </div>
-      </a>
-
-    </div>
-  </section>
-
-  <!-- FACILITIES -->
-  <section id="facilities" class="section-padding" aria-label="Facilities">
-    <div class="container" style="position: relative; z-index: 2;">
-      <span class="section-label reveal">Facilities</span>
-      <h2 class="section-title reveal">Our <span class="highlight">Campus</span></h2>
-      <p class="section-desc reveal">Modern infrastructure and resources to support quality education and student development.</p>
-
-      <div class="labs-grid">
-
-        <div class="lab-card reveal">
-          <div class="lab-image">
-            <img src="https://images.unsplash.com/photo-1562774053-701939374585?w=800&q=80&auto=format&fit=crop" alt="Library" loading="lazy" />
-            <span class="lab-num">01</span>
-          </div>
-          <div class="lab-body">
-            <h4>Library</h4>
-            <p>Well-stocked library with textbooks, reference materials, and reading room.</p>
-          </div>
-        </div>
-
-        <div class="lab-card reveal">
-          <div class="lab-image">
-            <img src="https://images.unsplash.com/photo-1581093458791-9f3c3900df4b?w=800&q=80&auto=format&fit=crop" alt="Science Labs" loading="lazy" />
-            <span class="lab-num">02</span>
-          </div>
-          <div class="lab-body">
-            <h4>Science Labs</h4>
-            <p>Fully equipped Physics, Chemistry, and Biology laboratories.</p>
-          </div>
-        </div>
-
-        <div class="lab-card reveal">
-          <div class="lab-image">
-            <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&q=80&auto=format&fit=crop" alt="Computer Lab" loading="lazy" />
-            <span class="lab-num">03</span>
-          </div>
-          <div class="lab-body">
-            <h4>Computer Lab</h4>
-            <p>Modern computers with internet access for IT education.</p>
-          </div>
-        </div>
-
-        <div class="lab-card reveal">
-          <div class="lab-image">
-            <img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=800&q=80&auto=format&fit=crop" alt="Sports Ground" loading="lazy" />
-            <span class="lab-num">04</span>
-          </div>
-          <div class="lab-body">
-            <h4>Sports Ground</h4>
-            <p>Spacious playground for cricket, football, and athletics.</p>
-          </div>
-        </div>
-
-        <div class="lab-card reveal">
-          <div class="lab-image">
-            <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=800&q=80&auto=format&fit=crop" alt="Classrooms" loading="lazy" />
-            <span class="lab-num">05</span>
-          </div>
-          <div class="lab-body">
-            <h4>Smart Classrooms</h4>
-            <p>Airy, well-lit classrooms with modern teaching aids.</p>
-          </div>
-        </div>
-
-        <div class="lab-card reveal">
-          <div class="lab-image">
-            <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=800&q=80&auto=format&fit=crop" alt="Auditorium" loading="lazy" />
-            <span class="lab-num">06</span>
-          </div>
-          <div class="lab-body">
-            <h4>Auditorium</h4>
-            <p>Multi-purpose hall for assemblies, events, and cultural programs.</p>
-          </div>
-        </div>
-
-      </div>
-
-      <div class="labs-note reveal">Our campus provides a safe, conducive, and inspiring environment for holistic learning.</div>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section id="contact" class="section-padding" aria-label="Contact">
-    <div class="container" style="position: relative; z-index: 2;">
-      <span class="section-label reveal">Contact</span>
-      <h2 class="section-title reveal">Get in <span class="highlight">Touch</span></h2>
-      <p class="section-desc reveal">Reach out to us for admissions, inquiries, or any information.</p>
-      <div class="contact-wrapper">
-        <div class="contact-info reveal">
-          <h3>Connect with GHSS Tibba Sultan Pur</h3>
-          <p>We welcome parents, students, and community members to visit our campus or contact us for any queries regarding admissions, academics, or school activities.</p>
-        </div>
-        <div class="contact-cards reveal">
-          <div class="contact-card email">
-            <div class="card-icon"><i class="fas fa-envelope"></i></div>
-            <div class="card-label">Email</div>
-            <div class="card-value">It.ghsstspur@gmail.com</div>
-            <a href="mailto:It.ghsstspur@gmail.com" class="card-btn">Send</a>
-          </div>
-          <div class="contact-card phone">
-            <div class="card-icon"><i class="fas fa-phone-alt"></i></div>
-            <div class="card-label">Phone</div>
-            <div class="card-value">0300 635 3469</div>
-            <a href="tel:+923006353469" class="card-btn">Call</a>
-          </div>
-          <div class="contact-card location">
-            <div class="card-icon"><i class="fas fa-map-marker-alt"></i></div>
-            <div class="card-label">Location</div>
-            <div class="card-value">Tibba Sultan Pur, Punjab, Pakistan</div>
-            <a href="https://maps.app.goo.gl/XbNQUP54seL3FsfN8" target="_blank" rel="noopener noreferrer" class="card-btn">Map</a>
-          </div>
-          <div class="contact-card whatsapp">
-            <div class="card-icon"><i class="fab fa-whatsapp"></i></div>
-            <div class="card-label">WhatsApp</div>
-            <a href="https://wa.me/923006353469" target="_blank" rel="noopener noreferrer" class="card-btn">Chat</a>
-          </div>
-          <div class="contact-card facebook">
-            <div class="card-icon"><i class="fab fa-facebook-f"></i></div>
-            <div class="card-label">Facebook</div>
-            <a href="https://www.facebook.com/share/g/19p66WaMYz/" target="_blank" rel="noopener noreferrer" class="card-btn">Follow</a>
-          </div>
-          <div class="contact-card whatsapp-channel">
-            <div class="card-icon"><i class="fab fa-whatsapp"></i></div>
-            <div class="card-label">WA Channel</div>
-            <a href="https://whatsapp.com/channel/0029Vb9JbCX0G0Xr0gYU8a09" target="_blank" rel="noopener noreferrer" class="card-btn">Join</a>
-          </div>
-        </div>
-      </div>
-      <div class="collaboration-box reveal">
-        <div class="collab-icon"><i class="fas fa-handshake"></i></div>
-        <h3>Admissions Open</h3>
-        <p>We are currently accepting applications for the new academic session. Visit the school office or contact us for admission details, fee structure, and required documents.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer class="footer" role="contentinfo">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <div class="fb-name">
-            <img
-              src="https://raw.githubusercontent.com/DEEPBYTO/GHSS/main/logo.png"
-              alt="GHSS Tibba Sultan Pur logo"
-              class="fb-logo"
-            >
-            <div class="fb-text">
-              <span class="fb-line-1">GHSS</span>
-              <span class="fb-line-2">Govt. Higher Secondary School</span>
-              <span class="fb-line-3">Tibba Sultan Pur</span>
-            </div>
-          </div>
-        </div>
-        <div class="footer-links">
-          <a href="#about">About</a>
-          <a href="#academics">Academics</a>
-          <a href="#facilities">Facilities</a>
-          <a href="#contact">Contact</a>
-          <a href="mailto:It.ghsstspur@gmail.com">Email</a>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>&copy; 2026 GHSS Tibba Sultan Pur. All rights reserved. • Established 1885</p>
-        <div class="footer-socials">
-          <a href="https://www.facebook.com/share/g/19p66WaMYz/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">Facebook</a>
-          <a href="https://whatsapp.com/channel/0029Vb9JbCX0G0Xr0gYU8a09" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Channel">WhatsApp</a>
-          <a href="https://maps.app.goo.gl/XbNQUP54seL3FsfN8" target="_blank" rel="noopener noreferrer" aria-label="Google Maps">Map</a>
-        </div>
+      <p>&copy; 2026 GHSS Tibba Sultan Pur • Established 1885 • 141 Years of Excellence</p>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#academics">Academics</a>
+        <a href="index.html#contact">Contact</a>
       </div>
     </div>
   </footer>
@@ -1890,258 +444,143 @@
     (function() {
       'use strict';
 
-      // HERO BACKGROUND ROTATOR
-      const heroImages = [
-        'https://raw.githubusercontent.com/DEEPBYTO/GHSS/main/school-building.jpeg',
-        'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=1920&q=85&auto=format&fit=crop',
-        'https://images.unsplash.com/photo-1562774053-701939374585?w=1920&q=85&auto=format&fit=crop',
-        'https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=1920&q=85&auto=format&fit=crop',
-        'https://images.unsplash.com/photo-1509062522246-3755977927d7?w=1920&q=85&auto=format&fit=crop',
-        'https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=1920&q=85&auto=format&fit=crop'
+      /* ================================================================
+         GALLERY CONFIGURATION
+         ----------------------------------------------------------------
+         Add new images below: push a new object to galleryImages array.
+         Format: { src: 'https://...', title: 'Photo Title' }
+         ================================================================ */
+      const GALLERY_BASE = 'https://raw.githubusercontent.com/DEEPBYTO/GHSS/main/images/school-building/';
+      const GALLERY_TOTAL = 29; // GHSS(0) ... GHSS(28)
+
+      const galleryTitles = [
+        'School Entrance', 'Main Building', 'Campus View', 'Academic Block',
+        'School Grounds', 'Classroom', 'Library', 'Science Lab',
+        'Computer Lab', 'Assembly Area', 'Sports Ground', 'Auditorium',
+        'Corridor', 'Garden', 'Playground', 'Event Day',
+        'Prize Distribution', 'Annual Function', 'Independence Day', 'Teachers Day',
+        'Students Activity', 'Staff Members', 'School Trip', 'Cultural Program',
+        'Sports Day', 'Exam Hall', 'Admin Office', 'School Gate',
+        'Panorama View'
       ];
 
-      const rotator = document.getElementById('heroBgRotator');
+      const galleryImages = [];
+      for (let i = 0; i < GALLERY_TOTAL; i++) {
+        galleryImages.push({
+          src: GALLERY_BASE + `GHSS(${i}).jpeg`,
+          title: galleryTitles[i] || `GHSS Photo ${i}`
+        });
+      }
+
+      // Update counts
+      document.getElementById('metaTotal').textContent = galleryImages.length;
+      document.getElementById('showingCount').textContent = galleryImages.length;
+      document.getElementById('totalCount').textContent = galleryImages.length;
+
+      /* ================================================================
+         RENDER GRID
+         ================================================================ */
+      const galleryGrid = document.getElementById('galleryGridFull');
       let currentIndex = 0;
-      const slides = [];
 
-      heroImages.forEach((url, i) => {
-        const div = document.createElement('div');
-        div.className = 'bg-slide' + (i === 0 ? ' active' : '');
-        div.style.backgroundImage = `url('${url}')`;
-        rotator.appendChild(div);
-        slides.push(div);
-      });
-
-      setInterval(() => {
-        const nextIndex = (currentIndex + 1) % slides.length;
-        slides[currentIndex].classList.remove('active');
-        slides[nextIndex].classList.add('active');
-        currentIndex = nextIndex;
-      }, 5000);
-
-      // PARTICLES
-      const canvas = document.getElementById('particles-canvas');
-      const ctx = canvas.getContext('2d');
-      let particles = [];
-      const particleCount = 50;
-      let mouseX = null, mouseY = null;
-
-      function resizeCanvas() {
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-      }
-      window.addEventListener('resize', resizeCanvas);
-      resizeCanvas();
-
-      class Particle {
-        constructor() { this.reset(); }
-        reset() {
-          this.x = Math.random() * canvas.width;
-          this.y = Math.random() * canvas.height;
-          this.size = Math.random() * 1.5 + 0.3;
-          this.speedX = (Math.random() - 0.5) * 0.2;
-          this.speedY = (Math.random() - 0.5) * 0.2;
-          this.opacity = Math.random() * 0.3 + 0.05;
-        }
-        update() {
-          this.x += this.speedX;
-          this.y += this.speedY;
-          if (this.x < 0 || this.x > canvas.width) { this.speedX *= -1; this.x += this.speedX; }
-          if (this.y < 0 || this.y > canvas.height) { this.speedY *= -1; this.y += this.speedY; }
-          if (mouseX !== null && mouseY !== null) {
-            const dx = this.x - mouseX;
-            const dy = this.y - mouseY;
-            const dist = Math.sqrt(dx * dx + dy * dy);
-            if (dist < 100) {
-              const force = (100 - dist) / 100 * 0.01;
-              this.x += dx * force;
-              this.y += dy * force;
-            }
-          }
-        }
-        draw() {
-          ctx.beginPath();
-          ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-          ctx.fillStyle = `rgba(240, 192, 64, ${this.opacity})`;
-          ctx.fill();
-        }
-      }
-
-      function initParticles() {
-        particles = [];
-        for (let i = 0; i < particleCount; i++) {
-          particles.push(new Particle());
-        }
-      }
-      initParticles();
-
-      function drawLines() {
-        for (let i = 0; i < particles.length; i++) {
-          for (let j = i + 1; j < particles.length; j++) {
-            const dx = particles[i].x - particles[j].x;
-            const dy = particles[i].y - particles[j].y;
-            const dist = Math.sqrt(dx * dx + dy * dy);
-            if (dist < 100) {
-              const opacity = (1 - dist / 100) * 0.12;
-              ctx.beginPath();
-              ctx.moveTo(particles[i].x, particles[i].y);
-              ctx.lineTo(particles[j].x, particles[j].y);
-              ctx.strokeStyle = `rgba(240, 192, 64, ${opacity})`;
-              ctx.lineWidth = 0.4;
-              ctx.stroke();
-            }
-          }
-        }
-      }
-
-      function animateParticles() {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        for (const p of particles) { p.update(); p.draw(); }
-        drawLines();
-        requestAnimationFrame(animateParticles);
-      }
-      animateParticles();
-
-      document.addEventListener('mousemove', (e) => { mouseX = e.clientX; mouseY = e.clientY; });
-      document.addEventListener('mouseleave', () => { mouseX = null; mouseY = null; });
-
-      // TYPING
-      const taglines = [
-        'Welcome to GHSS Tibba Sultan Pur',
-        'Serving Education Since 1885',
-        '141 Years of Excellence',
-        'Quality Education for All',
-        'Building Bright Futures',
-        'Excellence in Academics',
-        'Modern Facilities & Resources',
-        'Dedicated Faculty & Staff',
-        'Holistic Student Development',
-        'Your Path to Success Starts Here'
-      ];
-      const typingEl = document.getElementById('typing-text');
-      let taglineIndex = 0, charIndex = 0, isDeleting = false;
-      const typingSpeed = 70;
-
-      function typeEffect() {
-        const currentText = taglines[taglineIndex];
-        if (!isDeleting) {
-          typingEl.textContent = currentText.substring(0, charIndex + 1);
-          charIndex++;
-          if (charIndex === currentText.length) {
-            isDeleting = true;
-            setTimeout(typeEffect, 2200);
-            return;
-          }
-          setTimeout(typeEffect, typingSpeed + Math.random() * 40);
-        } else {
-          typingEl.textContent = currentText.substring(0, charIndex);
-          charIndex--;
-          if (charIndex < 0) {
-            isDeleting = false;
-            taglineIndex = (taglineIndex + 1) % taglines.length;
-            setTimeout(typeEffect, 400);
-            return;
-          }
-          setTimeout(typeEffect, typingSpeed * 0.5 + Math.random() * 30);
-        }
-      }
-      setTimeout(typeEffect, 600);
-
-      // NAVBAR SCROLL / TOGGLE / ACTIVE LINK
-      const navbar = document.getElementById('navbar');
-      const navToggle = document.getElementById('navToggle');
-      const navLinks = document.getElementById('navLinks');
-
-      window.addEventListener('scroll', () => {
-        if (window.scrollY > 20) navbar.classList.add('scrolled');
-        else navbar.classList.remove('scrolled');
-      });
-
-      navToggle.addEventListener('click', () => {
-        const isOpen = navLinks.classList.toggle('open');
-        navToggle.classList.toggle('active');
-        navToggle.setAttribute('aria-expanded', isOpen);
-      });
-
-      navLinks.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', () => {
-          navLinks.classList.remove('open');
-          navToggle.classList.remove('active');
-          navToggle.setAttribute('aria-expanded', 'false');
-        });
-      });
-
-      const sections = document.querySelectorAll('section[id]');
-      const navAnchors = navLinks.querySelectorAll('a[href^="#"]');
-      function updateActiveLink() {
-        let current = '';
-        const scrollPos = window.scrollY + 120;
-        sections.forEach(section => {
-          const top = section.offsetTop;
-          const height = section.offsetHeight;
-          if (scrollPos >= top && scrollPos < top + height) {
-            current = section.getAttribute('id');
+      galleryImages.forEach((img, i) => {
+        const item = document.createElement('div');
+        item.className = 'gallery-item';
+        item.setAttribute('role', 'button');
+        item.setAttribute('tabindex', '0');
+        item.setAttribute('aria-label', `View ${img.title}`);
+        item.innerHTML = `
+          <img src="${img.src}" alt="${img.title}" loading="lazy" />
+          <div class="gallery-caption">
+            <span class="gallery-num">${String(i + 1).padStart(2, '0')} / ${String(galleryImages.length).padStart(2, '0')}</span>
+            <span class="gallery-title">${img.title}</span>
+          </div>
+          <div class="gallery-zoom" aria-hidden="true"><i class="fas fa-expand"></i></div>
+        `;
+        item.addEventListener('click', () => openLightbox(i));
+        item.addEventListener('keydown', (e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault(); openLightbox(i);
           }
         });
-        navAnchors.forEach(a => {
-          a.classList.remove('active');
-          if (a.getAttribute('href') === `#${current}`) a.classList.add('active');
-        });
-      }
-      window.addEventListener('scroll', updateActiveLink);
-      updateActiveLink();
-
-      // REVEAL ON SCROLL
-      const revealElements = document.querySelectorAll('.reveal');
-      function revealOnScroll() {
-        const windowHeight = window.innerHeight;
-        const revealThreshold = 100;
-        revealElements.forEach(el => {
-          const rect = el.getBoundingClientRect();
-          if (rect.top < windowHeight - revealThreshold) {
-            el.classList.add('visible');
-          }
-        });
-      }
-      window.addEventListener('load', () => setTimeout(revealOnScroll, 200));
-      window.addEventListener('scroll', revealOnScroll);
-      window.addEventListener('resize', revealOnScroll);
-
-      // smooth anchor scroll
-      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-          const targetId = this.getAttribute('href');
-          if (targetId === '#') return;
-          const target = document.querySelector(targetId);
-          if (target) {
-            e.preventDefault();
-            const offset = 80;
-            const top = target.getBoundingClientRect().top + window.scrollY - offset;
-            window.scrollTo({ top, behavior: 'smooth' });
-          }
-        });
+        galleryGrid.appendChild(item);
       });
 
-      // ESC close mobile nav
+      /* ================================================================
+         LIGHTBOX
+         ================================================================ */
+      const lightbox = document.getElementById('lightbox');
+      const lightboxImg = document.getElementById('lightboxImg');
+      const lightboxNum = document.getElementById('lightboxNum');
+      const lightboxTitle = document.getElementById('lightboxTitle');
+      const lightboxClose = document.getElementById('lightboxClose');
+      const lightboxPrev = document.getElementById('lightboxPrev');
+      const lightboxNext = document.getElementById('lightboxNext');
+
+      function openLightbox(index) {
+        currentIndex = index;
+        updateLightbox();
+        lightbox.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+      function closeLightbox() {
+        lightbox.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+      function updateLightbox() {
+        const img = galleryImages[currentIndex];
+        lightboxImg.style.opacity = '0';
+        setTimeout(() => {
+          lightboxImg.src = img.src;
+          lightboxImg.alt = img.title;
+          lightboxImg.style.opacity = '1';
+        }, 150);
+        lightboxNum.textContent = `${String(currentIndex + 1).padStart(2, '0')} / ${String(galleryImages.length).padStart(2, '0')}`;
+        lightboxTitle.textContent = img.title;
+      }
+      function nextLightbox() {
+        currentIndex = (currentIndex + 1) % galleryImages.length;
+        updateLightbox();
+      }
+      function prevLightbox() {
+        currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
+        updateLightbox();
+      }
+
+      lightboxClose.addEventListener('click', closeLightbox);
+      lightboxNext.addEventListener('click', nextLightbox);
+      lightboxPrev.addEventListener('click', prevLightbox);
+      lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) closeLightbox();
+      });
       document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && navLinks.classList.contains('open')) {
-          navLinks.classList.remove('open');
-          navToggle.classList.remove('active');
-          navToggle.setAttribute('aria-expanded', 'false');
-          navToggle.focus();
-        }
+        if (!lightbox.classList.contains('active')) return;
+        if (e.key === 'Escape') closeLightbox();
+        if (e.key === 'ArrowRight') nextLightbox();
+        if (e.key === 'ArrowLeft') prevLightbox();
       });
 
-      function loadAll() {
-        setTimeout(revealOnScroll, 400);
-      }
-      if (document.readyState === 'complete') {
-        loadAll();
-      } else {
-        window.addEventListener('load', loadAll);
-      }
+      /* ================================================================
+         VIEW MODE TOGGLE
+         ================================================================ */
+      const viewGrid = document.getElementById('viewGrid');
+      const viewMasonry = document.getElementById('viewMasonry');
+      viewGrid.addEventListener('click', () => {
+        galleryGrid.classList.remove('masonry');
+        viewGrid.classList.add('active');
+        viewMasonry.classList.remove('active');
+        viewGrid.setAttribute('aria-selected', 'true');
+        viewMasonry.setAttribute('aria-selected', 'false');
+      });
+      viewMasonry.addEventListener('click', () => {
+        galleryGrid.classList.add('masonry');
+        viewMasonry.classList.add('active');
+        viewGrid.classList.remove('active');
+        viewMasonry.setAttribute('aria-selected', 'true');
+        viewGrid.setAttribute('aria-selected', 'false');
+      });
 
-      console.log('GHSS Tibba Sultan Pur | Established 1885 | 141 Years of Excellence');
+      console.log(`Gallery loaded: ${galleryImages.length} images`);
     })();
   </script>
 </body>
