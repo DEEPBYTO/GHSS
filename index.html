@@ -4,7 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- ===== Primary Meta Tags ===== -->
   <title>GHSS Tibba Sultan Pur – Government Higher Secondary School</title>
   <meta name="title" content="GHSS Tibba Sultan Pur – Government Higher Secondary School" />
   <meta name="description" content="Established 1885 • 141 Years of Excellence. Government Higher Secondary School Tibba Sultan Pur – Quality education, modern facilities, and a commitment to student success." />
@@ -13,14 +12,10 @@
   <meta name="robots" content="index, follow" />
   <meta name="theme-color" content="#0a1a2f" />
 
-  <!-- ===== Canonical URL ===== -->
   <link rel="canonical" href="https://deepbyto.github.io/GHSS/" />
-
-  <!-- ===== Favicon ===== -->
   <link rel="icon" href="https://raw.githubusercontent.com/DEEPBYTO/GHSS/main/logo.png" type="image/png" />
   <link rel="apple-touch-icon" href="https://raw.githubusercontent.com/DEEPBYTO/GHSS/main/logo.png" />
 
-  <!-- ===== Open Graph / Facebook / WhatsApp ===== -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://deepbyto.github.io/GHSS/" />
   <meta property="og:title" content="GHSS Tibba Sultan Pur | Government Higher Secondary School" />
@@ -34,7 +29,6 @@
   <meta property="og:site_name" content="GHSS Tibba Sultan Pur" />
   <meta property="og:locale" content="en_PK" />
 
-  <!-- ===== Twitter Card ===== -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:url" content="https://deepbyto.github.io/GHSS/" />
   <meta name="twitter:title" content="GHSS Tibba Sultan Pur | Government Higher Secondary School" />
@@ -42,14 +36,12 @@
   <meta name="twitter:image" content="https://raw.githubusercontent.com/DEEPBYTO/GHSS/main/images/school-building/GHSS(0).jpeg" />
   <meta name="twitter:image:alt" content="GHSS Tibba Sultan Pur Campus" />
 
-  <!-- ===== Fonts & CSS ===== -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&family=Orbitron:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
   <style>
-    /* ----- RESET & ROOT ----- */
     * { margin: 0; padding: 0; box-sizing: border-box; }
     :root {
       --bg-primary: #0a1a2f;
@@ -100,7 +92,6 @@
     ::-webkit-scrollbar-track { background: var(--scrollbar-track); }
     ::-webkit-scrollbar-thumb { background: var(--scrollbar-thumb); border-radius: 12px; }
 
-    /* ----- PARTICLES ----- */
     #particles-canvas { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; pointer-events: none; }
 
     /* ----- NAVBAR ----- */
@@ -201,54 +192,10 @@
     .anniversary-badge .anniv-num { font-family: var(--font-display); font-weight: 800; font-size: 1.35rem; color: var(--accent); }
     .anniversary-badge .anniv-label { font-size: 0.72rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-secondary); }
 
-    /* ----- ACADEMICS ----- */
-    #academics { background: var(--bg-primary); position: relative; overflow: hidden; }
-    .services-stack { display: flex; flex-direction: column; position: relative; z-index: 2; }
-    .service-bg { position: relative; width: 100%; min-height: 70vh; display: flex; align-items: center; justify-content: center; overflow: hidden; text-decoration: none; color: #ffffff; isolation: isolate; cursor: pointer; }
-    .service-bg .bg-image { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: -2; transition: transform 1s cubic-bezier(0.25, 0.46, 0.45, 0.94), filter 0.6s ease; filter: brightness(0.6) contrast(1.05) saturate(1.05); }
-    .service-bg:hover .bg-image { transform: scale(1.06); filter: brightness(0.7) contrast(1.05) saturate(1.1); }
-    .service-bg .bg-overlay { position: absolute; inset: 0; z-index: -1; background: linear-gradient(110deg, rgba(10, 26, 47, 0.92) 0%, rgba(10, 26, 47, 0.75) 45%, rgba(10, 26, 47, 0.45) 75%, rgba(10, 26, 47, 0.7) 100%); transition: opacity 0.5s ease; }
-    .service-bg:hover .bg-overlay { opacity: 0.9; }
-    .service-bg .service-inner { position: relative; z-index: 2; max-width: 1200px; width: 100%; padding: 80px 48px; display: grid; grid-template-columns: 1fr; }
-    .service-bg .service-num { font-family: var(--font-display); font-size: 0.75rem; font-weight: 600; letter-spacing: 0.28em; color: var(--accent); margin-bottom: 20px; display: inline-block; }
-    .service-bg h3 { font-family: var(--font-display); font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 800; letter-spacing: -0.02em; line-height: 1.1; margin-bottom: 22px; color: #ffffff; text-shadow: 0 4px 30px rgba(0, 0, 0, 0.5); max-width: 700px; }
-    .service-bg .service-desc { font-size: clamp(1rem, 1.3vw, 1.15rem); line-height: 1.75; color: rgba(255, 255, 255, 0.9); max-width: 620px; margin-bottom: 32px; }
-    .service-bg .service-bottom { display: flex; flex-wrap: wrap; align-items: center; gap: 22px; }
-    .service-bg .service-pricing { display: inline-flex; align-items: center; gap: 8px; padding: 10px 22px; border-radius: 50px; background: rgba(240, 192, 64, 0.12); border: 1px solid rgba(240, 192, 64, 0.3); font-size: 0.85rem; font-weight: 600; color: var(--accent); backdrop-filter: blur(10px); transition: all 0.3s ease; }
-    .service-bg .service-cta { display: inline-flex; align-items: center; gap: 12px; font-size: 0.9rem; font-weight: 600; letter-spacing: 0.04em; color: #ffffff; transition: gap 0.3s ease; }
-    .service-bg .service-cta .cta-arrow { display: inline-flex; align-items: center; justify-content: center; width: 42px; height: 42px; border-radius: 50%; background: var(--accent); color: #0a1a2f; font-size: 0.85rem; transition: all 0.35s ease; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4); }
-    .service-bg:hover .service-cta { gap: 18px; }
-    .service-bg:hover .service-cta .cta-arrow { transform: translateX(6px) rotate(-45deg); box-shadow: 0 6px 30px rgba(240, 192, 64, 0.4); }
-    .service-bg.right .service-inner { text-align: right; justify-items: end; }
-    .service-bg.right .service-desc { margin-left: auto; }
-    .service-bg.right .service-bottom { justify-content: flex-end; }
-    .service-bg.right h3 { margin-left: auto; }
-
-    /* ----- FACILITIES ----- */
-    #facilities { background: var(--bg-secondary); border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle); position: relative; overflow: hidden; }
-    .labs-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; margin-top: 48px; position: relative; z-index: 2; }
-    .lab-card { position: relative; border-radius: var(--radius); overflow: hidden; background: var(--bg-card); border: 1px solid var(--glass-border); transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94); cursor: pointer; display: flex; flex-direction: column; min-height: 320px; }
-    .lab-card:hover { border-color: var(--accent); transform: translateY(-8px); box-shadow: 0 24px 45px var(--shadow-color), 0 0 50px var(--accent-dim); }
-    .lab-card .lab-image { position: relative; width: 100%; aspect-ratio: 16 / 10; overflow: hidden; background: var(--bg-primary); flex-shrink: 0; }
-    .lab-card .lab-image img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94), filter 0.5s ease; filter: brightness(0.8) contrast(1.05) saturate(1.05); }
-    .lab-card:hover .lab-image img { transform: scale(1.08); filter: brightness(0.95) contrast(1.05) saturate(1.15); }
-    .lab-card .lab-image::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(10, 26, 47, 0) 50%, rgba(10, 26, 47, 0.6) 100%); pointer-events: none; transition: opacity 0.4s ease; }
-    .lab-card:hover .lab-image::after { opacity: 0.6; }
-    .lab-card .lab-num { position: absolute; top: 16px; left: 16px; z-index: 2; font-family: var(--font-display); font-size: 0.7rem; font-weight: 700; letter-spacing: 0.15em; padding: 5px 12px; border-radius: 50px; background: rgba(10, 26, 47, 0.7); border: 1px solid rgba(240, 192, 64, 0.3); color: var(--accent); backdrop-filter: blur(8px); }
-    .lab-card .lab-body { padding: 22px 22px 24px; display: flex; flex-direction: column; flex: 1; gap: 8px; }
-    .lab-card h4 { font-family: var(--font-display); font-size: 1.1rem; font-weight: 700; color: var(--text-primary); letter-spacing: -0.01em; margin-bottom: 2px; }
-    .lab-card p { font-size: 0.85rem; color: var(--text-secondary); line-height: 1.6; }
-    .lab-card::after { content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 3px; background: var(--accent); transition: width 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94); border-radius: 0 0 var(--radius) var(--radius); }
-    .lab-card:hover::after { width: 100%; }
-    .labs-note { margin-top: 32px; padding: 20px 28px; background: var(--bg-card); border: 1px solid var(--glass-border); border-radius: var(--radius-sm); color: var(--text-secondary); font-size: 0.95rem; text-align: center; backdrop-filter: blur(8px); position: relative; z-index: 2; }
-
-    /* ============================================
-       GALLERY SECTION
-       ============================================ */
+    /* ----- GALLERY ----- */
     #gallery { background: var(--bg-primary); border-top: 1px solid var(--border-subtle); position: relative; overflow: hidden; isolation: isolate; }
     .gallery-header { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 20px; margin-bottom: 12px; }
     .gallery-count-badge { display: inline-flex; align-items: center; gap: 8px; padding: 8px 18px; border-radius: 50px; background: var(--accent-dim); border: 1px solid var(--badge-border); font-family: var(--font-display); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em; color: var(--accent); text-transform: uppercase; white-space: nowrap; }
-    .gallery-count-badge i { font-size: 0.85rem; }
     .gallery-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 18px; margin-top: 40px; position: relative; z-index: 2; }
     .gallery-item { position: relative; border-radius: var(--radius-sm); overflow: hidden; background: var(--bg-card); border: 1px solid var(--glass-border); cursor: pointer; aspect-ratio: 4 / 3; transition: transform 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94), border-color 0.35s ease, box-shadow 0.45s ease; }
     .gallery-item:hover { transform: translateY(-6px); border-color: var(--accent); box-shadow: 0 22px 45px var(--shadow-color), 0 0 40px var(--accent-dim); z-index: 3; }
@@ -303,6 +250,7 @@
     .footer { padding: 48px 0 32px; border-top: 1px solid var(--border-subtle); background: var(--bg-primary); position: relative; overflow: hidden; }
     .footer-grid { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 24px; }
     .footer-brand .fb-name { display: flex; align-items: center; gap: 14px; }
+    .footer-brand .fb-logo { height: 56px; width: auto; object-fit: contain; border-radius: 6px; }
     .footer-brand .fb-text { display: flex; flex-direction: column; line-height: 1.15; }
     .footer-brand .fb-line-1 { font-family: var(--font-display); font-weight: 800; font-size: 1.15rem; letter-spacing: 0.06em; color: var(--accent); }
     .footer-brand .fb-line-2 { font-family: var(--font-sans); font-weight: 500; font-size: 0.72rem; letter-spacing: 0.06em; color: var(--text-secondary); text-transform: uppercase; }
@@ -310,11 +258,8 @@
     .footer-links { display: flex; flex-wrap: wrap; gap: 18px 28px; }
     .footer-links a { font-size: 0.8rem; color: var(--text-secondary); transition: color var(--transition); }
     .footer-links a:hover { color: var(--accent); }
-    .footer-bottom { margin-top: 32px; padding-top: 20px; border-top: 1px solid var(--border-subtle); display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px; }
+    .footer-bottom { margin-top: 32px; padding-top: 20px; border-top: 1px solid var(--border-subtle); display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 12px; text-align: center; }
     .footer-bottom p { font-size: 0.75rem; color: var(--text-muted); }
-    .footer-socials { display: flex; gap: 14px; }
-    .footer-socials a { font-size: 0.8rem; color: var(--text-muted); transition: color var(--transition); }
-    .footer-socials a:hover { color: var(--accent); }
 
     /* ----- REVEAL ----- */
     .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease, transform 0.8s ease; }
@@ -325,8 +270,6 @@
       .about-grid { grid-template-columns: 1fr; gap: 40px; }
       .contact-wrapper { grid-template-columns: 1fr; gap: 40px; }
       .contact-cards { grid-template-columns: repeat(3, 1fr); }
-      .service-bg .service-inner { padding: 70px 36px; }
-      .labs-grid { grid-template-columns: repeat(2, 1fr); }
       .gallery-grid { grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 14px; }
     }
 
@@ -339,19 +282,10 @@
       .hero-description { font-size: 1rem; }
       .hero-buttons { flex-direction: column; align-items: stretch; }
       .hero-buttons .btn-primary, .hero-buttons .btn-secondary { justify-content: center; }
-      .labs-grid { grid-template-columns: 1fr 1fr; }
       .footer-grid { flex-direction: column; text-align: center; }
-      .footer-brand .fb-name { justify-content: center; }
       .footer-bottom { flex-direction: column; text-align: center; }
       .section-padding { padding: 64px 0 48px; }
       .contact-cards { grid-template-columns: repeat(2, 1fr); gap: 12px; }
-      .service-bg { min-height: 65vh; }
-      .service-bg .service-inner { padding: 60px 24px; }
-      .service-bg h3 { font-size: 2rem; }
-      .service-bg.right .service-inner { text-align: left; justify-items: start; }
-      .service-bg.right h3 { margin-left: 0; }
-      .service-bg.right .service-desc { margin-left: 0; }
-      .service-bg.right .service-bottom { justify-content: flex-start; }
       .hero-brand-block { flex-direction: column; align-items: flex-start; gap: 14px; }
       .hero-logo { height: 80px; }
       .timeline { padding-left: 30px; }
@@ -362,22 +296,26 @@
       .lightbox-prev { left: 12px; }
       .lightbox-next { right: 12px; }
       .lightbox-caption { font-size: 0.68rem; bottom: -38px; }
+
+      /* Footer: mobile pe logo GHSS text ke UPAR */
+      .footer-brand .fb-name {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+      }
+      .footer-brand .fb-text { align-items: center; text-align: center; }
     }
 
     @media (max-width: 480px) {
-      .labs-grid { grid-template-columns: 1fr; }
       .footer-links { justify-content: center; }
       .hero-typing { font-size: 0.9rem; flex-wrap: wrap; }
       .container { padding: 0 16px; }
       .contact-cards { grid-template-columns: 1fr 1fr; gap: 10px; }
-      .service-bg { min-height: 60vh; }
-      .service-bg .service-inner { padding: 50px 20px; }
-      .service-bg h3 { font-size: 1.6rem; }
-      .service-bg .service-desc { font-size: 0.9rem; }
       .hero { min-height: 100vh; padding: 100px 0 60px; }
       .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
       .gallery-item .gallery-zoom { width: 32px; height: 32px; font-size: 0.75rem; }
       .gallery-header { flex-direction: column; align-items: flex-start; }
+      .footer-brand .fb-logo { height: 48px; }
     }
 
     @media (prefers-reduced-motion: reduce) {
@@ -402,8 +340,6 @@
       </a>
       <ul class="nav-links" id="navLinks" role="menubar">
         <li role="none"><a href="#about" role="menuitem">About</a></li>
-        <li role="none"><a href="#academics" role="menuitem">Academics</a></li>
-        <li role="none"><a href="#facilities" role="menuitem">Facilities</a></li>
         <li role="none"><a href="#gallery" role="menuitem">Gallery</a></li>
         <li role="none"><a href="#contact" role="menuitem">Contact</a></li>
       </ul>
@@ -496,105 +432,6 @@
     </div>
   </section>
 
-  <!-- ACADEMICS -->
-  <section id="academics" aria-label="Academics">
-    <div class="container section-padding" style="padding-bottom: 0; position: relative; z-index: 2;">
-      <span class="section-label reveal">Academics</span>
-      <h2 class="section-title reveal">Our <span class="highlight">Programs</span></h2>
-      <p class="section-desc reveal">We offer a wide range of academic programs designed to prepare students for success in higher education and beyond.</p>
-    </div>
-    <div class="services-stack">
-      <a href="#" class="service-bg reveal">
-        <img class="bg-image" src="https://raw.githubusercontent.com/DEEPBYTO/GHSS/main/images/school-building/GHSS(0).jpeg" alt="School building" loading="lazy" />
-        <div class="bg-overlay"></div>
-        <div class="service-inner">
-          <span class="service-num">01 / 04</span>
-          <h3>Science Stream</h3>
-          <p class="service-desc">Physics, Chemistry, Biology, and Mathematics with well-equipped laboratories and experienced faculty to prepare students for medical, engineering, and research careers.</p>
-          <div class="service-bottom">
-            <span class="service-pricing">F.Sc / Pre-Medical / Pre-Engineering</span>
-            <span class="service-cta">Learn More <span class="cta-arrow"><i class="fas fa-arrow-right"></i></span></span>
-          </div>
-        </div>
-      </a>
-      <a href="#" class="service-bg right reveal">
-        <img class="bg-image" src="https://raw.githubusercontent.com/DEEPBYTO/GHSS/main/images/school-building/GHSS%20(1).jpeg" alt="Arts stream" loading="lazy" />
-        <div class="bg-overlay"></div>
-        <div class="service-inner">
-          <span class="service-num">02 / 04</span>
-          <h3>Arts & Humanities</h3>
-          <p class="service-desc">A rich curriculum in languages, history, civics, and Islamic studies, fostering critical thinking and cultural awareness.</p>
-          <div class="service-bottom">
-            <span class="service-pricing">F.A / I.Com</span>
-            <span class="service-cta">Learn More <span class="cta-arrow"><i class="fas fa-arrow-right"></i></span></span>
-          </div>
-        </div>
-      </a>
-      <a href="#" class="service-bg reveal">
-        <img class="bg-image" src="https://raw.githubusercontent.com/DEEPBYTO/GHSS/main/images/school-building/GHSS%20(2).jpeg" alt="Computer science" loading="lazy" />
-        <div class="bg-overlay"></div>
-        <div class="service-inner">
-          <span class="service-num">03 / 04</span>
-          <h3>Computer Science</h3>
-          <p class="service-desc">Modern computer labs and courses in programming, IT, and digital literacy to prepare students for the technology-driven world.</p>
-          <div class="service-bottom">
-            <span class="service-pricing">ICS / Computer Science</span>
-            <span class="service-cta">Learn More <span class="cta-arrow"><i class="fas fa-arrow-right"></i></span></span>
-          </div>
-        </div>
-      </a>
-      <a href="#" class="service-bg right reveal">
-        <img class="bg-image" src="https://raw.githubusercontent.com/DEEPBYTO/GHSS/main/images/school-building/GHSS%20(3).jpeg" alt="Matriculation" loading="lazy" />
-        <div class="bg-overlay"></div>
-        <div class="service-inner">
-          <span class="service-num">04 / 04</span>
-          <h3>Matriculation</h3>
-          <p class="service-desc">Strong foundation in core subjects for classes 9 and 10, with a focus on board exam preparation and concept clarity.</p>
-          <div class="service-bottom">
-            <span class="service-pricing">SSC Part I & II</span>
-            <span class="service-cta">Learn More <span class="cta-arrow"><i class="fas fa-arrow-right"></i></span></span>
-          </div>
-        </div>
-      </a>
-    </div>
-  </section>
-
-  <!-- FACILITIES -->
-  <section id="facilities" class="section-padding" aria-label="Facilities">
-    <div class="container">
-      <span class="section-label reveal">Facilities</span>
-      <h2 class="section-title reveal">Our <span class="highlight">Campus</span></h2>
-      <p class="section-desc reveal">Modern infrastructure and resources to support quality education and student development.</p>
-      <div class="labs-grid">
-        <div class="lab-card reveal">
-          <div class="lab-image"><img src="https://raw.githubusercontent.com/DEEPBYTO/GHSS/main/images/school-building/GHSS%20(4).jpeg" alt="Library" loading="lazy" /><span class="lab-num">01</span></div>
-          <div class="lab-body"><h4>Library</h4><p>Well-stocked library with textbooks, reference materials, and reading room.</p></div>
-        </div>
-        <div class="lab-card reveal">
-          <div class="lab-image"><img src="https://raw.githubusercontent.com/DEEPBYTO/GHSS/main/images/school-building/GHSS%20(5).jpeg" alt="Science Labs" loading="lazy" /><span class="lab-num">02</span></div>
-          <div class="lab-body"><h4>Science Labs</h4><p>Fully equipped Physics, Chemistry, and Biology laboratories.</p></div>
-        </div>
-        <div class="lab-card reveal">
-          <div class="lab-image"><img src="https://raw.githubusercontent.com/DEEPBYTO/GHSS/main/images/school-building/GHSS%20(6).jpeg" alt="Computer Lab" loading="lazy" /><span class="lab-num">03</span></div>
-          <div class="lab-body"><h4>Computer Lab</h4><p>Modern computers with internet access for IT education.</p></div>
-        </div>
-        <div class="lab-card reveal">
-          <div class="lab-image"><img src="https://raw.githubusercontent.com/DEEPBYTO/GHSS/main/images/school-building/GHSS%20(7).jpeg" alt="Sports Ground" loading="lazy" /><span class="lab-num">04</span></div>
-          <div class="lab-body"><h4>Sports Ground</h4><p>Spacious playground for cricket, football, and athletics.</p></div>
-        </div>
-        <div class="lab-card reveal">
-          <div class="lab-image"><img src="https://raw.githubusercontent.com/DEEPBYTO/GHSS/main/images/school-building/GHSS%20(8).jpeg" alt="Classrooms" loading="lazy" /><span class="lab-num">05</span></div>
-          <div class="lab-body"><h4>Smart Classrooms</h4><p>Airy, well-lit classrooms with modern teaching aids.</p></div>
-        </div>
-        <div class="lab-card reveal">
-          <div class="lab-image"><img src="https://raw.githubusercontent.com/DEEPBYTO/GHSS/main/images/school-building/GHSS%20(9).jpeg" alt="Auditorium" loading="lazy" /><span class="lab-num">06</span></div>
-          <div class="lab-body"><h4>Auditorium</h4><p>Multi-purpose hall for assemblies, events, and cultural programs.</p></div>
-        </div>
-      </div>
-      <div class="labs-note reveal">Our campus provides a safe, conducive, and inspiring environment for holistic learning.</div>
-    </div>
-  </section>
-
   <!-- GALLERY -->
   <section id="gallery" class="section-padding" aria-label="Gallery">
     <div class="container">
@@ -683,6 +520,7 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <div class="fb-name">
+            <img src="https://raw.githubusercontent.com/DEEPBYTO/GHSS/main/logo.png" alt="GHSS Tibba Sultan Pur logo" class="fb-logo">
             <div class="fb-text">
               <span class="fb-line-1">GHSS</span>
               <span class="fb-line-2">Govt. Higher Secondary School</span>
@@ -692,20 +530,13 @@
         </div>
         <div class="footer-links">
           <a href="#about">About</a>
-          <a href="#academics">Academics</a>
-          <a href="#facilities">Facilities</a>
           <a href="#gallery">Gallery</a>
           <a href="#contact">Contact</a>
           <a href="mailto:It.ghsstspur@gmail.com">Email</a>
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2026 GHSS Tibba Sultan Pur. All rights reserved. • Established 1885</p>
-        <div class="footer-socials">
-          <a href="https://www.facebook.com/share/g/19p66WaMYz/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">Facebook</a>
-          <a href="https://whatsapp.com/channel/0029Vb9JbCX0G0Xr0gYU8a09" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Channel">WhatsApp</a>
-          <a href="https://maps.app.goo.gl/XbNQUP54seL3FsfN8" target="_blank" rel="noopener noreferrer" aria-label="Google Maps">Map</a>
-        </div>
+        <p>&copy; 2026 GHSS Tibba Sultan Pur. All rights reserved.</p>
       </div>
     </div>
   </footer>
@@ -714,9 +545,6 @@
     (function() {
       'use strict';
 
-      /* ============================================
-         IMAGE CONFIGURATION
-         ============================================ */
       var GHSS_BASE = 'https://raw.githubusercontent.com/DEEPBYTO/GHSS/main/images/school-building/';
 
       var galleryImages = [
@@ -751,9 +579,7 @@
         { src: GHSS_BASE + 'GHSS%20(28).jpeg', caption: 'Campus View 28' }
       ];
 
-      /* ============================================
-         HERO BACKGROUND ROTATOR
-         ============================================ */
+      /* HERO BACKGROUND ROTATOR */
       var heroImages = galleryImages.map(function(img) { return img.src; });
       var rotator = document.getElementById('heroBgRotator');
       var currentIndex = 0;
@@ -787,9 +613,7 @@
         currentIndex = nextIndex;
       }, 5000);
 
-      /* ============================================
-         GALLERY GRID
-         ============================================ */
+      /* GALLERY GRID */
       var galleryGrid = document.getElementById('galleryGrid');
       var galleryCountEl = document.getElementById('galleryCount');
 
@@ -827,9 +651,7 @@
 
       galleryCountEl.textContent = galleryImages.length;
 
-      /* ============================================
-         LIGHTBOX
-         ============================================ */
+      /* LIGHTBOX */
       var lightbox = document.getElementById('lightbox');
       var lightboxImg = document.getElementById('lightboxImg');
       var lightboxCaption = document.getElementById('lightboxCaption');
@@ -862,15 +684,8 @@
         lightboxCounter.textContent = (lbIndex + 1) + ' / ' + galleryImages.length;
       }
 
-      function nextImage() {
-        lbIndex = (lbIndex + 1) % galleryImages.length;
-        updateLightbox();
-      }
-
-      function prevImage() {
-        lbIndex = (lbIndex - 1 + galleryImages.length) % galleryImages.length;
-        updateLightbox();
-      }
+      function nextImage() { lbIndex = (lbIndex + 1) % galleryImages.length; updateLightbox(); }
+      function prevImage() { lbIndex = (lbIndex - 1 + galleryImages.length) % galleryImages.length; updateLightbox(); }
 
       galleryGrid.addEventListener('click', function(e) {
         var item = e.target.closest('.gallery-item');
@@ -879,10 +694,7 @@
       galleryGrid.addEventListener('keydown', function(e) {
         if (e.key === 'Enter' || e.key === ' ') {
           var item = e.target.closest('.gallery-item');
-          if (item) {
-            e.preventDefault();
-            openLightbox(parseInt(item.getAttribute('data-index'), 10));
-          }
+          if (item) { e.preventDefault(); openLightbox(parseInt(item.getAttribute('data-index'), 10)); }
         }
       });
 
@@ -890,9 +702,7 @@
       lbNext.addEventListener('click', nextImage);
       lbPrev.addEventListener('click', prevImage);
 
-      lightbox.addEventListener('click', function(e) {
-        if (e.target === lightbox) closeLightbox();
-      });
+      lightbox.addEventListener('click', function(e) { if (e.target === lightbox) closeLightbox(); });
 
       document.addEventListener('keydown', function(e) {
         if (!lightbox.classList.contains('open')) return;
@@ -901,32 +711,21 @@
         else if (e.key === 'ArrowLeft') prevImage();
       });
 
-      lightbox.addEventListener('touchstart', function(e) {
-        touchStartX = e.changedTouches[0].screenX;
-      }, { passive: true });
-
+      lightbox.addEventListener('touchstart', function(e) { touchStartX = e.changedTouches[0].screenX; }, { passive: true });
       lightbox.addEventListener('touchend', function(e) {
         touchEndX = e.changedTouches[0].screenX;
         var diff = touchStartX - touchEndX;
-        if (Math.abs(diff) > 60) {
-          if (diff > 0) nextImage();
-          else prevImage();
-        }
+        if (Math.abs(diff) > 60) { if (diff > 0) nextImage(); else prevImage(); }
       }, { passive: true });
 
-      /* ============================================
-         PARTICLES
-         ============================================ */
+      /* PARTICLES */
       var canvas = document.getElementById('particles-canvas');
       var ctx = canvas.getContext('2d');
       var particles = [];
       var particleCount = 50;
       var mouseX = null, mouseY = null;
 
-      function resizeCanvas() {
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-      }
+      function resizeCanvas() { canvas.width = window.innerWidth; canvas.height = window.innerHeight; }
       window.addEventListener('resize', resizeCanvas);
       resizeCanvas();
 
@@ -940,19 +739,13 @@
         this.opacity = Math.random() * 0.3 + 0.05;
       };
       Particle.prototype.update = function() {
-        this.x += this.speedX;
-        this.y += this.speedY;
+        this.x += this.speedX; this.y += this.speedY;
         if (this.x < 0 || this.x > canvas.width) { this.speedX *= -1; this.x += this.speedX; }
         if (this.y < 0 || this.y > canvas.height) { this.speedY *= -1; this.y += this.speedY; }
         if (mouseX !== null && mouseY !== null) {
-          var dx = this.x - mouseX;
-          var dy = this.y - mouseY;
+          var dx = this.x - mouseX, dy = this.y - mouseY;
           var dist = Math.sqrt(dx * dx + dy * dy);
-          if (dist < 100) {
-            var force = (100 - dist) / 100 * 0.01;
-            this.x += dx * force;
-            this.y += dy * force;
-          }
+          if (dist < 100) { var force = (100 - dist) / 100 * 0.01; this.x += dx * force; this.y += dy * force; }
         }
       };
       Particle.prototype.draw = function() {
@@ -994,9 +787,7 @@
       document.addEventListener('mousemove', function(e) { mouseX = e.clientX; mouseY = e.clientY; });
       document.addEventListener('mouseleave', function() { mouseX = null; mouseY = null; });
 
-      /* ============================================
-         TYPING EFFECT
-         ============================================ */
+      /* TYPING EFFECT */
       var taglines = [
         'Welcome to GHSS Tibba Sultan Pur',
         'Serving Education Since 1885',
@@ -1018,29 +809,18 @@
         if (!isDeleting) {
           typingEl.textContent = currentText.substring(0, charIndex + 1);
           charIndex++;
-          if (charIndex === currentText.length) {
-            isDeleting = true;
-            setTimeout(typeEffect, 2200);
-            return;
-          }
+          if (charIndex === currentText.length) { isDeleting = true; setTimeout(typeEffect, 2200); return; }
           setTimeout(typeEffect, typingSpeed + Math.random() * 40);
         } else {
           typingEl.textContent = currentText.substring(0, charIndex);
           charIndex--;
-          if (charIndex < 0) {
-            isDeleting = false;
-            taglineIndex = (taglineIndex + 1) % taglines.length;
-            setTimeout(typeEffect, 400);
-            return;
-          }
+          if (charIndex < 0) { isDeleting = false; taglineIndex = (taglineIndex + 1) % taglines.length; setTimeout(typeEffect, 400); return; }
           setTimeout(typeEffect, typingSpeed * 0.5 + Math.random() * 30);
         }
       }
       setTimeout(typeEffect, 600);
 
-      /* ============================================
-         NAVBAR
-         ============================================ */
+      /* NAVBAR */
       var navbar = document.getElementById('navbar');
       var navToggle = document.getElementById('navToggle');
       var navLinks = document.getElementById('navLinks');
@@ -1082,9 +862,7 @@
       window.addEventListener('scroll', updateActiveLink);
       updateActiveLink();
 
-      /* ============================================
-         REVEAL ON SCROLL
-         ============================================ */
+      /* REVEAL */
       var revealElements = document.querySelectorAll('.reveal');
       function revealOnScroll() {
         var windowHeight = window.innerHeight;
@@ -1097,9 +875,7 @@
       window.addEventListener('scroll', revealOnScroll);
       window.addEventListener('resize', revealOnScroll);
 
-      /* ============================================
-         SMOOTH ANCHOR SCROLL
-         ============================================ */
+      /* SMOOTH SCROLL */
       document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
         anchor.addEventListener('click', function(e) {
           var targetId = this.getAttribute('href');
