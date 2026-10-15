@@ -4,13 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>GHSS Tibba Sultan Pur – Government Higher Secondary School</title>
-  <meta name="description" content="Government Higher Secondary School Tibba Sultan Pur – Quality education, modern facilities, and a commitment to student success." />
+  <meta name="description" content="Government Higher Secondary School Tibba Sultan Pur – Established 1885. Quality education, modern facilities, and a commitment to student success." />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://ghsstibbasultanpur.github.io/" />
   <link rel="icon" href="https://raw.githubusercontent.com/DEEPBYTO/GHSS/main/logo.png" type="image/png" />
   <meta name="theme-color" content="#0a1a2f" />
   <meta property="og:title" content="GHSS Tibba Sultan Pur | Government Higher Secondary School" />
-  <meta property="og:description" content="Quality education, modern facilities, and a commitment to student success." />
+  <meta property="og:description" content="Established 1885 – Quality education, modern facilities, and a commitment to student success." />
   <meta property="og:image" content="https://raw.githubusercontent.com/DEEPBYTO/GHSS/main/logo.png" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="GHSS Tibba Sultan Pur" />
@@ -516,7 +516,7 @@
     }
 
     /* ============================================
-       ABOUT / PRINCIPAL MESSAGE
+       ABOUT / HISTORY TIMELINE
        ============================================ */
     #about {
       position: relative;
@@ -578,35 +578,159 @@
       margin-bottom: 16px;
     }
     .about-text p:last-child { margin-bottom: 0; }
-    .about-values {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 16px;
+
+    /* ============================================
+       HISTORY TIMELINE (replaces old value cards)
+       ============================================ */
+    .history-block {
+      position: relative;
+      padding: 8px 0 8px 4px;
     }
-    .value-card {
-      background: var(--bg-card);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-      border: 1px solid var(--glass-border);
-      border-radius: var(--radius-sm);
-      padding: 20px 18px;
+    .history-heading {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      color: var(--accent);
+      margin-bottom: 26px;
+      text-transform: uppercase;
+    }
+    .history-heading .heading-sub {
+      display: block;
+      font-family: var(--font-sans);
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      color: var(--text-muted);
+      margin-top: 4px;
+      text-transform: uppercase;
+    }
+
+    .timeline {
+      position: relative;
+      padding-left: 34px;
+    }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      top: 6px;
+      left: 9px;
+      bottom: 6px;
+      width: 2px;
+      background: linear-gradient(to bottom,
+        rgba(240, 192, 64, 0.05) 0%,
+        var(--accent) 12%,
+        var(--accent) 88%,
+        rgba(240, 192, 64, 0.05) 100%);
+      border-radius: 2px;
+    }
+
+    .timeline-item {
+      position: relative;
+      padding: 0 0 26px 0;
+    }
+    .timeline-item:last-child { padding-bottom: 0; }
+
+    .timeline-item .tl-dot {
+      position: absolute;
+      left: -33px;
+      top: 4px;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: var(--bg-secondary);
+      border: 2px solid var(--accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all var(--transition);
+      box-shadow: 0 0 0 0 var(--accent-glow);
+      z-index: 2;
+    }
+    .timeline-item .tl-dot::after {
+      content: '';
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--accent);
       transition: all var(--transition);
     }
-    .value-card:hover {
-      border-color: var(--accent);
-      transform: translateY(-4px);
-      box-shadow: 0 12px 25px var(--shadow-color);
+    .timeline-item:hover .tl-dot {
+      box-shadow: 0 0 0 6px var(--accent-glow);
+      transform: scale(1.08);
     }
-    .value-card h4 {
-      font-size: 0.9rem;
-      font-weight: 600;
+
+    .timeline-item .tl-year {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 1.5rem;
+      line-height: 1;
       color: var(--accent);
+      letter-spacing: 0.03em;
       margin-bottom: 4px;
+      display: block;
+      transition: transform var(--transition);
     }
-    .value-card p {
+    .timeline-item:hover .tl-year {
+      transform: translateX(3px);
+    }
+
+    .timeline-item .tl-title {
+      font-family: var(--font-sans);
+      font-weight: 600;
+      font-size: 0.92rem;
+      color: var(--text-primary);
+      margin-bottom: 2px;
+      letter-spacing: 0.01em;
+    }
+    .timeline-item .tl-desc {
       font-size: 0.8rem;
       color: var(--text-muted);
-      line-height: 1.5;
+      line-height: 1.55;
+    }
+
+    /* Anniversary highlight badge */
+    .anniversary-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      margin-top: 26px;
+      padding: 14px 24px;
+      border-radius: var(--radius-sm);
+      background: linear-gradient(135deg, rgba(240, 192, 64, 0.14) 0%, rgba(240, 192, 64, 0.05) 100%);
+      border: 1px solid var(--badge-border);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      transition: all var(--transition);
+    }
+    .anniversary-badge:hover {
+      border-color: var(--accent);
+      box-shadow: 0 10px 30px var(--accent-glow);
+      transform: translateY(-2px);
+    }
+    .anniversary-badge .anniv-icon {
+      font-size: 1.6rem;
+      color: var(--accent);
+      flex-shrink: 0;
+    }
+    .anniversary-badge .anniv-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.2;
+    }
+    .anniversary-badge .anniv-num {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 1.35rem;
+      color: var(--accent);
+      letter-spacing: 0.02em;
+    }
+    .anniversary-badge .anniv-label {
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-secondary);
     }
 
     /* ============================================
@@ -1283,7 +1407,6 @@
       .hero-buttons { flex-direction: column; align-items: stretch; }
       .hero-buttons .btn-primary,
       .hero-buttons .btn-secondary { justify-content: center; }
-      .about-values { grid-template-columns: 1fr 1fr; }
       .labs-grid { grid-template-columns: 1fr 1fr; }
       .footer-grid { flex-direction: column; text-align: center; }
       .footer-brand .fb-name { justify-content: center; }
@@ -1314,11 +1437,19 @@
         gap: 14px;
       }
       .hero-logo { height: 80px; }
+
+      /* Timeline mobile tweaks */
+      .timeline { padding-left: 30px; }
+      .timeline-item .tl-dot { left: -29px; width: 17px; height: 17px; }
+      .timeline-item .tl-dot::after { width: 6px; height: 6px; }
+      .timeline-item .tl-year { font-size: 1.3rem; }
+      .timeline-item .tl-title { font-size: 0.85rem; }
+      .anniversary-badge { padding: 12px 18px; }
+      .anniversary-badge .anniv-num { font-size: 1.15rem; }
     }
 
     @media (max-width: 480px) {
       .labs-grid { grid-template-columns: 1fr; }
-      .about-values { grid-template-columns: 1fr; }
       .footer-links { justify-content: center; }
       .hero-typing { font-size: 0.9rem; flex-wrap: wrap; }
       .container { padding: 0 16px; }
@@ -1366,7 +1497,7 @@
 <body>
   <canvas id="particles-canvas"></canvas>
 
-  <!-- FLOATING WHATSAPP BUTTON - UPDATED NUMBER -->
+  <!-- FLOATING WHATSAPP BUTTON -->
   <a href="https://wa.me/923006353469?text=Hello%20GHSS%20Tibba%20Sultan%20Pur" 
      class="whatsapp-float" 
      target="_blank" 
@@ -1407,7 +1538,7 @@
     <div class="hero-bg-rotator" id="heroBgRotator" aria-hidden="true"></div>
     <div class="container">
       <div class="hero-content">
-        <div class="hero-badge"><span class="badge-dot"></span>Excellence in Education</div>
+        <div class="hero-badge"><span class="badge-dot"></span>Established 1885 • 141 Years of Excellence</div>
 
         <!-- HERO LOGO + STACKED TEXT -->
         <div class="hero-brand-block">
@@ -1423,7 +1554,7 @@
           </div>
         </div>
 
-        <p class="hero-subtitle">Excellence in Education</p>
+        <p class="hero-subtitle">Excellence in Education Since 1885</p>
         <p class="hero-description">Empowering students with quality education, modern facilities, and a commitment to academic excellence and character building.</p>
         <div class="hero-typing"><span id="typing-text"></span><span class="cursor"></span></div>
         <div class="hero-buttons">
@@ -1450,13 +1581,57 @@
           <p>We offer a comprehensive curriculum that balances academics, sports, and extracurricular activities, preparing students for higher education and successful careers.</p>
           <p>Our dedicated faculty and staff work tirelessly to create a supportive learning environment where every student can thrive and reach their full potential.</p>
         </div>
-        <div class="about-values reveal">
-          <div class="value-card"><h4>Academic Excellence</h4><p>Consistently high standards in teaching and learning.</p></div>
-          <div class="value-card"><h4>Character Building</h4><p>Instilling values of integrity, respect, and responsibility.</p></div>
-          <div class="value-card"><h4>Inclusive Education</h4><p>Equal opportunities for all students to succeed.</p></div>
-          <div class="value-card"><h4>Community Engagement</h4><p>Building strong ties with parents and the local community.</p></div>
-          <div class="value-card" style="grid-column: span 2;"><h4>Holistic Development</h4><p>Focus on academics, sports, arts, and life skills for well-rounded individuals.</p></div>
+
+        <!-- ==========================================
+             HISTORY TIMELINE (replaces value cards)
+             ========================================== -->
+        <div class="history-block reveal">
+          <div class="history-heading">
+            Our History
+            <span class="heading-sub">A Journey Through Time</span>
+          </div>
+
+          <div class="timeline">
+            <div class="timeline-item">
+              <span class="tl-dot"></span>
+              <span class="tl-year">1885</span>
+              <div class="tl-title">School Established</div>
+              <div class="tl-desc">Foundation laid as a Primary School, beginning a legacy of education in the region.</div>
+            </div>
+
+            <div class="timeline-item">
+              <span class="tl-dot"></span>
+              <span class="tl-year">1949</span>
+              <div class="tl-title">Upgraded to Middle School</div>
+              <div class="tl-desc">Expanded academic offerings to include middle-level education for the growing community.</div>
+            </div>
+
+            <div class="timeline-item">
+              <span class="tl-dot"></span>
+              <span class="tl-year">1964</span>
+              <div class="tl-title">Elevated to High School</div>
+              <div class="tl-desc">Achieved High School status, enabling students to complete their secondary education locally.</div>
+            </div>
+
+            <div class="timeline-item">
+              <span class="tl-dot"></span>
+              <span class="tl-year">1987</span>
+              <div class="tl-title">Became Higher Secondary School</div>
+              <div class="tl-desc">Upgraded to Higher Secondary School, offering intermediate programs in Science and Arts.</div>
+            </div>
+          </div>
+
+          <!-- 141 Years Anniversary Badge -->
+          <div class="anniversary-badge">
+            <i class="fas fa-award anniv-icon"></i>
+            <div class="anniv-text">
+              <span class="anniv-num">141 Years</span>
+              <span class="anniv-label">of Educational Excellence</span>
+            </div>
+          </div>
         </div>
+        <!-- ========================================== -->
+
       </div>
     </div>
   </section>
@@ -1619,7 +1794,7 @@
     </div>
   </section>
 
-  <!-- CONTACT - UPDATED CONTACT INFORMATION -->
+  <!-- CONTACT -->
   <section id="contact" class="section-padding" aria-label="Contact">
     <div class="container" style="position: relative; z-index: 2;">
       <span class="section-label reveal">Contact</span>
@@ -1674,7 +1849,7 @@
     </div>
   </section>
 
-  <!-- FOOTER - UPDATED LINKS -->
+  <!-- FOOTER -->
   <footer class="footer" role="contentinfo">
     <div class="container">
       <div class="footer-grid">
@@ -1701,7 +1876,7 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2026 GHSS Tibba Sultan Pur. All rights reserved.</p>
+        <p>&copy; 2026 GHSS Tibba Sultan Pur. All rights reserved. • Established 1885</p>
         <div class="footer-socials">
           <a href="https://www.facebook.com/share/g/19p66WaMYz/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">Facebook</a>
           <a href="https://whatsapp.com/channel/0029Vb9JbCX0G0Xr0gYU8a09" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Channel">WhatsApp</a>
@@ -1833,6 +2008,8 @@
       // TYPING
       const taglines = [
         'Welcome to GHSS Tibba Sultan Pur',
+        'Serving Education Since 1885',
+        '141 Years of Excellence',
         'Quality Education for All',
         'Building Bright Futures',
         'Excellence in Academics',
@@ -1964,7 +2141,7 @@
         window.addEventListener('load', loadAll);
       }
 
-      console.log('GHSS Tibba Sultan Pur | Government Higher Secondary School');
+      console.log('GHSS Tibba Sultan Pur | Established 1885 | 141 Years of Excellence');
     })();
   </script>
 </body>
