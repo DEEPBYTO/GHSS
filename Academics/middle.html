@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Middle School (6–8) – GHSS Tibba Sultan Pur</title>
+  <meta name="description" content="Middle School program at GHSS Tibba Sultan Pur for Classes 6 to 8." />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#0a1a2f" />
+  <link rel="canonical" href="https://deepbyto.github.io/GHSS/middle.html" />
+  <link rel="icon" href="https://raw.githubusercontent.com/DEEPBYTO/GHSS/main/logo.png" type="image/png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&family=Orbitron:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --bg-primary: #0a1a2f;
+      --bg-secondary: #112240;
+      --bg-card: rgba(18, 34, 64, 0.85);
+      --accent: #f0c040;
+      --accent-dim: rgba(240, 192, 64, 0.12);
+      --accent-glow: rgba(240, 192, 64, 0.25);
+      --text-primary: #ffffff;
+      --text-secondary: #ccd6e0;
+      --text-muted: #8899aa;
+      --border-subtle: rgba(255, 255, 255, 0.08);
+      --glass-border: rgba(255, 255, 255, 0.12);
+      --radius: 16px;
+      --radius-sm: 10px;
+      --transition: 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      --font-sans: 'Inter', sans-serif;
+      --font-display: 'Orbitron', sans-serif;
+      --badge-bg: rgba(240, 192, 64, 0.1);
+      --badge-border: rgba(240, 192, 64, 0.25);
+      --nav-bg: rgba(10, 26, 47, 0.75);
+      --nav-scrolled: rgba(10, 26, 47, 0.97);
+    }
+    html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+    body { font-family: var(--font-sans); background: var(--bg-primary); color: var(--text-primary); line-height: 1.6; overflow-x: hidden; }
+    a { color: var(--text-primary); text-decoration: none; }
+    a:hover { color: var(--accent); }
+    img { max-width: 100%; display: block; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; position: relative; z-index: 2; }
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: #0a1a2f; }
+    ::-webkit-scrollbar-thumb { background: #f0c040; border-radius: 12px; }
+    #particles-canvas { position: fixed; inset: 0; z-index: 0; pointer-events: none; }
+
+    .navbar { position: fixed; top: 0; left: 0; width: 100%; z-index: 1000; padding: 16px 0; background: var(--nav-bg); backdrop-filter: blur(18px); border-bottom: 1px solid var(--glass-border); transition: background 0.3s, box-shadow 0.3s; }
+    .navbar.scrolled { background: var(--nav-scrolled); box-shadow: 0 4px 25px rgba(0,0,0,0.6); }
+    .navbar .container { display: flex; align-items: center; justify-content: space-between; }
+    .nav-brand { display: flex; align-items: center; gap: 12px; }
+    .nav-brand .brand-logo { height: 48px; width: auto; border-radius: 8px; }
+    .school-name { display: flex; flex-direction: column; line-height: 1.1; }
+    .school-name .line-1 { font-family: var(--font-display); font-weight: 800; font-size: 1.15rem; letter-spacing: 0.06em; color: var(--accent); }
+    .school-name .line-2 { font-size: 0.7rem; font-weight: 500; color: var(--text-secondary); text-transform: uppercase; }
+    .school-name .line-3 { font-size: 0.62rem; color: var(--text-muted); letter-spacing: 0.08em; }
+    .nav-links { display: flex; align-items: center; gap: 28px; list-style: none; }
+    .nav-links a { font-size: 0.85rem; font-weight: 500; color: var(--text-secondary); position: relative; }
+    .nav-links a::after { content: ''; position: absolute; left: 0; bottom: -4px; width: 0; height: 2px; background: var(--accent); transition: width 0.3s; border-radius: 4px; }
+    .nav-links a:hover { color: var(--accent); }
+    .nav-links a:hover::after { width: 100%; }
+    .nav-toggle { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 6px; }
+    .nav-toggle span { display: block; width: 26px; height: 2px; background: var(--text-primary); border-radius: 4px; transition: all 0.3s; transform-origin: center; }
+    .nav-toggle.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+    .nav-toggle.active span:nth-child(2) { opacity: 0; }
+    .nav-toggle.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+
+    .group-hero { position: relative; min-height: 65vh; display: flex; align-items: center; padding: 140px 0 80px; overflow: hidden; }
+    .group-hero .gh-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: -2; filter: brightness(0.5); }
+    .group-hero::before { content: ''; position: absolute; inset: 0; z-index: -1; background: linear-gradient(135deg, rgba(10, 26, 47, 0.92) 0%, rgba(10, 26, 47, 0.7) 50%, rgba(10, 26, 47, 0.85) 100%); }
+    .group-hero-content { position: relative; z-index: 2; max-width: 820px; }
+    .back-btn { display: inline-flex; align-items: center; gap: 10px; padding: 10px 22px; border-radius: 50px; background: rgba(240, 192, 64, 0.12); border: 1px solid var(--badge-border); color: var(--accent); font-size: 0.82rem; font-weight: 600; margin-bottom: 28px; cursor: pointer; transition: all 0.3s; }
+    .back-btn:hover { background: var(--accent); color: var(--bg-primary); transform: translateX(-4px); }
+    .group-badge { display: inline-flex; align-items: center; gap: 8px; padding: 6px 16px 6px 12px; border-radius: 50px; background: var(--accent-dim); border: 1px solid var(--glass-border); font-size: 0.72rem; letter-spacing: 0.06em; margin-bottom: 24px; text-transform: uppercase; }
+    .group-badge i { color: var(--accent); }
+    .group-hero h1 { font-family: var(--font-display); font-weight: 900; font-size: clamp(2.2rem, 6vw, 4rem); line-height: 1.05; margin-bottom: 22px; }
+    .group-hero h1 span { color: var(--accent); }
+    .group-hero .gh-desc { font-size: clamp(1rem, 1.4vw, 1.15rem); line-height: 1.8; color: var(--text-secondary); max-width: 640px; margin-bottom: 32px; }
+    .group-quick-info { display: flex; flex-wrap: wrap; gap: 14px; }
+    .qi-item { display: inline-flex; align-items: center; gap: 10px; padding: 10px 20px; border-radius: 50px; background: rgba(18, 34, 64, 0.7); border: 1px solid var(--glass-border); font-size: 0.82rem; color: var(--text-secondary); }
+    .qi-item i { color: var(--accent); }
+    .qi-item strong { color: var(--text-primary); }
+
+    .group-body { background: var(--bg-primary); padding: 80px 0 100px; }
+    .group-section { margin-bottom: 60px; }
+    .group-section:last-child { margin-bottom: 0; }
+    .gs-title { font-family: var(--font-display); font-size: 1.35rem; font-weight: 700; margin-bottom: 8px; display: flex; align-items: center; gap: 14px; }
+    .gs-title i { display: inline-flex; align-items: center; justify-content: center; width: 42px; height: 42px; border-radius: 12px; background: var(--accent-dim); border: 1px solid var(--badge-border); color: var(--accent); font-size: 1.05rem; }
+    .gs-subtitle { font-size: 0.92rem; color: var(--text-muted); margin-bottom: 26px; margin-left: 56px; }
+    .chip-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 14px; }
+    .chip { display: flex; align-items: center; gap: 12px; padding: 16px 18px; border-radius: 12px; background: var(--bg-card); border: 1px solid var(--glass-border); transition: all 0.35s; }
+    .chip:hover { transform: translateY(-3px); border-color: rgba(240, 192, 64, 0.4); }
+    .chip .chip-icon { display: flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 10px; background: var(--accent-dim); color: var(--accent); flex-shrink: 0; }
+    .chip:hover .chip-icon { background: var(--accent); color: var(--bg-primary); }
+    .chip .chip-text { font-size: 0.85rem; font-weight: 500; }
+    .career-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 14px; }
+    .career-item { display: flex; align-items: flex-start; gap: 14px; padding: 20px 22px; border-radius: 12px; background: var(--bg-card); border: 1px solid var(--glass-border); transition: all 0.35s; }
+    .career-item:hover { border-color: rgba(240, 192, 64, 0.4); transform: translateY(-3px); }
+    .career-item .ci-icon { display: flex; align-items: center; justify-content: center; width: 42px; height: 42px; border-radius: 12px; background: var(--accent-dim); border: 1px solid var(--badge-border); color: var(--accent); font-size: 1.05rem; flex-shrink: 0; }
+    .career-item:hover .ci-icon { background: var(--accent); color: var(--bg-primary); }
+    .career-item .ci-title { font-weight: 600; font-size: 0.95rem; margin-bottom: 4px; }
+    .career-item .ci-desc { font-size: 0.82rem; color: var(--text-muted); }
+    .info-banner { margin-top: 40px; padding: 28px 32px; border-radius: var(--radius); background: linear-gradient(135deg, rgba(240, 192, 64, 0.1) 0%, rgba(240, 192, 64, 0.03) 100%); border: 1px solid var(--badge-border); display: flex; flex-wrap: wrap; align-items: center; gap: 22px; }
+    .info-banner .ib-icon { display: flex; align-items: center; justify-content: center; width: 56px; height: 56px; border-radius: 50%; background: var(--accent); color: var(--bg-primary); font-size: 1.45rem; flex-shrink: 0; }
+    .info-banner .ib-title { font-family: var(--font-display); font-size: 1rem; font-weight: 700; color: var(--accent); margin-bottom: 5px; text-transform: uppercase; }
+    .info-banner .ib-desc { font-size: 0.9rem; color: var(--text-secondary); }
+    .info-banner .ib-desc strong { color: var(--text-primary); }
+    .group-nav { margin-top: 60px; padding-top: 40px; border-top: 1px solid var(--border-subtle); display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .gn-link { display: flex; flex-direction: column; gap: 6px; padding: 20px 24px; border-radius: 12px; background: var(--bg-card); border: 1px solid var(--glass-border); transition: all 0.35s; }
+    .gn-link:hover { border-color: rgba(240, 192, 64, 0.4); transform: translateY(-3px); }
+    .gn-link.next { text-align: right; align-items: flex-end; }
+    .gn-link .gn-label { font-family: var(--font-display); font-size: 0.62rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--text-muted); display: flex; align-items: center; gap: 8px; }
+    .gn-link.next .gn-label { justify-content: flex-end; }
+    .gn-link .gn-title { font-family: var(--font-display); font-size: 1rem; font-weight: 700; color: var(--accent); }
+
+    .footer { padding: 48px 0 32px; border-top: 1px solid var(--border-subtle); background: var(--bg-secondary); }
+    .footer-grid { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 24px; }
+    .footer-brand .fb-name { display: flex; align-items: center; gap: 14px; }
+    .footer-brand .fb-logo { height: 56px; width: auto; border-radius: 6px; }
+    .footer-brand .fb-text { display: flex; flex-direction: column; line-height: 1.15; }
+    .footer-brand .fb-line-1 { font-family: var(--font-display); font-weight: 800; font-size: 1.15rem; color: var(--accent); }
+    .footer-brand .fb-line-2 { font-size: 0.72rem; font-weight: 500; color: var(--text-secondary); text-transform: uppercase; }
+    .footer-brand .fb-line-3 { font-size: 0.62rem; color: var(--text-muted); }
+    .footer-links { display: flex; flex-wrap: wrap; gap: 18px 28px; }
+    .footer-links a { font-size: 0.8rem; color: var(--text-secondary); }
+    .footer-bottom { margin-top: 32px; padding-top: 20px; border-top: 1px solid var(--border-subtle); text-align: center; }
+    .footer-bottom p { font-size: 0.75rem; color: var(--text-muted); }
+    .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.8s, transform 0.8s; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    @media (max-width: 768px) {
+      .nav-links { position: fixed; top: 0; right: -100%; width: 280px; height: 100vh; background: var(--bg-primary); flex-direction: column; justify-content: center; gap: 28px; padding: 40px; transition: right 0.4s; border-left: 1px solid var(--glass-border); }
+      .nav-links.open { right: 0; }
+      .nav-links a { font-size: 1.1rem; }
+      .nav-toggle { display: flex; z-index: 1001; }
+      .footer-grid { flex-direction: column; text-align: center; }
+      .footer-brand .fb-name { flex-direction: column; }
+      .footer-brand .fb-text { align-items: center; }
+      .group-hero { padding: 120px 0 60px; min-height: auto; }
+      .group-hero h1 { font-size: 2rem; }
+      .chip-grid { grid-template-columns: 1fr 1fr; }
+      .career-list { grid-template-columns: 1fr; }
+      .group-nav { grid-template-columns: 1fr; }
+      .gs-title { font-size: 1.15rem; }
+      .gs-subtitle { margin-left: 0; }
+      .info-banner { flex-direction: column; text-align: center; }
+    }
+    @media (max-width: 480px) {
+      .container { padding: 0 16px; }
+      .chip-grid { grid-template-columns: 1fr; }
+      .footer-brand .fb-logo { height: 48px; }
+    }
+  </style>
+</head>
+<body>
+  <canvas id="particles-canvas"></canvas>
+
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="index.html" class="nav-brand">
+        <img src="https://raw.githubusercontent.com/DEEPBYTO/GHSS/main/logo.png" alt="GHSS logo" class="brand-logo">
+        <span class="school-name">
+          <span class="line-1">GHSS</span>
+          <span class="line-2">Govt. Higher Secondary School</span>
+          <span class="line-3">Tibba Sultan Pur</span>
+        </span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#academics">Academics</a></li>
+        <li><a href="index.html#gallery">Gallery</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <section class="group-hero">
+    <img class="gh-bg" src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=1920&q=85&auto=format&fit=crop" alt="Middle School">
+    <div class="container">
+      <div class="group-hero-content">
+        <a href="index.html#academics" class="back-btn"><i class="fas fa-arrow-left"></i> Back to Home</a>
+        <span class="group-badge"><i class="fas fa-book-open"></i> Classes 6 – 8</span>
+        <h1>Middle <span>School</span></h1>
+        <p class="gh-desc">Strong foundational program covering Classes 6 to 8, focusing on core subjects and General Group to prepare students for the Matriculation level.</p>
+        <div class="group-quick-info">
+          <span class="qi-item"><i class="fas fa-graduation-cap"></i> <strong>Level:</strong> Middle</span>
+          <span class="qi-item"><i class="fas fa-layer-group"></i> <strong>Group:</strong> General</span>
+          <span class="qi-item"><i class="fas fa-clock"></i> <strong>Duration:</strong> 3 Years</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="group-body">
+    <div class="container">
+      <div class="group-section reveal">
+        <div class="gs-title"><i class="fas fa-book-open"></i> Core Subjects</div>
+        <div class="gs-subtitle">Subjects taught at Middle level</div>
+        <div class="chip-grid">
+          <div class="chip"><span class="chip-icon"><i class="fas fa-language"></i></span><span class="chip-text">English</span></div>
+          <div class="chip"><span class="chip-icon"><i class="fas fa-language"></i></span><span class="chip-text">Urdu</span></div>
+          <div class="chip"><span class="chip-icon"><i class="fas fa-calculator"></i></span><span class="chip-text">Mathematics</span></div>
+          <div class="chip"><span class="chip-icon"><i class="fas fa-flask"></i></span><span class="chip-text">General Science</span></div>
+          <div class="chip"><span class="chip-icon"><i class="fas fa-book-quran"></i></span><span class="chip-text">Islamiat</span></div>
+          <div class="chip"><span class="chip-icon"><i class="fas fa-globe-asia"></i></span><span class="chip-text">Social Studies</span></div>
+          <div class="chip"><span class="chip-icon"><i class="fas fa-laptop"></i></span><span class="chip-text">Computer Basics</span></div>
+          <div class="chip"><span class="chip-icon"><i class="fas fa-palette"></i></span><span class="chip-text">Arts & Crafts</span></div>
+        </div>
+      </div>
+
+      <div class="group-section reveal">
+        <div class="gs-title"><i class="fas fa-lightbulb"></i> What Students Learn</div>
+        <div class="gs-subtitle">Key skills and concepts developed</div>
+        <div class="career-list">
+          <div class="career-item"><div class="ci-icon"><i class="fas fa-brain"></i></div><div><div class="ci-title">Concept Building</div><div class="ci-desc">Strong foundation in math and science concepts through interactive learning.</div></div></div>
+          <div class="career-item"><div class="ci-icon"><i class="fas fa-comments"></i></div><div><div class="ci-title">Language Skills</div><div class="ci-desc">Focus on English, Urdu reading, writing, and communication skills.</div></div></div>
+          <div class="career-item"><div class="ci-icon"><i class="fas fa-flask"></i></div><div><div class="ci-title">Basic Science</div><div class="ci-desc">Introduction to Physics, Chemistry, and Biology fundamentals.</div></div></div>
+          <div class="career-item"><div class="ci-icon"><i class="fas fa-users"></i></div><div><div class="ci-title">Character Building</div><div class="ci-desc">Islamic values, civic sense, and social responsibility.</div></div></div>
+        </div>
+      </div>
+
+      <div class="info-banner reveal">
+        <div class="ib-icon"><i class="fas fa-arrow-right"></i></div>
+        <div>
+          <div class="ib-title">Next Step</div>
+          <div class="ib-desc">After Class 8, students move to <strong>Matriculation (Class 9)</strong> where they can choose between <strong>Science Group</strong> or <strong>Arts Group</strong>.</div>
+        </div>
+      </div>
+
+      <div class="group-nav reveal">
+        <a class="gn-link" href="icom.html"><div class="gn-label"><i class="fas fa-arrow-left"></i> Previous</div><div class="gn-title">I.Com & Economics</div></a>
+        <a class="gn-link next" href="matric.html"><div class="gn-label">Next <i class="fas fa-arrow-right"></i></div><div class="gn-title">Matriculation (SSC)</div></a>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="fb-name">
+            <img src="https://raw.githubusercontent.com/DEEPBYTO/GHSS/main/logo.png" alt="GHSS logo" class="fb-logo">
+            <div class="fb-text">
+              <span class="fb-line-1">GHSS</span>
+              <span class="fb-line-2">Govt. Higher Secondary School</span>
+              <span class="fb-line-3">Tibba Sultan Pur</span>
+            </div>
+          </div>
+        </div>
+        <div class="footer-links">
+          <a href="index.html#about">About</a>
+          <a href="index.html#academics">Academics</a>
+          <a href="index.html#gallery">Gallery</a>
+          <a href="index.html#contact">Contact</a>
+          <a href="mailto:It.ghsstspur@gmail.com">Email</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 GHSS Tibba Sultan Pur. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function() {
+      'use strict';
+      var canvas = document.getElementById('particles-canvas');
+      var ctx = canvas.getContext('2d');
+      var particles = [];
+      var mx = null, my = null;
+      function resize() { canvas.width = window.innerWidth; canvas.height = window.innerHeight; }
+      window.addEventListener('resize', resize);
+      resize();
+      function P() { this.reset(); }
+      P.prototype.reset = function() {
+        this.x = Math.random() * canvas.width;
+        this.y = Math.random() * canvas.height;
+        this.size = Math.random() * 1.5 + 0.3;
+        this.sx = (Math.random() - 0.5) * 0.2;
+        this.sy = (Math.random() - 0.5) * 0.2;
+        this.o = Math.random() * 0.3 + 0.05;
+      };
+      P.prototype.update = function() {
+        this.x += this.sx; this.y += this.sy;
+        if (this.x < 0 || this.x > canvas.width) this.sx *= -1;
+        if (this.y < 0 || this.y > canvas.height) this.sy *= -1;
+        if (mx !== null && my !== null) {
+          var dx = this.x - mx, dy = this.y - my;
+          var dist = Math.sqrt(dx*dx + dy*dy);
+          if (dist < 100) { var f = (100 - dist) / 100 * 0.01; this.x += dx * f; this.y += dy * f; }
+        }
+      };
+      P.prototype.draw = function() {
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+        ctx.fillStyle = 'rgba(240, 192, 64, ' + this.o + ')';
+        ctx.fill();
+      };
+      for (var k = 0; k < 50; k++) particles.push(new P());
+      function animP() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        for (var i = 0; i < particles.length; i++) { particles[i].update(); particles[i].draw(); }
+        for (var i = 0; i < particles.length; i++) {
+          for (var j = i + 1; j < particles.length; j++) {
+            var dx = particles[i].x - particles[j].x, dy = particles[i].y - particles[j].y;
+            var d = Math.sqrt(dx*dx + dy*dy);
+            if (d < 100) {
+              ctx.beginPath();
+              ctx.moveTo(particles[i].x, particles[i].y);
+              ctx.lineTo(particles[j].x, particles[j].y);
+              ctx.strokeStyle = 'rgba(240, 192, 64, ' + ((1 - d/100) * 0.12) + ')';
+              ctx.lineWidth = 0.4;
+              ctx.stroke();
+            }
+          }
+        }
+        requestAnimationFrame(animP);
+      }
+      animP();
+      document.addEventListener('mousemove', function(e) { mx = e.clientX; my = e.clientY; });
+      document.addEventListener('mouseleave', function() { mx = null; my = null; });
+
+      var nav = document.getElementById('navbar');
+      var toggle = document.getElementById('navToggle');
+      var links = document.getElementById('navLinks');
+      window.addEventListener('scroll', function() {
+        if (window.scrollY > 20) nav.classList.add('scrolled');
+        else nav.classList.remove('scrolled');
+      });
+      toggle.addEventListener('click', function() { links.classList.toggle('open'); toggle.classList.toggle('active'); });
+      links.querySelectorAll('a').forEach(function(l) {
+        l.addEventListener('click', function() { links.classList.remove('open'); toggle.classList.remove('active'); });
+      });
+
+      var rv = document.querySelectorAll('.reveal');
+      function revealNow() {
+        var wh = window.innerHeight;
+        rv.forEach(function(el) { if (el.getBoundingClientRect().top < wh - 100) el.classList.add('visible'); });
+      }
+      window.addEventListener('scroll', revealNow);
+      window.addEventListener('load', function() { setTimeout(revealNow, 200); });
+      setTimeout(revealNow, 300);
+    })();
+  </script>
+</body>
+</html>
