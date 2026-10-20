@@ -213,21 +213,86 @@
     .service-bg.right .service-bottom { justify-content: flex-end; }
     .service-bg.right h3 { margin-left: auto; }
 
-    /* ----- GALLERY ----- */
+    /* ----- GALLERY (3 STRAIGHT MOVING LINES) ----- */
     #gallery { background: var(--bg-secondary); border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle); position: relative; overflow: hidden; isolation: isolate; }
+
     .gallery-header { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 20px; margin-bottom: 12px; }
-    .gallery-count-badge { display: inline-flex; align-items: center; gap: 8px; padding: 8px 18px; border-radius: 50px; background: var(--accent-dim); border: 1px solid var(--badge-border); font-family: var(--font-display); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em; color: var(--accent); text-transform: uppercase; white-space: nowrap; }
-    .gallery-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 18px; margin-top: 40px; position: relative; z-index: 2; }
-    .gallery-item { position: relative; border-radius: var(--radius-sm); overflow: hidden; background: var(--bg-card); border: 1px solid var(--glass-border); cursor: pointer; aspect-ratio: 4 / 3; transition: transform 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94), border-color 0.35s ease, box-shadow 0.45s ease; }
-    .gallery-item:hover { transform: translateY(-6px); border-color: var(--accent); box-shadow: 0 22px 45px var(--shadow-color), 0 0 40px var(--accent-dim); z-index: 3; }
-    .gallery-item img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94), filter 0.45s ease; filter: brightness(0.85) contrast(1.05) saturate(1.05); }
-    .gallery-item:hover img { transform: scale(1.09); filter: brightness(1) contrast(1.05) saturate(1.15); }
-    .gallery-item .gallery-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(10, 26, 47, 0.85) 0%, rgba(10, 26, 47, 0.35) 45%, rgba(10, 26, 47, 0) 75%); opacity: 0; transition: opacity 0.4s ease; display: flex; flex-direction: column; justify-content: flex-end; padding: 18px; pointer-events: none; }
-    .gallery-item:hover .gallery-overlay { opacity: 1; }
-    .gallery-item .gallery-caption { font-family: var(--font-display); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; color: var(--accent); text-transform: uppercase; transform: translateY(10px); transition: transform 0.4s ease; }
-    .gallery-item:hover .gallery-caption { transform: translateY(0); }
-    .gallery-item .gallery-zoom { position: absolute; top: 14px; right: 14px; width: 38px; height: 38px; border-radius: 50%; background: rgba(10, 26, 47, 0.7); border: 1px solid rgba(240, 192, 64, 0.4); color: var(--accent); display: flex; align-items: center; justify-content: center; font-size: 0.85rem; opacity: 0; transform: scale(0.7) rotate(-30deg); transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94); backdrop-filter: blur(8px); pointer-events: none; }
-    .gallery-item:hover .gallery-zoom { opacity: 1; transform: scale(1) rotate(0deg); }
+
+    .gallery-marquee {
+      margin-top: 48px;
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 8%, #000 92%, transparent 100%);
+              mask-image: linear-gradient(90deg, transparent 0%, #000 8%, #000 92%, transparent 100%);
+    }
+
+    .marquee-row { overflow: hidden; width: 100%; }
+
+    .marquee-track {
+      display: flex;
+      gap: 16px;
+      width: max-content;
+      will-change: transform;
+      animation: marqueeLeft 45s linear infinite;
+    }
+    .marquee-row:nth-child(2) .marquee-track { animation-name: marqueeRight; animation-duration: 55s; }
+    .marquee-row:nth-child(3) .marquee-track { animation-name: marqueeLeft; animation-duration: 50s; }
+    .marquee-row:hover .marquee-track { animation-play-state: paused; }
+
+    @keyframes marqueeLeft {
+      from { transform: translateX(0); }
+      to   { transform: translateX(-50%); }
+    }
+    @keyframes marqueeRight {
+      from { transform: translateX(-50%); }
+      to   { transform: translateX(0); }
+    }
+
+    .marquee-card {
+      position: relative;
+      flex: 0 0 auto;
+      width: 260px;
+      height: 170px;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid var(--glass-border);
+      background: var(--bg-card);
+      cursor: pointer;
+      transition: transform .4s cubic-bezier(.25,.46,.45,.94), border-color .35s ease, box-shadow .45s ease;
+    }
+    .marquee-card:hover {
+      transform: scale(1.08);
+      border-color: var(--accent);
+      box-shadow: 0 18px 40px var(--shadow-color), 0 0 30px var(--accent-dim);
+      z-index: 5;
+    }
+    .marquee-card img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      display: block;
+      filter: brightness(.85) contrast(1.05) saturate(1.05);
+      transition: filter .4s ease;
+    }
+    .marquee-card:hover img { filter: brightness(1) contrast(1.05) saturate(1.15); }
+    .marquee-card .mc-cap {
+      position: absolute;
+      left: 0; right: 0; bottom: 0;
+      padding: 10px 12px;
+      font-family: var(--font-display);
+      font-size: .62rem;
+      font-weight: 700;
+      letter-spacing: .1em;
+      color: var(--accent);
+      text-transform: uppercase;
+      background: linear-gradient(to top, rgba(10,26,47,.9), rgba(10,26,47,0));
+      opacity: 0;
+      transform: translateY(8px);
+      transition: all .35s ease;
+    }
+    .marquee-card:hover .mc-cap { opacity: 1; transform: translateY(0); }
 
     /* ----- LIGHTBOX ----- */
     .lightbox { position: fixed; inset: 0; z-index: 10000; background: rgba(5, 12, 24, 0.96); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); display: flex; align-items: center; justify-content: center; opacity: 0; visibility: hidden; transition: opacity 0.35s ease, visibility 0.35s ease; }
@@ -313,7 +378,8 @@
       .about-grid { grid-template-columns: 1fr; gap: 40px; }
       .contact-layout { grid-template-columns: 1fr; gap: 40px; }
       .service-bg .service-inner { padding: 70px 36px; }
-      .gallery-grid { grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 14px; }
+      .gallery-marquee { gap: 12px; }
+      .marquee-card { width: 220px; height: 145px; }
     }
     @media (max-width: 768px) {
       .nav-links { position: fixed; top: 0; right: -100%; width: 280px; height: 100vh; background: var(--bg-primary); backdrop-filter: blur(24px); flex-direction: column; justify-content: center; align-items: center; gap: 28px; padding: 40px; overflow-y: auto; transition: right 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94); border-left: 1px solid var(--glass-border); }
@@ -338,7 +404,6 @@
       .hero-logo { height: 80px; }
       .timeline { padding-left: 30px; }
       .timeline-item .tl-dot { left: -29px; width: 17px; height: 17px; }
-      .gallery-grid { grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 12px; }
       .lightbox-btn { width: 44px; height: 44px; font-size: 1rem; }
       .lightbox-close { top: 16px; right: 16px; }
       .lightbox-prev { left: 12px; }
@@ -354,6 +419,9 @@
       .admissions-cta .ac-content h3 { font-size: 1.1rem; }
       .admissions-cta .ac-content p { font-size: 0.85rem; }
       .admissions-cta .ac-btn { padding: 11px 24px; font-size: 0.82rem; width: 100%; justify-content: center; }
+      .gallery-marquee { gap: 10px; }
+      .marquee-card { width: 190px; height: 125px; }
+      .marquee-track { gap: 10px; }
     }
     @media (max-width: 480px) {
       .footer-links { justify-content: center; }
@@ -364,18 +432,18 @@
       .service-bg h3 { font-size: 1.6rem; }
       .service-bg .service-desc { font-size: 0.9rem; }
       .hero { min-height: 100vh; padding: 100px 0 60px; }
-      .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
-      .gallery-item .gallery-zoom { width: 32px; height: 32px; font-size: 0.75rem; }
       .gallery-header { flex-direction: column; align-items: flex-start; }
       .footer-brand .fb-logo { height: 48px; }
       .social-tiles { grid-template-columns: 1fr; gap: 10px; }
       .social-tile { flex-direction: row; align-items: center; padding: 16px; gap: 14px; }
       .social-tile .st-icon { width: 40px; height: 40px; font-size: 1.05rem; }
+      .marquee-card { width: 150px; height: 100px; }
     }
     @media (prefers-reduced-motion: reduce) {
       .about-waves .glow-orb { animation: none; }
       .hero-bg-rotator .bg-slide { transition: none; }
       .admissions-cta::before { animation: none; }
+      .marquee-track { animation: none; }
     }
   </style>
 </head>
@@ -606,7 +674,7 @@
     </div>
   </section>
 
-  <!-- GALLERY -->
+  <!-- GALLERY (3 STRAIGHT MOVING LINES) -->
   <section id="gallery" class="section-padding" aria-label="Gallery">
     <div class="container">
       <div class="gallery-header">
@@ -615,9 +683,13 @@
           <h2 class="section-title reveal">Beauty of <span class="highlight">GHSS</span></h2>
           <p class="section-desc reveal">A visual journey through our campus, facilities, and memorable moments.</p>
         </div>
-        <span class="gallery-count-badge reveal"><i class="fas fa-images"></i> <span id="galleryCount">29</span> Photos</span>
       </div>
-      <div class="gallery-grid" id="galleryGrid" role="list"></div>
+
+      <div class="gallery-marquee" id="galleryMarquee">
+        <div class="marquee-row"><div class="marquee-track" data-row="0"></div></div>
+        <div class="marquee-row"><div class="marquee-track" data-row="1"></div></div>
+        <div class="marquee-row"><div class="marquee-track" data-row="2"></div></div>
+      </div>
     </div>
   </section>
 
@@ -827,43 +899,44 @@
         currentIndex = nextIndex;
       }, 5000);
 
-      /* GALLERY */
-      var galleryGrid = document.getElementById('galleryGrid');
-      var galleryCountEl = document.getElementById('galleryCount');
+      /* ===== GALLERY — 3 STRAIGHT MOVING LINES ===== */
+      var marqueeWrap = document.getElementById('galleryMarquee');
+      var marqueeTracks = marqueeWrap.querySelectorAll('.marquee-track');
 
-      galleryImages.forEach(function(img, i) {
-        var item = document.createElement('div');
-        item.className = 'gallery-item reveal';
-        item.setAttribute('role', 'listitem');
-        item.setAttribute('data-index', i);
-        item.setAttribute('tabindex', '0');
-        item.setAttribute('aria-label', img.caption + ' — click to view');
+      var perRow = Math.ceil(galleryImages.length / 3);
 
-        var imgEl = document.createElement('img');
-        imgEl.src = img.src;
-        imgEl.alt = img.caption;
-        imgEl.loading = 'lazy';
-        imgEl.decoding = 'async';
-        if (i < 8) { imgEl.loading = 'eager'; imgEl.fetchPriority = 'high'; }
+      function makeCard(img, globalIndex) {
+        var card = document.createElement('div');
+        card.className = 'marquee-card';
+        card.setAttribute('data-index', globalIndex);
+        card.setAttribute('role', 'listitem');
+        card.setAttribute('tabindex', '0');
+        card.setAttribute('aria-label', img.caption + ' — click to view');
 
-        var overlay = document.createElement('div');
-        overlay.className = 'gallery-overlay';
+        var im = document.createElement('img');
+        im.src = img.src;
+        im.alt = img.caption;
+        im.loading = 'lazy';
+        im.decoding = 'async';
+
         var cap = document.createElement('div');
-        cap.className = 'gallery-caption';
+        cap.className = 'mc-cap';
         cap.textContent = img.caption;
-        overlay.appendChild(cap);
 
-        var zoom = document.createElement('div');
-        zoom.className = 'gallery-zoom';
-        zoom.innerHTML = '<i class="fas fa-expand"></i>';
+        card.appendChild(im);
+        card.appendChild(cap);
+        return card;
+      }
 
-        item.appendChild(imgEl);
-        item.appendChild(overlay);
-        item.appendChild(zoom);
-        galleryGrid.appendChild(item);
+      galleryImages.forEach(function (img, i) {
+        var row = Math.min(2, Math.floor(i / perRow));
+        marqueeTracks[row].appendChild(makeCard(img, i));
       });
 
-      galleryCountEl.textContent = galleryImages.length;
+      /* Duplicate cards for seamless infinite loop (animation -50%) */
+      marqueeTracks.forEach(function (track) {
+        track.innerHTML += track.innerHTML;
+      });
 
       /* LIGHTBOX */
       var lightbox = document.getElementById('lightbox');
@@ -901,14 +974,14 @@
       function nextImage() { lbIndex = (lbIndex + 1) % galleryImages.length; updateLightbox(); }
       function prevImage() { lbIndex = (lbIndex - 1 + galleryImages.length) % galleryImages.length; updateLightbox(); }
 
-      galleryGrid.addEventListener('click', function(e) {
-        var item = e.target.closest('.gallery-item');
-        if (item) openLightbox(parseInt(item.getAttribute('data-index'), 10));
+      marqueeWrap.addEventListener('click', function(e) {
+        var c = e.target.closest('.marquee-card');
+        if (c) openLightbox(parseInt(c.getAttribute('data-index'), 10));
       });
-      galleryGrid.addEventListener('keydown', function(e) {
+      marqueeWrap.addEventListener('keydown', function(e) {
         if (e.key === 'Enter' || e.key === ' ') {
-          var item = e.target.closest('.gallery-item');
-          if (item) { e.preventDefault(); openLightbox(parseInt(item.getAttribute('data-index'), 10)); }
+          var c = e.target.closest('.marquee-card');
+          if (c) { e.preventDefault(); openLightbox(parseInt(c.getAttribute('data-index'), 10)); }
         }
       });
 
