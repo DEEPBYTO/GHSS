@@ -303,8 +303,53 @@
     .footer-links { display: flex; flex-wrap: wrap; gap: 18px 28px; }
     .footer-links a { font-size: 0.8rem; color: var(--text-secondary); transition: color var(--transition); }
     .footer-links a:hover { color: var(--accent); }
-    .footer-bottom { margin-top: 32px; padding-top: 20px; border-top: 1px solid var(--border-subtle); display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 12px; text-align: center; }
+    .footer-bottom {
+      margin-top: 32px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border-subtle);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+    }
     .footer-bottom p { font-size: 0.75rem; color: var(--text-muted); }
+    .footer-dev {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 6px 14px;
+      border-radius: 50px;
+      background: var(--accent-dim);
+      border: 1px solid var(--badge-border);
+      transition: all var(--transition);
+      text-decoration: none;
+    }
+    .footer-dev:hover {
+      background: var(--accent);
+      border-color: var(--accent);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px var(--accent-glow);
+    }
+    .footer-dev-text {
+      font-family: var(--font-display);
+      font-size: 0.62rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-secondary);
+      transition: color var(--transition);
+    }
+    .footer-dev:hover .footer-dev-text { color: var(--bg-primary); }
+    .footer-dev-logo {
+      height: 18px;
+      width: auto;
+      filter: var(--wordmark-filter);
+      transition: filter var(--transition);
+    }
+    .footer-dev:hover .footer-dev-logo { filter: brightness(0) invert(0); }
+    [data-theme="light"] .footer-dev-logo { filter: brightness(0) invert(0); }
+    [data-theme="light"] .footer-dev:hover .footer-dev-logo { filter: brightness(0) invert(0); }
 
     /* ----- REVEAL ----- */
     .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease, transform 0.8s ease; }
@@ -328,7 +373,10 @@
       .hero-buttons { flex-direction: column; align-items: stretch; }
       .hero-buttons .btn-primary, .hero-buttons .btn-secondary { justify-content: center; }
       .footer-grid { flex-direction: column; text-align: center; }
-      .footer-bottom { flex-direction: column; text-align: center; }
+      .footer-bottom { flex-direction: column; justify-content: center; text-align: center; gap: 14px; }
+      .footer-dev { padding: 5px 12px; }
+      .footer-dev-text { font-size: 0.58rem; }
+      .footer-dev-logo { height: 16px; }
       .section-padding { padding: 64px 0 48px; }
       .service-bg { min-height: 65vh; }
       .service-bg .service-inner { padding: 60px 24px; }
@@ -783,6 +831,10 @@
       </div>
       <div class="footer-bottom">
         <p>&copy; 2026 GHSS Tibba Sultan Pur. All rights reserved.</p>
+        <a href="https://deepbyto.github.io/" target="_blank" rel="noopener noreferrer" class="footer-dev" aria-label="Developed by DEEPBYTO">
+          <span class="footer-dev-text">Developed by</span>
+          <img src="https://deepbyto.github.io/wordmark.png" alt="DEEPBYTO" class="footer-dev-logo">
+        </a>
       </div>
     </div>
   </footer>
