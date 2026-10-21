@@ -392,7 +392,7 @@
        ===================================================== -->
   <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation" data-shared-header>
     <div class="container">
-      <a href="index.html" class="nav-brand" aria-label="GHSS Tibba Sultan Pur home">
+      <a href="/GHSS/index.html" class="nav-brand" aria-label="GHSS Tibba Sultan Pur home">
         <img src="https://raw.githubusercontent.com/DEEPBYTO/GHSS/main/logo.png" alt="GHSS Tibba Sultan Pur logo" class="brand-logo">
         <span class="school-name">
           <span class="line-1">GHSS</span>
@@ -401,10 +401,10 @@
         </span>
       </a>
       <ul class="nav-links" id="navLinks" role="menubar">
-        <li role="none"><a href="index.html#about" role="menuitem">About</a></li>
-        <li role="none"><a href="index.html#academics" role="menuitem">Academics</a></li>
-        <li role="none"><a href="index.html#gallery" role="menuitem">Gallery</a></li>
-        <li role="none"><a href="index.html#contact" role="menuitem">Contact</a></li>
+        <li role="none"><a href="/GHSS/index.html#about" role="menuitem">About</a></li>
+        <li role="none"><a href="/GHSS/index.html#academics" role="menuitem">Academics</a></li>
+        <li role="none"><a href="/GHSS/index.html#gallery" role="menuitem">Gallery</a></li>
+        <li role="none"><a href="/GHSS/index.html#contact" role="menuitem">Contact</a></li>
       </ul>
       <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">
         <span></span><span></span><span></span>
@@ -758,10 +758,10 @@
           </div>
         </div>
         <div class="footer-links">
-          <a href="index.html#about">About</a>
-          <a href="index.html#academics">Academics</a>
-          <a href="index.html#gallery">Gallery</a>
-          <a href="index.html#contact">Contact</a>
+          <a href="/GHSS/index.html#about">About</a>
+          <a href="/GHSS/index.html#academics">Academics</a>
+          <a href="/GHSS/index.html#gallery">Gallery</a>
+          <a href="/GHSS/index.html#contact">Contact</a>
           <a href="https://wa.me/923006353469" target="_blank" rel="noopener noreferrer">WhatsApp</a>
         </div>
       </div>
@@ -1074,7 +1074,7 @@
       });
 
       var sections = document.querySelectorAll('section[id]');
-      var navAnchors = navLinks.querySelectorAll('a[href^="index.html#"]');
+      var navAnchors = navLinks.querySelectorAll('a[href^="/GHSS/index.html#"]');
       function updateActiveLink() {
         var current = '';
         var scrollPos = window.scrollY + 120;
@@ -1085,7 +1085,7 @@
         });
         navAnchors.forEach(function(a) {
           a.classList.remove('active');
-          if (a.getAttribute('href') === 'index.html#' + current) a.classList.add('active');
+          if (a.getAttribute('href') === '/GHSS/index.html#' + current) a.classList.add('active');
         });
       }
       window.addEventListener('scroll', updateActiveLink);
