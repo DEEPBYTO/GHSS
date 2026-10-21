@@ -70,6 +70,7 @@
       --scrollbar-track: #0a1a2f;
       --nav-bg: rgba(10, 26, 47, 0.75);
       --nav-scrolled: rgba(10, 26, 47, 0.97);
+      --wordmark-filter: brightness(0) invert(1);
     }
 
     html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
@@ -91,7 +92,7 @@
 
     #particles-canvas { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; pointer-events: none; }
 
-    /* ----- NAVBAR CSS (shared HTML styled rahe) ----- */
+    /* ----- NAVBAR ----- */
     .navbar {
       position: fixed; top: 0; left: 0; width: 100%; z-index: 1000;
       padding: 16px 0; background: var(--nav-bg);
@@ -472,7 +473,7 @@
     .apply-cta .ac-btn i { transition: transform 0.3s ease; }
     .apply-cta .ac-btn:hover i { transform: translateX(4px); }
 
-    /* ----- FOOTER CSS ----- */
+    /* ----- FOOTER CSS (UPDATED) ----- */
     .footer {
       padding: 48px 0 32px;
       border-top: 1px solid var(--border-subtle);
@@ -480,15 +481,61 @@
       position: relative;
       overflow: hidden;
     }
-    .footer-grid { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 24px; }
-    .footer-brand .fb-name { display: flex; align-items: center; gap: 14px; }
-    .footer-brand .fb-logo { height: 56px; width: auto; object-fit: contain; border-radius: 6px; }
-    .footer-brand .fb-text { display: flex; flex-direction: column; line-height: 1.15; }
-    .footer-brand .fb-line-1 { font-family: var(--font-display); font-weight: 800; font-size: 1.15rem; letter-spacing: 0.06em; color: var(--accent); }
-    .footer-brand .fb-line-2 { font-family: var(--font-sans); font-weight: 500; font-size: 0.72rem; letter-spacing: 0.06em; color: var(--text-secondary); text-transform: uppercase; }
-    .footer-brand .fb-line-3 { font-family: var(--font-sans); font-weight: 400; font-size: 0.62rem; letter-spacing: 0.1em; color: var(--text-muted); }
-    .footer-links { display: flex; flex-wrap: wrap; gap: 18px 28px; }
-    .footer-links a { font-size: 0.8rem; color: var(--text-secondary); transition: color var(--transition); }
+    .footer-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 24px;
+    }
+    .footer-brand .fb-name {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .footer-brand .fb-logo {
+      height: 56px;
+      width: auto;
+      object-fit: contain;
+      border-radius: 6px;
+    }
+    .footer-brand .fb-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.15;
+    }
+    .footer-brand .fb-line-1 {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 1.15rem;
+      letter-spacing: 0.06em;
+      color: var(--accent);
+    }
+    .footer-brand .fb-line-2 {
+      font-family: var(--font-sans);
+      font-weight: 500;
+      font-size: 0.72rem;
+      letter-spacing: 0.06em;
+      color: var(--text-secondary);
+      text-transform: uppercase;
+    }
+    .footer-brand .fb-line-3 {
+      font-family: var(--font-sans);
+      font-weight: 400;
+      font-size: 0.62rem;
+      letter-spacing: 0.1em;
+      color: var(--text-muted);
+    }
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px 28px;
+    }
+    .footer-links a {
+      font-size: 0.8rem;
+      color: var(--text-secondary);
+      transition: color var(--transition);
+    }
     .footer-links a:hover { color: var(--accent); }
     .footer-bottom {
       margin-top: 32px;
@@ -496,12 +543,50 @@
       border-top: 1px solid var(--border-subtle);
       display: flex;
       flex-wrap: wrap;
-      justify-content: center;
+      justify-content: space-between;
       align-items: center;
       gap: 12px;
-      text-align: center;
     }
-    .footer-bottom p { font-size: 0.75rem; color: var(--text-muted); }
+    .footer-bottom p {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+    .footer-dev {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 6px 14px;
+      border-radius: 50px;
+      background: var(--accent-dim);
+      border: 1px solid var(--badge-border);
+      transition: all var(--transition);
+      text-decoration: none;
+    }
+    .footer-dev:hover {
+      background: var(--accent);
+      border-color: var(--accent);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px var(--accent-glow);
+    }
+    .footer-dev-text {
+      font-family: var(--font-display);
+      font-size: 0.62rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-secondary);
+      transition: color var(--transition);
+    }
+    .footer-dev:hover .footer-dev-text { color: var(--bg-primary); }
+    .footer-dev-logo {
+      height: 18px;
+      width: auto;
+      filter: var(--wordmark-filter);
+      transition: filter var(--transition);
+    }
+    .footer-dev:hover .footer-dev-logo { filter: brightness(0) invert(0); }
+    [data-theme="light"] .footer-dev-logo { filter: brightness(0) invert(0); }
+    [data-theme="light"] .footer-dev:hover .footer-dev-logo { filter: brightness(0) invert(0); }
 
     /* Reveal */
     .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease, transform 0.8s ease; }
@@ -524,6 +609,10 @@
       .nav-links a { font-size: 1.1rem; }
       .nav-toggle { display: flex; z-index: 1001; }
       .footer-grid { flex-direction: column; text-align: center; }
+      .footer-bottom { flex-direction: column; justify-content: center; text-align: center; gap: 14px; }
+      .footer-dev { padding: 5px 12px; }
+      .footer-dev-text { font-size: 0.58rem; }
+      .footer-dev-logo { height: 16px; }
       .footer-brand .fb-name { flex-direction: column; align-items: center; gap: 10px; }
       .footer-brand .fb-text { align-items: center; text-align: center; }
       .group-hero { padding: 120px 0 60px; min-height: auto; }
@@ -577,248 +666,3 @@
           <span class="qi-item"><i class="fas fa-graduation-cap"></i> <strong>Level:</strong> Intermediate</span>
           <span class="qi-item"><i class="fas fa-tools"></i> <strong>Group:</strong> Pre-Engineering</span>
           <span class="qi-item"><i class="fas fa-university"></i> <strong>Board:</strong> BISE Multan</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- GROUP BODY -->
-  <div class="group-body">
-    <div class="container">
-
-      <!-- Subjects -->
-      <div class="group-section reveal">
-        <div class="gs-title"><i class="fas fa-book-open"></i> Subjects</div>
-        <div class="gs-subtitle">Compulsory and elective subjects for F.Sc Pre-Engineering</div>
-        <div class="chip-grid">
-          <div class="chip"><span class="chip-icon"><i class="fas fa-calculator"></i></span><span class="chip-text">Mathematics</span></div>
-          <div class="chip"><span class="chip-icon"><i class="fas fa-atom"></i></span><span class="chip-text">Physics</span></div>
-          <div class="chip"><span class="chip-icon"><i class="fas fa-vial"></i></span><span class="chip-text">Chemistry</span></div>
-          <div class="chip"><span class="chip-icon"><i class="fas fa-language"></i></span><span class="chip-text">English</span></div>
-          <div class="chip"><span class="chip-icon"><i class="fas fa-language"></i></span><span class="chip-text">Urdu</span></div>
-          <div class="chip"><span class="chip-icon"><i class="fas fa-book-quran"></i></span><span class="chip-text">Islamic Studies</span></div>
-          <div class="chip"><span class="chip-icon"><i class="fas fa-flag"></i></span><span class="chip-text">Pakistan Studies</span></div>
-        </div>
-      </div>
-
-      <!-- Career Opportunities -->
-      <div class="group-section reveal">
-        <div class="gs-title"><i class="fas fa-briefcase"></i> Career Opportunities</div>
-        <div class="gs-subtitle">Fields you can enter after F.Sc Pre-Engineering</div>
-        <div class="career-list">
-          <div class="career-item">
-            <div class="ci-icon"><i class="fas fa-hard-hat"></i></div>
-            <div class="ci-text">
-              <div class="ci-title">Civil Engineering</div>
-              <div class="ci-desc">Construction, infrastructure, and structural design.</div>
-            </div>
-          </div>
-          <div class="career-item">
-            <div class="ci-icon"><i class="fas fa-microchip"></i></div>
-            <div class="ci-text">
-              <div class="ci-title">Electrical Engineering</div>
-              <div class="ci-desc">Power systems, electronics, and control engineering.</div>
-            </div>
-          </div>
-          <div class="career-item">
-            <div class="ci-icon"><i class="fas fa-cogs"></i></div>
-            <div class="ci-text">
-              <div class="ci-title">Mechanical Engineering</div>
-              <div class="ci-desc">Machines, manufacturing, and automotive engineering.</div>
-            </div>
-          </div>
-          <div class="career-item">
-            <div class="ci-icon"><i class="fas fa-laptop-code"></i></div>
-            <div class="ci-text">
-              <div class="ci-title">Computer Engineering</div>
-              <div class="ci-desc">Hardware, software, and embedded systems.</div>
-            </div>
-          </div>
-          <div class="career-item">
-            <div class="ci-icon"><i class="fas fa-robot"></i></div>
-            <div class="ci-text">
-              <div class="ci-title">Mechatronics</div>
-              <div class="ci-desc">Robotics, automation, and intelligent systems.</div>
-            </div>
-          </div>
-          <div class="career-item">
-            <div class="ci-icon"><i class="fas fa-city"></i></div>
-            <div class="ci-text">
-              <div class="ci-title">Architecture</div>
-              <div class="ci-desc">Building design, urban planning, and interior design.</div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Board Info -->
-      <div class="info-banner reveal">
-        <div class="ib-icon"><i class="fas fa-university"></i></div>
-        <div class="ib-text">
-          <div class="ib-title">BISE Multan Board</div>
-          <div class="ib-desc">Intermediate examinations are conducted under the <strong>Board of Intermediate and Secondary Education (BISE) Multan</strong>. After F.Sc Pre-Engineering, students appear in <strong>ECAT</strong> for engineering admissions.</div>
-        </div>
-      </div>
-
-      <!-- Apply CTA — Home page ke Contact section par le jaye -->
-      <div class="apply-cta reveal">
-        <div class="ac-icon"><i class="fas fa-handshake"></i></div>
-        <div class="ac-content">
-          <h3>Admissions Open — F.Sc Pre-Engineering</h3>
-          <p>Apply now for Classes 11 and 12 (Pre-Engineering) in the new academic session. Visit the school office or contact us for admission details.</p>
-        </div>
-        <a href="../index.html#contact" class="ac-btn">
-          Apply Now <i class="fas fa-arrow-right"></i>
-        </a>
-      </div>
-
-    </div>
-  </div>
-
-  <!-- FOOTER — HOME PAGE SE AUTOMATIC LOAD -->
-  <div id="site-footer"></div>
-
-  <!-- ===== SHARED HEADER/FOOTER LOADER (index.html se) ===== -->
-  <script>
-  (function () {
-    'use strict';
-    var base = (window.location.pathname.indexOf('/Academics/') !== -1) ? '../' : './';
-
-    fetch(base + 'index.html')
-      .then(function (r) { if (!r.ok) throw new Error('load fail'); return r.text(); })
-      .then(function (html) {
-        var doc = new DOMParser().parseFromString(html, 'text/html');
-
-        var h = doc.querySelector('[data-shared-header]');
-        var hh = document.getElementById('site-header');
-        if (h && hh) hh.innerHTML = h.outerHTML;
-
-        var f = doc.querySelector('[data-shared-footer]');
-        var fh = document.getElementById('site-footer');
-        if (f && fh) fh.innerHTML = f.outerHTML;
-
-        initNavbar();
-      })
-      .catch(function (err) { console.warn('Shared header/footer load:', err); });
-
-    function initNavbar() {
-      var navbar = document.getElementById('navbar');
-      var navToggle = document.getElementById('navToggle');
-      var navLinks = document.getElementById('navLinks');
-      if (!navbar || !navToggle || !navLinks) return;
-
-      window.addEventListener('scroll', function () {
-        if (window.scrollY > 20) navbar.classList.add('scrolled');
-        else navbar.classList.remove('scrolled');
-      });
-
-      navToggle.addEventListener('click', function () {
-        var isOpen = navLinks.classList.toggle('open');
-        navToggle.classList.toggle('active');
-        navToggle.setAttribute('aria-expanded', isOpen);
-      });
-
-      navLinks.querySelectorAll('a').forEach(function (link) {
-        link.addEventListener('click', function () {
-          navLinks.classList.remove('open');
-          navToggle.classList.remove('active');
-          navToggle.setAttribute('aria-expanded', 'false');
-        });
-      });
-    }
-  })();
-  </script>
-
-  <script>
-    (function() {
-      'use strict';
-
-      /* PARTICLES */
-      var canvas = document.getElementById('particles-canvas');
-      var ctx = canvas.getContext('2d');
-      var particles = [];
-      var particleCount = 50;
-      var mouseX = null, mouseY = null;
-
-      function resizeCanvas() { canvas.width = window.innerWidth; canvas.height = window.innerHeight; }
-      window.addEventListener('resize', resizeCanvas);
-      resizeCanvas();
-
-      function Particle() { this.reset(); }
-      Particle.prototype.reset = function() {
-        this.x = Math.random() * canvas.width;
-        this.y = Math.random() * canvas.height;
-        this.size = Math.random() * 1.5 + 0.3;
-        this.speedX = (Math.random() - 0.5) * 0.2;
-        this.speedY = (Math.random() - 0.5) * 0.2;
-        this.opacity = Math.random() * 0.3 + 0.05;
-      };
-      Particle.prototype.update = function() {
-        this.x += this.speedX; this.y += this.speedY;
-        if (this.x < 0 || this.x > canvas.width) { this.speedX *= -1; this.x += this.speedX; }
-        if (this.y < 0 || this.y > canvas.height) { this.speedY *= -1; this.y += this.speedY; }
-        if (mouseX !== null && mouseY !== null) {
-          var dx = this.x - mouseX, dy = this.y - mouseY;
-          var dist = Math.sqrt(dx * dx + dy * dy);
-          if (dist < 100) { var force = (100 - dist) / 100 * 0.01; this.x += dx * force; this.y += dy * force; }
-        }
-      };
-      Particle.prototype.draw = function() {
-        ctx.beginPath();
-        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-        ctx.fillStyle = 'rgba(240, 192, 64, ' + this.opacity + ')';
-        ctx.fill();
-      };
-
-      for (var i = 0; i < particleCount; i++) particles.push(new Particle());
-
-      function drawLines() {
-        for (var i = 0; i < particles.length; i++) {
-          for (var j = i + 1; j < particles.length; j++) {
-            var dx = particles[i].x - particles[j].x;
-            var dy = particles[i].y - particles[j].y;
-            var dist = Math.sqrt(dx * dx + dy * dy);
-            if (dist < 100) {
-              var opacity = (1 - dist / 100) * 0.12;
-              ctx.beginPath();
-              ctx.moveTo(particles[i].x, particles[i].y);
-              ctx.lineTo(particles[j].x, particles[j].y);
-              ctx.strokeStyle = 'rgba(240, 192, 64, ' + opacity + ')';
-              ctx.lineWidth = 0.4;
-              ctx.stroke();
-            }
-          }
-        }
-      }
-
-      function animateParticles() {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        for (var k = 0; k < particles.length; k++) { particles[k].update(); particles[k].draw(); }
-        drawLines();
-        requestAnimationFrame(animateParticles);
-      }
-      animateParticles();
-
-      document.addEventListener('mousemove', function(e) { mouseX = e.clientX; mouseY = e.clientY; });
-      document.addEventListener('mouseleave', function() { mouseX = null; mouseY = null; });
-
-      /* REVEAL */
-      var revealElements = document.querySelectorAll('.reveal');
-      function revealOnScroll() {
-        var windowHeight = window.innerHeight;
-        revealElements.forEach(function(el) {
-          var rect = el.getBoundingClientRect();
-          if (rect.top < windowHeight - 100) el.classList.add('visible');
-        });
-      }
-      window.addEventListener('load', function() { setTimeout(revealOnScroll, 200); });
-      window.addEventListener('scroll', revealOnScroll);
-      window.addEventListener('resize', revealOnScroll);
-
-      setTimeout(revealOnScroll, 500);
-
-      console.log('GHSS Tibba Sultan Pur | F.Sc Pre-Engineering Page (shared header/footer)');
-    })();
-  </script>
-</body>
-</html>
