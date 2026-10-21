@@ -70,6 +70,7 @@
       --scrollbar-track: #0a1a2f;
       --nav-bg: rgba(10, 26, 47, 0.75);
       --nav-scrolled: rgba(10, 26, 47, 0.97);
+      --wordmark-filter: brightness(0) invert(1);
     }
 
     html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
@@ -554,6 +555,133 @@
     @media (prefers-reduced-motion: reduce) {
       .apply-cta::before { animation: none; }
     }
+
+    /* ----- FOOTER (UPDATED with DEEPBYTO) ----- */
+    .footer {
+      padding: 48px 0 32px;
+      border-top: 1px solid var(--border-subtle);
+      background: var(--bg-secondary);
+      position: relative;
+      overflow: hidden;
+    }
+    .footer-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 24px;
+    }
+    .footer-brand .fb-name {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .footer-brand .fb-logo {
+      height: 56px;
+      width: auto;
+      object-fit: contain;
+      border-radius: 6px;
+    }
+    .footer-brand .fb-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.15;
+    }
+    .footer-brand .fb-line-1 {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 1.15rem;
+      letter-spacing: 0.06em;
+      color: var(--accent);
+    }
+    .footer-brand .fb-line-2 {
+      font-family: var(--font-sans);
+      font-weight: 500;
+      font-size: 0.72rem;
+      letter-spacing: 0.06em;
+      color: var(--text-secondary);
+      text-transform: uppercase;
+    }
+    .footer-brand .fb-line-3 {
+      font-family: var(--font-sans);
+      font-weight: 400;
+      font-size: 0.62rem;
+      letter-spacing: 0.1em;
+      color: var(--text-muted);
+    }
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px 28px;
+    }
+    .footer-links a {
+      font-size: 0.8rem;
+      color: var(--text-secondary);
+      transition: color var(--transition);
+    }
+    .footer-links a:hover { color: var(--accent); }
+    .footer-bottom {
+      margin-top: 32px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border-subtle);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+    }
+    .footer-bottom p {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+    .footer-dev {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 6px 14px;
+      border-radius: 50px;
+      background: var(--accent-dim);
+      border: 1px solid var(--badge-border);
+      transition: all var(--transition);
+      text-decoration: none;
+    }
+    .footer-dev:hover {
+      background: var(--accent);
+      border-color: var(--accent);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px var(--accent-glow);
+    }
+    .footer-dev-text {
+      font-family: var(--font-display);
+      font-size: 0.62rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-secondary);
+      transition: color var(--transition);
+    }
+    .footer-dev:hover .footer-dev-text { color: var(--bg-primary); }
+    .footer-dev-logo {
+      height: 18px;
+      width: auto;
+      filter: var(--wordmark-filter);
+      transition: filter var(--transition);
+    }
+    .footer-dev:hover .footer-dev-logo { filter: brightness(0) invert(0); }
+    [data-theme="light"] .footer-dev-logo { filter: brightness(0) invert(0); }
+    [data-theme="light"] .footer-dev:hover .footer-dev-logo { filter: brightness(0) invert(0); }
+
+    @media (max-width: 768px) {
+      .footer-bottom {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        gap: 14px;
+      }
+      .footer-dev { padding: 5px 12px; }
+      .footer-dev-text { font-size: 0.58rem; }
+      .footer-dev-logo { height: 16px; }
+    }
   </style>
 </head>
 <body>
@@ -695,7 +823,7 @@
     'use strict';
     var base = (window.location.pathname.indexOf('/Academics/') !== -1) ? '../' : './';
 
-    fetch(base + 'index.html')
+    fetch(base + 'index.html?v=' + Date.now())
       .then(function (r) { if (!r.ok) throw new Error('load fail'); return r.text(); })
       .then(function (html) {
         var doc = new DOMParser().parseFromString(html, 'text/html');
@@ -708,9 +836,31 @@
         var fh = document.getElementById('site-footer');
         if (f && fh) fh.innerHTML = f.outerHTML;
 
+        fixLinks();
         initNavbar();
       })
       .catch(function (err) { console.warn('Shared header/footer load:', err); });
+
+    function fixLinks() {
+      var header = document.getElementById('site-header');
+      if (header) {
+        header.querySelectorAll('a[href]').forEach(function(link) {
+          var href = link.getAttribute('href');
+          if (href && href.indexOf('index.html') === 0) {
+            link.setAttribute('href', base + href);
+          }
+        });
+      }
+      var footer = document.getElementById('site-footer');
+      if (footer) {
+        footer.querySelectorAll('a[href]').forEach(function(link) {
+          var href = link.getAttribute('href');
+          if (href && href.indexOf('index.html') === 0) {
+            link.setAttribute('href', base + href);
+          }
+        });
+      }
+    }
 
     function initNavbar() {
       var navbar = document.getElementById('navbar');
