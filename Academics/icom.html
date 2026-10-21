@@ -559,28 +559,8 @@
 <body>
   <canvas id="particles-canvas"></canvas>
 
-  <!-- NAVBAR -->
-  <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
-    <div class="container">
-      <a href="../index.html" class="nav-brand" aria-label="GHSS Tibba Sultan Pur home">
-        <img src="https://raw.githubusercontent.com/DEEPBYTO/GHSS/main/logo.png" alt="GHSS Tibba Sultan Pur logo" class="brand-logo">
-        <span class="school-name">
-          <span class="line-1">GHSS</span>
-          <span class="line-2">Govt. Higher Secondary School</span>
-          <span class="line-3">Tibba Sultan Pur</span>
-        </span>
-      </a>
-      <ul class="nav-links" id="navLinks" role="menubar">
-        <li role="none"><a href="../index.html#about" role="menuitem">About</a></li>
-        <li role="none"><a href="../index.html#academics" role="menuitem">Academics</a></li>
-        <li role="none"><a href="../index.html#gallery" role="menuitem">Gallery</a></li>
-        <li role="none"><a href="../index.html#contact" role="menuitem">Contact</a></li>
-      </ul>
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </nav>
+  <!-- HEADER — HOME PAGE SE AUTOMATIC LOAD -->
+  <div id="site-header"></div>
 
   <!-- GROUP HERO -->
   <section class="group-hero">
@@ -681,14 +661,14 @@
         </div>
       </div>
 
-      <!-- Apply CTA -->
+      <!-- Apply CTA — Home page ke Contact section par le jaye -->
       <div class="apply-cta reveal">
         <div class="ac-icon"><i class="fas fa-handshake"></i></div>
         <div class="ac-content">
           <h3>Admissions Open — I.Com</h3>
           <p>Apply now for Classes 11 and 12 (I.Com / Economics) in the new academic session. Visit the school office or contact us for admission details.</p>
         </div>
-        <a href="mailto:It.ghsstspur@gmail.com" class="ac-btn">
+        <a href="../index.html#contact" class="ac-btn">
           Apply Now <i class="fas fa-arrow-right"></i>
         </a>
       </div>
@@ -696,33 +676,59 @@
     </div>
   </div>
 
-  <!-- FOOTER -->
-  <footer class="footer" role="contentinfo">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <div class="fb-name">
-            <img src="https://raw.githubusercontent.com/DEEPBYTO/GHSS/main/logo.png" alt="GHSS Tibba Sultan Pur logo" class="fb-logo">
-            <div class="fb-text">
-              <span class="fb-line-1">GHSS</span>
-              <span class="fb-line-2">Govt. Higher Secondary School</span>
-              <span class="fb-line-3">Tibba Sultan Pur</span>
-            </div>
-          </div>
-        </div>
-        <div class="footer-links">
-          <a href="../index.html#about">About</a>
-          <a href="../index.html#academics">Academics</a>
-          <a href="../index.html#gallery">Gallery</a>
-          <a href="../index.html#contact">Contact</a>
-          <a href="mailto:It.ghsstspur@gmail.com">Email</a>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>&copy; 2026 GHSS Tibba Sultan Pur. All rights reserved.</p>
-      </div>
-    </div>
-  </footer>
+  <!-- FOOTER — HOME PAGE SE AUTOMATIC LOAD -->
+  <div id="site-footer"></div>
+
+  <!-- ===== SHARED HEADER/FOOTER LOADER (index.html se) ===== -->
+  <script>
+  (function () {
+    'use strict';
+    var base = (window.location.pathname.indexOf('/Academics/') !== -1) ? '../' : './';
+
+    fetch(base + 'index.html')
+      .then(function (r) { if (!r.ok) throw new Error('load fail'); return r.text(); })
+      .then(function (html) {
+        var doc = new DOMParser().parseFromString(html, 'text/html');
+
+        var h = doc.querySelector('[data-shared-header]');
+        var hh = document.getElementById('site-header');
+        if (h && hh) hh.innerHTML = h.outerHTML;
+
+        var f = doc.querySelector('[data-shared-footer]');
+        var fh = document.getElementById('site-footer');
+        if (f && fh) fh.innerHTML = f.outerHTML;
+
+        initNavbar();
+      })
+      .catch(function (err) { console.warn('Shared header/footer load:', err); });
+
+    function initNavbar() {
+      var navbar = document.getElementById('navbar');
+      var navToggle = document.getElementById('navToggle');
+      var navLinks = document.getElementById('navLinks');
+      if (!navbar || !navToggle || !navLinks) return;
+
+      window.addEventListener('scroll', function () {
+        if (window.scrollY > 20) navbar.classList.add('scrolled');
+        else navbar.classList.remove('scrolled');
+      });
+
+      navToggle.addEventListener('click', function () {
+        var isOpen = navLinks.classList.toggle('open');
+        navToggle.classList.toggle('active');
+        navToggle.setAttribute('aria-expanded', isOpen);
+      });
+
+      navLinks.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', function () {
+          navLinks.classList.remove('open');
+          navToggle.classList.remove('active');
+          navToggle.setAttribute('aria-expanded', 'false');
+        });
+      });
+    }
+  })();
+  </script>
 
   <script>
     (function() {
@@ -797,30 +803,6 @@
       document.addEventListener('mousemove', function(e) { mouseX = e.clientX; mouseY = e.clientY; });
       document.addEventListener('mouseleave', function() { mouseX = null; mouseY = null; });
 
-      /* NAVBAR */
-      var navbar = document.getElementById('navbar');
-      var navToggle = document.getElementById('navToggle');
-      var navLinks = document.getElementById('navLinks');
-
-      window.addEventListener('scroll', function() {
-        if (window.scrollY > 20) navbar.classList.add('scrolled');
-        else navbar.classList.remove('scrolled');
-      });
-
-      navToggle.addEventListener('click', function() {
-        var isOpen = navLinks.classList.toggle('open');
-        navToggle.classList.toggle('active');
-        navToggle.setAttribute('aria-expanded', isOpen);
-      });
-
-      navLinks.querySelectorAll('a').forEach(function(link) {
-        link.addEventListener('click', function() {
-          navLinks.classList.remove('open');
-          navToggle.classList.remove('active');
-          navToggle.setAttribute('aria-expanded', 'false');
-        });
-      });
-
       /* REVEAL */
       var revealElements = document.querySelectorAll('.reveal');
       function revealOnScroll() {
@@ -834,18 +816,9 @@
       window.addEventListener('scroll', revealOnScroll);
       window.addEventListener('resize', revealOnScroll);
 
-      document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape' && navLinks.classList.contains('open')) {
-          navLinks.classList.remove('open');
-          navToggle.classList.remove('active');
-          navToggle.setAttribute('aria-expanded', 'false');
-          navToggle.focus();
-        }
-      });
-
       setTimeout(revealOnScroll, 500);
 
-      console.log('GHSS Tibba Sultan Pur | I.Com Page');
+      console.log('GHSS Tibba Sultan Pur | I.Com Page (shared header/footer)');
     })();
   </script>
 </body>
